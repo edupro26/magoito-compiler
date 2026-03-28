@@ -1,0 +1,6 @@
+-- Author: 57551, Eduardo Proença
+
+-- Function call missing the second argument
+
+fun add (a, b) : (Int, Int) -> Int = a + b
+fun main (_) : Unit -> Unit = print(add(1,))

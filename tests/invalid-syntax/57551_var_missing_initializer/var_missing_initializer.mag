@@ -1,0 +1,7 @@
+-- Author: 57551, Eduardo Proença
+
+-- Variable declaration is missing the initializer value after `=`
+
+fun main (_) : Unit -> Unit =
+    var x : Int = ;
+    print(x)

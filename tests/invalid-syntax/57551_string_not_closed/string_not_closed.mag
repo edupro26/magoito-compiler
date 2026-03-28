@@ -1,0 +1,5 @@
+-- Author: 57551, Eduardo Proença
+
+-- String literal missing closing `"`)
+
+fun main (_) : Unit -> Unit = print("hello)

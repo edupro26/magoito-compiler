@@ -1,0 +1,7 @@
+-- Author: 57551, Eduardo Proença
+
+-- Record is missing a `,` between fields
+
+fun main (_) : Unit -> Unit =
+    var r : {x: Int, y: Int} = {x = 1 y = 2};
+    print(r.x)
