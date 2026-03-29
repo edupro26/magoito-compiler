@@ -1,0 +1,7 @@
+-- Author: 57551, Eduardo Proença
+
+-- `;` associates to the right; the value of the whole sequence is the last expression
+
+fun main (_) : Unit -> Unit =
+    var x : Int = 0;
+    x = 1; x = x + 1; print(x)

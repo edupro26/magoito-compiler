@@ -1,0 +1,12 @@
+-- Author: 57551, Eduardo Proença
+
+-- Mutually recursive functions; short-circuit evaluation in base cases
+
+fun even (x) : Int -> Bool =
+    x == 0 || odd(x - 1)
+
+fun odd (x) : Int -> Bool =
+    x != 0 && even(x - 1)
+
+fun main (_) : Unit -> Unit =
+    print(even(10))

@@ -1,0 +1,8 @@
+-- Author: 57551, Eduardo Proença
+
+-- Short-circuiting prevents `x` from being updated
+
+fun main (_) : Unit -> Unit =
+    var x : Int = 0;
+    false && (x = 1) == 1;
+    print(x)

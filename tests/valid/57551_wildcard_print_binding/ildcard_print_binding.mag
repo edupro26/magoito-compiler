@@ -1,0 +1,8 @@
+-- Author: 57551, Eduardo Proença
+
+-- `print(...)` returns Unit which can be bound to `_` wildcards
+
+fun main (_) : Unit -> Unit =
+    var _ : Unit = print(111);
+    var _ : Unit = print(222);
+    unit

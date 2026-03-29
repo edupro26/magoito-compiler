@@ -1,0 +1,8 @@
+-- Author: 57551, Eduardo Proença
+
+-- Record field order is irrelevant; nested projection works
+
+fun main (_) : Unit -> Unit =
+    var p : {y: Int, x: Int} = {x = 3, y = 5};
+    var box : {point: {x: Int, y: Int}} = {point = p};
+    print(box.point.x)

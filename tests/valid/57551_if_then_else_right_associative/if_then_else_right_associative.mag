@@ -1,0 +1,11 @@
+-- Author: 57551, Eduardo Proença
+
+-- `if`/`then`/`else` associates to the right;
+
+fun main (_) : Unit -> Unit =
+    print(
+        if true then
+            if false then 1 else 2
+        else
+            3
+    )

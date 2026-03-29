@@ -1,0 +1,11 @@
+-- Author: 57551, Eduardo Proença
+
+-- Record fields are evaluated left-to-right
+
+fun main (_) : Unit -> Unit =
+    var x : Int = 0;
+    var r : {a: Int, b: Int, c: Int} = {a = (x = 1), b = x, c = (x = x + 1)};
+    print(r.a);
+    print(r.b);
+    print(r.c);
+    print(x)

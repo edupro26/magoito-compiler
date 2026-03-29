@@ -1,0 +1,6 @@
+-- Author: 57551, Eduardo Proença
+
+-- Tests precedence/right-association of `^`
+
+fun main (_) : Unit -> Unit =
+    print(2 ^ -3 ^ 2 * 1)

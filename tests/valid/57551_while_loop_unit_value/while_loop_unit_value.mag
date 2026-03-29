@@ -1,0 +1,9 @@
+-- Author: 57551, Eduardo Proença
+
+-- while loop evaluates to `unit`; assignment returns a value that can be used immediately
+
+fun main (_) : Unit -> Unit =
+    var x : Int = 0;
+    var u : Unit = while x < 3 do x = x + 1;
+    print(u);
+    print(x);
