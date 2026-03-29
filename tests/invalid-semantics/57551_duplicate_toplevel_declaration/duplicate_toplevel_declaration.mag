@@ -1,0 +1,7 @@
+-- Author: 57551, Eduardo Proença
+
+const a : Int = 1
+fun a (_) : Unit -> Unit = print(0)
+
+fun main (_) : Unit -> Unit =
+    print(a)

@@ -1,0 +1,7 @@
+-- Author: 57551, Eduardo Proença
+
+-- A variable can not be named `print`
+
+fun main (_) : Unit -> Unit =
+    var print : Int = 123;
+    unit

@@ -1,0 +1,7 @@
+-- Author: 57551, Eduardo Proença
+
+-- Record projection requires the field to exist in the record type
+
+fun main (_) : Unit -> Unit =
+    var r : {x: Int} = {x = 10};
+    print(r.y)

@@ -1,0 +1,7 @@
+-- Author: 57551, Eduardo Proença
+
+-- `var` can not be assigned to a `const` value
+
+const bad : Int = var x : Int = 1
+fun main (_) : Unit -> Unit =
+    print(bad)

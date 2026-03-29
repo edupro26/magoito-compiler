@@ -1,0 +1,6 @@
+-- Author: 57551, Eduardo Proença
+
+-- `if expr1 then expr2` (no else), `expr2` must have type Unit
+
+fun main (_) : Unit -> Unit =
+    if true then 1
