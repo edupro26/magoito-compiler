@@ -6,4 +6,4 @@ fun main (_) : Unit -> Unit =
     var x : Int = 0;
     var u : Unit = while x < 3 do x = x + 1;
     print(u);
-    print(x);
+    print(x)
