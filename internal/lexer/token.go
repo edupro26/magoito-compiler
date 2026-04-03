@@ -24,6 +24,8 @@ const (
 	DO
 	PRINT
 
+	WILDCARD // _
+
 	LPAREN    // (
 	RPAREN    // )
 	LBRACE    // {
@@ -126,56 +128,58 @@ func tokenToString(kind Kind) string {
 		return "unit"
 	case PRINT:
 		return "print"
+	case WILDCARD:
+		return "wildcard"
 	case LPAREN:
-		return "("
+		return "left_paren"
 	case RPAREN:
-		return ")"
+		return "right_paren"
 	case LBRACE:
-		return "{"
+		return "left_brace"
 	case RBRACE:
-		return "}"
+		return "right_brace"
 	case COLON:
-		return ":"
+		return "colon"
 	case COMMA:
-		return ","
+		return "comma"
 	case DOT:
-		return "."
+		return "dot"
 	case ARROW:
-		return "->"
+		return "arrow"
 	case ASSIGN:
-		return "="
+		return "assign"
 	case SEMICOLON:
-		return ";"
+		return "semi_colon"
 	case PLUS:
-		return "+"
+		return "plus"
 	case MINUS:
-		return "-"
+		return "minus"
 	case STAR:
-		return "*"
+		return "star"
 	case SLASH:
-		return "/"
+		return "slash"
 	case PERCENT:
-		return "%"
+		return "percent"
 	case POWER:
-		return "^"
+		return "power"
 	case NOT:
-		return "!"
+		return "not"
 	case EQ:
-		return "=="
+		return "equals"
 	case NEQ:
-		return "!="
+		return "not_equals"
 	case LT:
-		return "<"
+		return "less_than"
 	case LTE:
-		return "<="
+		return "less_than_equals"
 	case GT:
-		return ">"
+		return "greater_than"
 	case GTE:
-		return ">="
+		return "greater_than_equals"
 	case AND:
-		return "&&"
+		return "and"
 	case OR:
-		return "||"
+		return "or"
 	default:
 		return fmt.Sprintf("unknown(%d)", kind)
 	}
