@@ -72,40 +72,32 @@ var reservedMap = map[string]Kind{
 type Kind int
 
 type Token struct {
-	Kind  Kind
-	Value string
-}
-
-func (t Token) isOneOfMany(tokens ...Kind) bool {
-	for _, token := range tokens {
-		if token == t.Kind {
-			return true
-		}
-	}
-	return false
+	kind  Kind
+	value string
 }
 
 func (t Token) Debug() {
-	if t.isOneOfMany(IDENTIFIER, INT, STRING) {
-		fmt.Printf("%s (%s)\n", TokenKindString(t.Kind), t.Value)
+	// TODO Better string representation
+	if t.kind == IDENTIFIER || t.kind == INT || t.kind == STRING {
+		fmt.Printf("%s (%s)\n", tokenToString(t.kind), t.value)
 	} else {
-		fmt.Printf("%s ()\n", TokenKindString(t.Kind))
+		fmt.Printf("%s ()\n", tokenToString(t.kind))
 	}
 }
 
-func NewToken(kind Kind, value string) Token {
+func newToken(kind Kind, value string) Token {
 	return Token{
-		Kind:  kind,
-		Value: value,
+		kind:  kind,
+		value: value,
 	}
 }
 
-func TokenKindString(kind Kind) string {
+func tokenToString(kind Kind) string {
 	switch kind {
 	case EOF:
 		return "eof"
 	case IDENTIFIER:
-		return "ident"
+		return "identifier"
 	case INT:
 		return "int"
 	case STRING:
