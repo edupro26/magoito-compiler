@@ -60,7 +60,7 @@ func createLexer(source string) *lexer {
 	}
 }
 
-func Tokenize(source string) []Token {
+func Tokenize(source string) ([]Token, error) {
 	lex := createLexer(source)
 
 	for !lex.atEof() {
@@ -77,12 +77,15 @@ func Tokenize(source string) []Token {
 
 		if !match {
 			// TODO Improve this error handling
-			panic(fmt.Sprintf("lexer::error - unrecnonized token near %s\n", lex.remainder()))
+			return nil, fmt.Errorf(
+				"Syntax error: unrecognized token. Remaining input %s\n",
+				lex.remainder(),
+			)
 		}
 	}
 
 	lex.push(newToken(EOF, "eof"))
-	return lex.tokens
+	return lex.tokens, nil
 }
 
 func (lex *lexer) advN(n int) {

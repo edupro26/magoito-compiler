@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"magoito-compiler/internal/lexer"
 	"os"
 )
@@ -8,7 +9,12 @@ import (
 func main() {
 	bytes, _ := os.ReadFile("./example02.mag")
 
-	tokens := lexer.Tokenize(string(bytes))
+	tokens, err := lexer.Tokenize(string(bytes))
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
 	for _, token := range tokens {
 		token.Debug()
 	}
