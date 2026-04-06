@@ -101,10 +101,6 @@ func (lex *lexer) remainder() string {
 	return lex.source[lex.pos:]
 }
 
-func (lex *lexer) at() byte {
-	return lex.source[lex.pos]
-}
-
 func (lex *lexer) atEof() bool {
 	return lex.pos >= len(lex.source)
 }
