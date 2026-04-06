@@ -1,27 +1,60 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"magoito-compiler/cmd/printer"
 	"magoito-compiler/internal/lexer"
 	"magoito-compiler/internal/parser"
 	"os"
+	"strings"
 )
 
 func main() {
-	bytes, _ := os.ReadFile("./example01.mag")
+	scanner := bufio.NewScanner(os.Stdin)
+	fmt.Println("Magoito CLI")
+	for {
+		fmt.Print(">> ")
+		if !scanner.Scan() {
+			fmt.Println()
+			return
+		}
+
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" {
+			continue
+		}
+		if line == "q" || line == "quit" {
+			return
+		}
+
+		parts := strings.Fields(line)
+		if len(parts) == 2 && parts[0] == "run" {
+			if err := runFile(parts[1]); err != nil {
+				fmt.Println(err)
+			}
+			continue
+		}
+		fmt.Println("unknown command. Use: run <file>, q, or quit")
+	}
+}
+
+func runFile(filePath string) error {
+	bytes, err := os.ReadFile(filePath)
+	if err != nil {
+		return fmt.Errorf("error reading file: %w", err)
+	}
 
 	tokens, err := lexer.Tokenize(string(bytes))
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		return err
+	}
+	ast, err := parser.Parse(tokens)
+	if err != nil {
+		return fmt.Errorf("syntax error: %w", err)
 	}
 
-	program, err := parser.Parse(tokens)
-	if err != nil {
-		fmt.Println("syntax error:", err)
-		os.Exit(1)
-	}
-	fmt.Printf("parsed %d top-level declaration(s)\n\n", len(program.Declarations))
-	printer.Print(program)
+	fmt.Printf("parsed %d top-level declaration(s)\n\n", len(ast.Declarations))
+	printer.Print(ast)
+	return nil
 }
