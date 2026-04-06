@@ -10,9 +10,11 @@ const (
 	IDENTIFIER
 	INT
 	STRING
+	UNIT
 	TRUE
 	FALSE
-	UNIT
+
+	WILDCARD // _
 
 	CONST
 	FUN
@@ -23,8 +25,6 @@ const (
 	WHILE
 	DO
 	PRINT
-
-	WILDCARD // _
 
 	LPAREN    // (
 	RPAREN    // )
@@ -74,27 +74,18 @@ var reservedMap = map[string]Kind{
 type Kind int
 
 type Token struct {
-	kind  Kind
-	value string
-}
-
-func (t Token) Debug() {
-	// TODO Better string representation
-	if t.kind == IDENTIFIER || t.kind == INT || t.kind == STRING {
-		fmt.Printf("%s (%s)\n", tokenToString(t.kind), t.value)
-	} else {
-		fmt.Printf("%s ()\n", tokenToString(t.kind))
-	}
+	Kind  Kind
+	Value string
 }
 
 func newToken(kind Kind, value string) Token {
 	return Token{
-		kind:  kind,
-		value: value,
+		Kind:  kind,
+		Value: value,
 	}
 }
 
-func tokenToString(kind Kind) string {
+func (kind Kind) ToString() string {
 	switch kind {
 	case EOF:
 		return "eof"
@@ -129,57 +120,57 @@ func tokenToString(kind Kind) string {
 	case PRINT:
 		return "print"
 	case WILDCARD:
-		return "wildcard"
+		return "_"
 	case LPAREN:
-		return "left_paren"
+		return "("
 	case RPAREN:
-		return "right_paren"
+		return ")"
 	case LBRACE:
-		return "left_brace"
+		return "{"
 	case RBRACE:
-		return "right_brace"
+		return "}"
 	case COLON:
-		return "colon"
+		return ":"
 	case COMMA:
-		return "comma"
+		return ","
 	case DOT:
-		return "dot"
+		return "."
 	case ARROW:
-		return "arrow"
+		return "->"
 	case ASSIGN:
-		return "assign"
+		return "="
 	case SEMICOLON:
-		return "semi_colon"
+		return ";"
 	case PLUS:
-		return "plus"
+		return "+"
 	case MINUS:
-		return "minus"
+		return "-"
 	case STAR:
-		return "star"
+		return "*"
 	case SLASH:
-		return "slash"
+		return "/"
 	case PERCENT:
-		return "percent"
+		return "%"
 	case POWER:
-		return "power"
+		return "^"
 	case NOT:
-		return "not"
+		return "!"
 	case EQ:
-		return "equals"
+		return "=="
 	case NEQ:
-		return "not_equals"
+		return "!="
 	case LT:
-		return "less_than"
+		return "<"
 	case LTE:
-		return "less_than_equals"
+		return "<="
 	case GT:
-		return "greater_than"
+		return ">"
 	case GTE:
-		return "greater_than_equals"
+		return ">="
 	case AND:
-		return "and"
+		return "&&"
 	case OR:
-		return "or"
+		return "||"
 	default:
 		return fmt.Sprintf("unknown(%d)", kind)
 	}

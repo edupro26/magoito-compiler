@@ -27,6 +27,7 @@ func createLexer(source string) *lexer {
 		patterns: []regexPattern{
 			{regexp.MustCompile(`\s+`), skipHandler},
 			{regexp.MustCompile(`--.*`), skipHandler},
+			// TODO Fix unclosed string problem
 			{regexp.MustCompile(`"[^"]*"`), stringHandler},
 			{regexp.MustCompile(`[a-zA-Z][a-zA-Z0-9_']*`), symbolHandler},
 			{regexp.MustCompile(`0|[1-9][0-9]*`), numberHandler},
@@ -107,8 +108,6 @@ func (lex *lexer) at() byte {
 func (lex *lexer) atEof() bool {
 	return lex.pos >= len(lex.source)
 }
-
-/* ------ Regex Handlers ------ */
 
 func defaultHandler(kind Kind, value string) regexHandler {
 	return func(lex *lexer, regex *regexp.Regexp) {
