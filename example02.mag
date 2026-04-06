@@ -1,16 +1,7 @@
--- Magoito example
+-- Example 2
+
+fun duplicate (x): Int -> Int = x * 2
 
 fun main (_) : Unit -> Unit =
-    var i : Int = 0;
-    var acc : Int = 0;
-    var st : {msg: String, value: Int} = {msg = greeting, value = acc};
-
-    print(st.msg);
-    while i < 4 do (
-        acc = acc + i;
-        i = i + 1
-    );
-
-    st = {msg = "done", value = acc};
-    print(st.msg);
-    print(st.value)
+    var a : Int = 5;
+    print(duplicate(a))

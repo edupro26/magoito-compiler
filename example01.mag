@@ -1,1 +1,5 @@
-45 + 3 * 5
+-- Example 1
+
+const a : String = "Hello, World!"
+fun main (_) : Unit -> Unit =
+    print(a)
