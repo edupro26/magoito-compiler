@@ -44,6 +44,10 @@ func main() {
 			if err := util.RunCmd(args[2:]); err != nil {
 				fmt.Println(err)
 			}
+		case "test":
+			if err := util.TestCmd(); err != nil {
+				fmt.Println(err)
+			}
 		case "help":
 			util.PrintHelp()
 		case "quit", "q":

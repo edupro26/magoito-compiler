@@ -12,6 +12,11 @@ import (
 	"strconv"
 )
 
+const (
+	OK   = "✅"
+	FAIL = "❌"
+)
+
 func PrintBanner() {
 	fmt.Printf("Magoito CLI (early version), Go version: %s\n", runtime.Version())
 	fmt.Println(`Try "help" for more information, or run an example: run --example 1`)
@@ -50,6 +55,46 @@ func RunCmd(args []string) error {
 		return errors.New(`usage: mag run <file.mag> [--ast]`)
 	}
 	return runFile(args[0], printAST)
+}
+
+func TestCmd() error {
+	testDirs := []string{
+		filepath.Join("test", "valid"),
+		filepath.Join("test", "invalid-syntax"),
+		filepath.Join("test", "invalid-semantics"),
+	}
+	for _, dir := range testDirs {
+		entries, err := os.ReadDir(dir)
+		if err != nil {
+			return fmt.Errorf("cannot read test directory %q: %w", dir, err)
+		}
+		for _, entry := range entries {
+			if !entry.IsDir() {
+				continue
+			}
+			subDir := filepath.Join(dir, entry.Name())
+			files, err := filepath.Glob(filepath.Join(subDir, "*.mag"))
+			if err != nil {
+				return err
+			}
+			for _, f := range files {
+				emoji := OK
+				content, err := os.ReadFile(f)
+				if err != nil {
+					emoji = FAIL
+				} else {
+					tokens, err := lexer.Tokenize(string(content))
+					if err != nil {
+						emoji = FAIL
+					} else if _, err = parser.Parse(tokens); err != nil {
+						emoji = FAIL
+					}
+				}
+				fmt.Printf("%s - %s\n", f, emoji)
+			}
+		}
+	}
+	return nil
 }
 
 func runFile(filePath string, printAST bool) error {
