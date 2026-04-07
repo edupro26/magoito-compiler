@@ -19,7 +19,7 @@ const (
 
 func PrintBanner() {
 	fmt.Printf("Magoito CLI (early version), Go version: %s\n", runtime.Version())
-	fmt.Println(`Try "help" for more information, or run an example: run --example 1`)
+	fmt.Println(`Try "help" for more information, or run an example: mag run --example 1`)
 }
 
 func PrintHelp() {
@@ -112,11 +112,11 @@ func runFile(filePath string, printAST bool) error {
 	if err != nil {
 		return fmt.Errorf("%s:%w", filePath, err)
 	}
-	fmt.Printf("parsed %d top-level declaration(s)\n", len(program.Declarations))
 
 	if printAST {
-		fmt.Println()
 		printer.Print(program)
+	} else {
+		printer.Pretty(program)
 	}
 	return nil
 }
