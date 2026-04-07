@@ -61,7 +61,7 @@ func (p *parser) parseVarDecl() *ast.VarDecl {
 	case lexer.WILDCARD:
 		name = p.advance().Value
 	default:
-		p.errorf("expected identifier or _ after 'var', got %v", p.at().Kind.ToString())
+		p.errorf("expected 'identifier' or '_' after 'var', got %v", p.at().Kind.ToString())
 	}
 	p.expect(lexer.COLON)
 	typ := p.parseType()
@@ -201,7 +201,7 @@ func (p *parser) parsePrimary() ast.Expr {
 		tok := p.advance()
 		val, err := strconv.Atoi(tok.Value)
 		if err != nil {
-			p.errorf("invalid integer %q", tok.Value)
+			p.errorf("invalid integer '%v'", tok.Value)
 		}
 		return &ast.IntLiteral{Value: val}
 	case lexer.STRING:
@@ -239,7 +239,7 @@ func (p *parser) parsePrimary() ast.Expr {
 	case lexer.LBRACE:
 		return p.parseRecordExpr()
 	default:
-		p.errorf("unexpected token %v in expression", p.at().Kind.ToString())
+		p.errorf("unexpected token '%v' in expression", p.at().Kind.ToString())
 	}
 	return nil
 }

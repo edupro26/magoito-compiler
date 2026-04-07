@@ -15,6 +15,18 @@ type lexer struct {
 	tokens   []Token
 	source   string
 	pos      int
+	line     int
+	col      int
+}
+
+type LexError struct {
+	Message string
+	Line    int
+	Col     int
+}
+
+func (e *LexError) Error() string {
+	return fmt.Sprintf("%d:%d: syntax error: %s", e.Line, e.Col, e.Message)
 }
 
 type regexHandler func(lex *lexer, regex *regexp.Regexp)
@@ -22,6 +34,8 @@ type regexHandler func(lex *lexer, regex *regexp.Regexp)
 func createLexer(source string) *lexer {
 	return &lexer{
 		pos:    0,
+		line:   1,
+		col:    1,
 		source: source,
 		tokens: make([]Token, 0),
 		patterns: []regexPattern{
@@ -78,18 +92,27 @@ func Tokenize(source string) ([]Token, error) {
 
 		if !match {
 			// TODO Improve this error handling
-			return nil, fmt.Errorf(
-				"Syntax error: unrecognized token. Remaining input %s\n",
-				lex.remainder(),
-			)
+			return nil, &LexError{
+				Message: fmt.Sprintf("illegal token '%v'", string(lex.source[lex.pos])),
+				Line:    lex.line,
+				Col:     lex.col,
+			}
 		}
 	}
 
-	lex.push(newToken(EOF, "eof"))
+	lex.push(newToken(EOF, "eof", lex.line, lex.col))
 	return lex.tokens, nil
 }
 
 func (lex *lexer) advN(n int) {
+	for i := 0; i < n; i++ {
+		if lex.source[lex.pos+i] == '\n' {
+			lex.line++
+			lex.col = 1
+		} else {
+			lex.col++
+		}
+	}
 	lex.pos += n
 }
 
@@ -107,31 +130,35 @@ func (lex *lexer) atEof() bool {
 
 func defaultHandler(kind Kind, value string) regexHandler {
 	return func(lex *lexer, regex *regexp.Regexp) {
+		line, col := lex.line, lex.col
+		lex.push(newToken(kind, value, line, col))
 		lex.advN(len(value))
-		lex.push(newToken(kind, value))
 	}
 }
 
 func numberHandler(lex *lexer, regex *regexp.Regexp) {
+	line, col := lex.line, lex.col
 	match := regex.FindString(lex.remainder())
-	lex.push(newToken(INT, match))
+	lex.push(newToken(INT, match, line, col))
 	lex.advN(len(match))
 }
 
 func stringHandler(lex *lexer, regex *regexp.Regexp) {
+	line, col := lex.line, lex.col
 	match := regex.FindStringIndex(lex.remainder())
 	literal := lex.remainder()[match[0]+1 : match[1]-1]
-	lex.push(newToken(STRING, literal))
+	lex.push(newToken(STRING, literal, line, col))
 	lex.advN(len(literal) + 2)
 }
 
 func symbolHandler(lex *lexer, regex *regexp.Regexp) {
+	line, col := lex.line, lex.col
 	match := regex.FindString(lex.remainder())
 
 	if kind, exits := reservedMap[match]; exits {
-		lex.push(newToken(kind, match))
+		lex.push(newToken(kind, match, line, col))
 	} else {
-		lex.push(newToken(IDENTIFIER, match))
+		lex.push(newToken(IDENTIFIER, match, line, col))
 	}
 
 	lex.advN(len(match))

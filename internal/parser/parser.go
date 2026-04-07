@@ -14,10 +14,12 @@ type parser struct {
 
 type ParseError struct {
 	Message string
+	Line    int
+	Col     int
 }
 
 func (e *ParseError) Error() string {
-	return e.Message
+	return fmt.Sprintf("%d:%d: syntax error: %s", e.Line, e.Col, e.Message)
 }
 
 func Parse(tokens []lexer.Token) (program *ast.Program, err error) {
@@ -70,16 +72,25 @@ func (p *parser) advance() lexer.Token {
 func (p *parser) expect(kind lexer.Kind) lexer.Token {
 	token := p.at()
 	if token.Kind != kind {
-		panic(&ParseError{Message: fmt.Sprintf(
-			"expected %v, got %v", kind.ToString(), token.Kind.ToString(),
-		)})
+		panic(&ParseError{
+			Message: fmt.Sprintf(
+				"expected '%v', got '%v'", kind.ToString(), token.Kind.ToString(),
+			),
+			Line: token.Line,
+			Col:  token.Col,
+		})
 	}
 	return p.advance()
 }
 
 // errorf panics with a ParseError formatted with the given message.
 func (p *parser) errorf(format string, args ...any) {
-	panic(&ParseError{Message: fmt.Sprintf(format, args...)})
+	token := p.at()
+	panic(&ParseError{
+		Message: fmt.Sprintf(format, args...),
+		Line:    token.Line,
+		Col:     token.Col,
+	})
 }
 
 func (p *parser) parseProgram() *ast.Program {
@@ -100,7 +111,6 @@ func (p *parser) parseDeclaration() ast.Declaration {
 	case lexer.FUN:
 		return p.parseFunDecl()
 	default:
-
 		p.errorf("expected 'const' or 'fun', got %s", p.at().Kind.ToString())
 		return nil
 	}
@@ -146,7 +156,7 @@ func (p *parser) parseParam() string {
 	case lexer.WILDCARD:
 		return p.advance().Value
 	default:
-		p.errorf("expected identifier or _ in parameter list, got %v", tok.Kind.ToString())
+		p.errorf("expected 'identifier' or '_' in parameter list, got %v", tok.Kind.ToString())
 		return ""
 	}
 }

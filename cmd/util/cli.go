@@ -106,11 +106,11 @@ func runFile(filePath string, printAST bool) error {
 
 	tokens, err := lexer.Tokenize(string(bytes))
 	if err != nil {
-		return err
+		return fmt.Errorf("%s:%w", filePath, err)
 	}
 	program, err := parser.Parse(tokens)
 	if err != nil {
-		return fmt.Errorf("syntax error: %w", err)
+		return fmt.Errorf("%s:%w", filePath, err)
 	}
 	fmt.Printf("parsed %d top-level declaration(s)\n", len(program.Declarations))
 

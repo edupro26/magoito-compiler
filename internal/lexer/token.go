@@ -76,12 +76,16 @@ type Kind int
 type Token struct {
 	Kind  Kind
 	Value string
+	Line  int
+	Col   int
 }
 
-func newToken(kind Kind, value string) Token {
+func newToken(kind Kind, value string, line, col int) Token {
 	return Token{
 		Kind:  kind,
 		Value: value,
+		Line:  line,
+		Col:   col,
 	}
 }
 

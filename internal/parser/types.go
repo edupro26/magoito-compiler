@@ -31,13 +31,13 @@ func (p *parser) parseTypeAtom() ast.Type {
 	case lexer.IDENTIFIER:
 		name := p.advance().Value
 		if !validBasicTypes[name] {
-			p.errorf("unknown type %q, expected one of Int, Bool, String, Unit", name)
+			p.errorf("unknown type '%v', expected one of Int, Bool, String, Unit", name)
 		}
 		return &ast.BasicType{Name: name}
 	case lexer.LBRACE:
 		return p.parseRecordType()
 	default:
-		p.errorf("expected type, got %v", tok.Kind.ToString())
+		p.errorf("expected 'type', got %v", tok.Kind.ToString())
 		return nil
 	}
 }
@@ -57,7 +57,7 @@ func (p *parser) parseGroupedType() ast.Type {
 		return &ast.FunctionType{Params: types, Return: ret}
 	}
 	if len(types) > 1 {
-		p.errorf("multi-type group must be followed by ->")
+		p.errorf("multi-type group must be followed by '->'")
 	}
 	return types[0]
 }
