@@ -1,0 +1,6 @@
+--- Author: fc51601, José Sousa
+
+-- functions are not first class citizens
+
+const f : Unit -> Unit = var i : Int = 1
+fun main (_) : Unit -> Unit = print(f)

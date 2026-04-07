@@ -1,0 +1,7 @@
+-- Author: 66358, Gustavo Cardoso
+
+fun countdown (n) : Int -> Unit =
+  var i : Int = n;
+  var u : Unit = while i > 0 do i = i - 1;
+  u
+fun main (_) : Unit -> Unit = print(countdown(5))

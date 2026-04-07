@@ -1,0 +1,9 @@
+-- Author: 59843, Miguel Castelo
+
+-- while returns Unit
+-- it is valid to store it in a Unit variable
+
+fun main (_) : Unit -> Unit =
+  var i : Int = 3;
+  var loop : Unit = while i > 0 do (i = i - 1);
+  print(loop)

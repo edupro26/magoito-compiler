@@ -1,0 +1,10 @@
+-- Author: 59843, Miguel Castelo
+
+fun f (_) : Unit -> Int =
+  var z : Int = 10;
+  var y : Int = z;
+  var x : Int = y;
+  x
+
+fun main (_) : Unit -> Unit =
+  print(f(unit))

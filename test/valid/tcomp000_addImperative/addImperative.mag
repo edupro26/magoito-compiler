@@ -1,0 +1,15 @@
+-- Author: tcomp000, Vasco T. Vasconcelos
+
+fun add (n, m) : (Int, Int) -> Int =
+  var sum : Int = m;
+  while n > 0 do (
+    sum = sum + 1;
+    n = n - 1
+  );
+  sum
+
+fun main (_) : Unit -> Unit = print(add(17, 13))
+
+
+
+

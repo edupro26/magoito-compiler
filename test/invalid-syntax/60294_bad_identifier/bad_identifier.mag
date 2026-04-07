@@ -1,0 +1,2 @@
+-- Author: 60294, Pedro Rosa
+fun 1add (x): Int -> Int = x + 1

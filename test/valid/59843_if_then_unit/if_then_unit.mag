@@ -1,0 +1,8 @@
+-- Author: 59843, Miguel Castelo
+
+-- if-then (no else) sugar of: if exp then exp else unit
+
+fun main (_) : Unit -> Unit =
+  var x : Int = 7;
+  if x > 6 then print("big");
+  if x < 0 then print("negative")

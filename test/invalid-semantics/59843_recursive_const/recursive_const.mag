@@ -1,0 +1,10 @@
+-- Author: 59843, Miguel Castelo
+
+-- const declarations may only use literals, operators, record expressions and projections
+-- A function call is not allowed in a const initialiser
+
+fun double (n) : Int -> Int = n * 2
+
+const result : Int = double(27)
+
+fun main (_) : Unit -> Unit = print(result)

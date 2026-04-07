@@ -1,0 +1,3 @@
+-- Author: 60294, Pedro Rosa
+fun main(_): Unit -> Unit = 
+    print(2 ^ 3 ^ 2)

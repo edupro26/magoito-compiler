@@ -1,0 +1,6 @@
+--- Author: fc51601, José Sousa
+
+-- parameter functions are invoced like "func1(unit)"
+
+fun func1 (_) : Unit -> Unit = print("Is this a lambda?")
+fun main (_) : Unit -> Unit = func1()

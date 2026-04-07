@@ -1,0 +1,7 @@
+-- Author: 58196, Pedro Lopes
+
+-- Missing "=" token, invalidating the SYNTAX
+
+const speed : Int 120
+
+fun main (_) : Unit -> Unit = print(speed)

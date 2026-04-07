@@ -1,0 +1,8 @@
+-- Author: 57163, Guilherme Dias
+-- What andOperation??
+
+fun and(a, b) : (Bool, Bool) -> Bool = 
+	a && b
+
+fun main (_) : Unit -> Unit =
+	print(andOperation(and(a > b, b > c)))

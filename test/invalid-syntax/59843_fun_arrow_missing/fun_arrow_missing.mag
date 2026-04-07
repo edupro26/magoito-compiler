@@ -1,0 +1,7 @@
+-- Author: 59843, Miguel Castelo
+
+-- The function type must include the '->' arrow
+
+fun double (n) : Int Int = n * 2
+
+fun main (_) : Unit -> Unit = print(double(5))

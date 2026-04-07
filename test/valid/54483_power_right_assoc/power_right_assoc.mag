@@ -1,0 +1,6 @@
+-- Author: 54483, Pedro Barata
+
+-- Tests that ^ is right-associative: 2^3^2 = 2^(3^2) = 2^9 = 512
+
+fun main (_) : Unit -> Unit =
+  print(2 ^ 3 ^ 2)

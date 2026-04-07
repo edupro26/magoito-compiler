@@ -1,0 +1,7 @@
+-- Author: 66128, Daniel Sousa
+
+-- Constants must have a type annotation
+
+fun main (_) : Unit -> Unit = 
+    const testString = "Test";
+    print(testString);

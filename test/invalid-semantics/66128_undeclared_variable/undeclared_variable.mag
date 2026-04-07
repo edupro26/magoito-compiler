@@ -1,0 +1,7 @@
+-- Author: 66128, Daniel Sousa
+
+-- Checks that the compiler correctly identifies and reports the use of an undeclared variable.
+
+fun main (_) : Unit -> Unit = 
+    print(undeclared_variable)
+    

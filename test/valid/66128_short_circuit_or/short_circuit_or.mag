@@ -1,0 +1,8 @@
+-- Author: 66128, Daniel Sousa
+
+fun fn_ (_) : Unit -> Bool =
+  print("Called fn");
+  true
+
+fun main (_) : Unit -> Unit =
+  if true || fn_(unit) then print("Called main")

@@ -1,0 +1,4 @@
+-- Author: tcomp000, Vasco T. Vasconcelos
+
+fun main (_) : Unit -> Unit =
+  {user = "tcomp", id = 0 + 0 * 0, un = unit} . un

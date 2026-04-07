@@ -1,0 +1,17 @@
+-- Author: 66494, Tiago Silva
+
+fun fibonacci (n) : Int -> Int =
+    var index : Int = 0;
+    var num : Int = 0; -- Fn
+    var num_index_minus_one : Int = 1; -- Fn-1 - initialized as F1
+    var num_index_minus_two : Int = 0; -- Fn-2 - initialized as F0
+    while index != n do (
+        num = num_index_minus_one + num_index_minus_two;
+        if index > 0 then num_index_minus_two = num_index_minus_one;
+        num_index_minus_one = num;
+        index = index + 1
+    );
+    num
+
+fun main (_) : Unit -> Unit =
+    print(fibonacci(15))

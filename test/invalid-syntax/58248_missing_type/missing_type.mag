@@ -1,0 +1,7 @@
+-- Author: 58248, Afonso Topa 
+-- Missing the type of a declaration, even if obvious fails.
+
+fun double(n) = n * 2
+
+fun main(_) : Unit -> Unit =
+    print(double(5))

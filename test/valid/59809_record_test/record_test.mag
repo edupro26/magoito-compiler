@@ -1,0 +1,6 @@
+-- Author: 59809, Manuel Leitão
+
+const person : {name: String, age: Int} = {name = "Maria", age = 25}
+
+fun main (_) : Unit -> Unit =
+    print(person.age)

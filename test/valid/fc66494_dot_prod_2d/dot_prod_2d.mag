@@ -1,0 +1,10 @@
+-- Author: 66494, Tiago Silva
+
+const vect_a : {vax: Int, vay: Int} = {vax = 3, vay = 4}
+const vect_b : {vbx: Int, vby: Int} = {vbx = 7, vby = 2}
+
+fun dot_prod_2d (a, b) : ({ax: Int, ay: Int}, {bx: Int, by: Int}) -> Int =
+    a.ax*b.bx + a.ay*b.by
+
+fun main (_) : Unit -> Unit =
+    print(dot_prod_2d(vect_a, vect_b))

@@ -1,0 +1,5 @@
+-- Author: 57163, Guilherme Dias
+
+fun functionAsParameter (f, a, b) : (fun, Int, Int) -> fun =
+	f(a,b)
+

@@ -1,0 +1,6 @@
+-- Author: 66128, Daniel Sousa
+
+-- Checks that the compiler correctly identifies and reports the use of a non-record type in a projection.
+
+fun main (_) : Unit -> Unit =
+  print(5.x)

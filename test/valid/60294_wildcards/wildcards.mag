@@ -1,0 +1,4 @@
+-- Author: 60294, Pedro Rosa
+fun discard(_, _): (Int, Bool) -> Unit = unit
+fun main(_): Unit -> Unit = 
+    print(discard(100, true))

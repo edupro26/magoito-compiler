@@ -1,0 +1,8 @@
+-- Author: 59843, Miguel Castelo
+
+-- Precedence: * has priority over +
+-- 3 * 4 = 12
+-- 2 + 12 = 14 
+
+fun main (_) : Unit -> Unit =
+print(2 + 3 * 4)

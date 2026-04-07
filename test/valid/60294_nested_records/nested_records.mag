@@ -1,0 +1,5 @@
+-- Author: 60294, Pedro Rosa
+const myShape: {id: Int, center: {x: Int, y: Int}} = {id = 1, center = {x = 10, y = 20}}
+
+fun main(_): Unit -> Unit =
+    print(myShape.center.y)

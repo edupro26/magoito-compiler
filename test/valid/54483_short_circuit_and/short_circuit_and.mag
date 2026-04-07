@@ -1,0 +1,11 @@
+-- Author: 54483, Pedro Barata
+
+-- Tests short-circuit: false && f(unit) should not call f
+-- f has a side effect (prints), so if it runs the output would differ
+
+fun f (_) : Unit -> Bool =
+  var _ : Unit = print("side-effect");
+  true
+
+fun main (_) : Unit -> Unit =
+  print(false && f(unit))

@@ -1,0 +1,8 @@
+-- Author: 60294, Pedro Rosa
+fun main(_): Unit -> Unit =
+    var i: Int = 3;
+    while i > 0 do (
+        print(i);
+        i = i - 1
+    );
+    print(i)

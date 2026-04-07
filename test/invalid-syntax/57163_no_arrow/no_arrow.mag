@@ -1,0 +1,4 @@
+-- Author: 57163, Guilherme Dias
+-- No complete arrow
+fun noArrow (_) : Unit - Unit 
+	print(1242*2)

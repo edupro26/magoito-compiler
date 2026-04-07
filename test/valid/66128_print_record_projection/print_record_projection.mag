@@ -1,0 +1,7 @@
+-- Author: 66128, Daniel Sousa
+
+fun main (_) : Unit -> Unit = 
+    var record : {x: String, y: String} = {x = "Hello ", y = "World"};
+    print(record.x + record.y)
+
+    

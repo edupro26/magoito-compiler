@@ -1,0 +1,12 @@
+-- Author: 59843, Miguel Castelo
+
+-- only if print representation is nothing
+
+const empty : {} = {}
+
+fun makeEmpty (_) : Unit -> {} = {}
+
+fun main (_) : Unit -> Unit =
+  var e : {} = makeEmpty(unit);
+  print(empty);
+  print("did not print empty")

@@ -1,0 +1,2 @@
+-- Author: 66358, Gustavo Cardoso
+fun main (_) : Unit -> Unit = if true then 5 else false

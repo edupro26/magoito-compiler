@@ -1,0 +1,8 @@
+-- Author: 59809, Manuel Leitão
+
+fun move (p, dx, dy) : ({x: Int, y: Int}, Int, Int) -> {x: Int, y: Int} =
+    {x = p.x + dx, y = p.y + dy}
+
+fun main (_) : Unit -> Unit =
+    var p : {x: Int, y: Int} = {x = 1, y = 2};
+    print(move(p, 3, 4).y)

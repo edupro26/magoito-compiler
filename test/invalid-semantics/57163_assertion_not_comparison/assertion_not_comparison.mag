@@ -1,0 +1,4 @@
+-- Author: 57163, Guilherme Dias
+
+fun recursive (n) : Int -> Int =
+	if n = 0 then 0 else recursive(n-1)

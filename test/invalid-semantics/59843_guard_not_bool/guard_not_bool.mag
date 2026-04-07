@@ -1,0 +1,9 @@
+-- Author: 59843, Miguel Castelo
+
+-- The condition of a while loop must be of type Bool
+
+fun main (_) : Unit -> Unit =
+  var n : Int = 5;
+  while n do (
+    n = n - 1
+  )

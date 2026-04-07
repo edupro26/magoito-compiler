@@ -1,0 +1,8 @@
+-- Author: 66128, Daniel Sousa
+
+-- Checks that the compiler correctly identifies and reports type mismatches in if branches.
+
+fun main (_) : Unit -> Unit = 
+    var test : Int = 5;
+    if test == true then print("true") else print("false")
+    

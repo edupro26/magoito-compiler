@@ -1,0 +1,10 @@
+-- Author: 58196, Pedro Lopes
+
+-- Consts should be able to be evaluated at compile time."
+-- Error expected
+
+fun double (n) : Int -> Int = n * 2
+
+const x : Int = double(5)
+
+fun main (_) : Unit -> Unit = print(x)

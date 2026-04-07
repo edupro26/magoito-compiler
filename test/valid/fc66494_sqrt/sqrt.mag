@@ -1,0 +1,22 @@
+-- Author: 66494, Tiago Silva
+
+fun sqrt(n) : Int -> {} =
+    var low_lim : Int = 1;
+    var high_lim : Int = n;
+    var mid_val : Int = 0;
+    var res : Int = 1;
+
+    while low_lim <= high_lim do (
+        mid_val = low_lim + (high_lim - low_lim) / 2;
+
+        if mid_val ^ 2 <= n then (
+            res = mid_val;
+            low_lim = mid_val + 1 
+        ) else
+            high_lim = mid_val - 1
+    );
+
+    res
+
+fun main (_) : Unit -> Unit =
+    print(sqrt(7))

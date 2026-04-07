@@ -1,0 +1,9 @@
+-- Author: 59809, Manuel Leitão
+
+fun main (_) : Unit -> Unit =
+    var a : Int = 10;
+    var b : Int = 25;
+    var temp : Int = a;
+    a = b;
+    b = temp;
+    print(a)

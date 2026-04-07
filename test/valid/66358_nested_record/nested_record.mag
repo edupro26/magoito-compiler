@@ -1,0 +1,6 @@
+-- Author: 66358, Gustavo Cardoso
+
+const uni : {name: String, dept: {name: String, lead: {name: String, age: Int}}} =
+{name = "Tcomp", dept = {name = "fcul",lead = {name = "Gustavo", age = 21}}}
+
+fun main(_): Unit -> Unit = print(uni.dept.lead.age)

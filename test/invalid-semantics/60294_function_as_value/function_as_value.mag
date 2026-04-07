@@ -1,0 +1,5 @@
+-- Author: 60294, Pedro Rosa
+fun succ (n): Int -> Int = n + 1
+fun main (_): Unit -> Unit = 
+    var myFunc: Int -> Int = succ;
+    unit

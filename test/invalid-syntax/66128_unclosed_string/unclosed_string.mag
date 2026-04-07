@@ -1,0 +1,7 @@
+-- Author: 66128, Daniel Sousa
+
+-- Strings must be closed
+
+fun main (_) : Unit -> Unit = 
+    const unclosedString : String = "This string is not closed;
+    print(unclosedString);

@@ -1,0 +1,6 @@
+--Author 58196, Pedro Lopes
+
+-- 2 + 3 * 4 - 1 = 2 + (3 * 4) - 1 = 13
+
+fun main (_) : Unit -> Unit =
+  print(2 + 3 * 4 - 1)

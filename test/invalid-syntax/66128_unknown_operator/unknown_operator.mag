@@ -1,0 +1,7 @@
+-- Author: 66128, Daniel Sousa
+
+-- The '@' operator is not defined
+
+fun main (_) : Unit -> Unit = 
+    const intValue : Int = 5 @ 3;
+    print(intValue);

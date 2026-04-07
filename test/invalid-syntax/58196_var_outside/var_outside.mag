@@ -1,0 +1,8 @@
+-- Author: 58196, Pedro Lopes
+
+-- Var's cannot be declared outside of a funcftion
+
+var vari : Int = 42
+
+fun main (_) : Unit -> Unit =
+  print(vari)

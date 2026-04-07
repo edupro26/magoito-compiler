@@ -1,0 +1,4 @@
+-- Author: 66358, Gustavo Cardoso
+fun print (x) : Int -> Int = x + 1
+
+fun main (_) : Unit -> Unit = print(6)

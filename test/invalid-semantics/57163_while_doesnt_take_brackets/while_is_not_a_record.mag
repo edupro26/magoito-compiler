@@ -1,0 +1,8 @@
+-- Author: 57163, Guilherme Dias
+
+fun main (_) : Unit -> Unit =
+	var top : Int = 0;
+	while top > 0 do {
+		top = top - 1
+	};
+	print(top)

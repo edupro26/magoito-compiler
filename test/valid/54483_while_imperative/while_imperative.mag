@@ -1,0 +1,15 @@
+-- Author: 54483, Pedro Barata
+
+-- Tests while loop, variable mutation, and semicolon sequencing
+-- Computes factorial of 5 imperatively
+
+fun factorial (n) : Int -> Int =
+  var result : Int = 1;
+  while n > 1 do (
+    result = result * n;
+    n = n - 1
+  );
+  result
+
+fun main (_) : Unit -> Unit =
+  print(factorial(5))

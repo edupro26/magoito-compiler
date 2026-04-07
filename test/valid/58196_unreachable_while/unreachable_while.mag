@@ -1,0 +1,11 @@
+-- Author: 58196, Pedro Lopes
+
+-- The expression sideEffec(99) should not be evaluated,
+
+fun sideEffect (x) : Int -> Bool =
+  var _ : Unit = print(x);
+  true
+
+fun main (_) : Unit -> Unit =
+  while false do sideEffect(99);
+  print(1)

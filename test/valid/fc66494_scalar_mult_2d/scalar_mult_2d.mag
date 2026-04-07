@@ -1,0 +1,10 @@
+-- Author: 66494, Tiago Silva
+
+const num : Int = -3
+const vect : {x: Int, y: Int} = {x = -1, y = 5}
+
+fun scalar_mult_2d (n, v) : (Int, {vx: Int, vy: Int}) -> {x: Int, y: Int} =
+    {x = n*v.vx, y = n*v.vy}
+
+fun main (_) : Unit -> Unit =
+    print(scalar_mult_2d(num, vect).y)

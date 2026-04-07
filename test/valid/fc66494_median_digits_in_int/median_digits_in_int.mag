@@ -1,0 +1,35 @@
+-- Author: 66494, Tiago Silva
+
+fun median_digits(n) : Int -> Int =
+    var num_length : Int = 0;
+    var num_middle : Int = 0;
+    var mod_amount : Int = 0;
+    var count : Int = 0;
+    var temp : Int = n;
+
+    if temp < 0 then temp = temp * -1;
+
+    while temp > 0 do (
+        temp = temp / 10;
+        num_length = num_length + 1
+    );
+
+    if num_length % 2 == 0 then (
+        num_middle = (num_length/2)+1;
+        mod_amount = 100
+    ) else (
+        num_middle = (num_length+1)/2;
+        mod_amount = 10
+    );
+
+    count = num_length;
+    temp = n;
+    while count > middle do (
+        temp = temp / 10;
+        count = count - 1
+    );
+
+    temp % mod_amount
+
+fun main (_) : Unit -> Unit =
+    print(median_digits(-123456))

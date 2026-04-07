@@ -1,0 +1,4 @@
+--- Author: fc51601, José Sousa
+
+const r : {x: Int, x: Int, x: Int} = {x = 0, x = 1, x = 2}
+fun main (_) : Unit -> Unit = print(r)

@@ -1,0 +1,10 @@
+-- Author: 59809, Manuel Leitão
+
+fun isqrt (n) : Int -> Int =
+    var x : Int = n;
+    while x * x > n do
+        x = (x + n / x) / 2;
+    x
+
+fun main (_) : Unit -> Unit =
+    print(isqrt(144))

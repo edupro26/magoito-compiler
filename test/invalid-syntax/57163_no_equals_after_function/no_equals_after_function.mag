@@ -1,0 +1,4 @@
+-- Author: 57163, Guilherme Dias
+-- No equals after function
+fun noEquals (_) : Unit -> Unit 
+	print(1242*2)

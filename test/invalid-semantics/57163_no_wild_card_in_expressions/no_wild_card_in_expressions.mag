@@ -1,0 +1,3 @@
+-- Author: 57163, Guilherme Dias
+
+const _ : Int = 1242 * _

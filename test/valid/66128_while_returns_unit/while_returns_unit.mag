@@ -1,0 +1,6 @@
+-- Author: 66128, Daniel Sousa
+
+fun main (_) : Unit -> Unit =
+  var i : Int = 5;
+  var x : Unit = while i > 0 do i = i - 1;
+  print(x)

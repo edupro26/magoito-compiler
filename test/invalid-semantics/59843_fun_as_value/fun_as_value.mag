@@ -1,0 +1,10 @@
+-- Author: 59843, Miguel Castelo
+
+-- MAGOITO is a first-order language: functions are not first-class values
+-- Attempting to put a function reference in a record field shoould fail
+
+fun double (n) : Int -> Int = n * 2
+
+fun main (_) : Unit -> Unit =
+  var x : Int = double;
+  print(x)

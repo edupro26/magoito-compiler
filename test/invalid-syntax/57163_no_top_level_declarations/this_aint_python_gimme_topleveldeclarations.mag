@@ -1,0 +1,6 @@
+-- Author: 57163, Guilherme Dias
+
+var id : Int = 10
+var multiplier : Int = 10
+
+print(id * multiplier)

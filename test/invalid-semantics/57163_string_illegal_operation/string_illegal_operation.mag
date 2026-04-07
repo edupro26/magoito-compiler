@@ -1,0 +1,5 @@
+-- Author: 57163, Guilherme Dias
+
+fun main (_) : Unit -> Unit =
+    var str : String = "val";
+    str = "2" + 2 -- This ain't JavaScript

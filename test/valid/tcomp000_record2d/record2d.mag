@@ -1,0 +1,9 @@
+-- Author: tcomp000, Vasco T. Vasconcelos
+
+const origin : {x: Int, y: Int} = {x = 0, y = 0}
+
+fun move (r, deltax, deltay) : ({x: Int, y: Int}, Int, Int) -> {y: Int, x: Int}  =
+  {x = r.x + deltax, y = r.y + deltay}
+
+fun main (_) : Unit -> Unit =
+   print(move(origin, 3, 5).x)

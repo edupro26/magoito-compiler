@@ -1,0 +1,6 @@
+-- Author: tcomp000, Vasco T. Vasconcelos
+
+const maxSpeed : Int = 120
+const fever : Int = 37 + 5
+
+fun main (_) : Unit -> Unit = print(maxSpeed * fever)

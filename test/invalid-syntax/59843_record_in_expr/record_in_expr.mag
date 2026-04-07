@@ -1,0 +1,8 @@
+-- Author: 59843, Miguel Castelo
+
+-- {x : 1} is invalid as an expression
+-- it should be {x = 1}
+
+fun main (_) : Unit -> Unit =
+  var pt : {x : Int, y : Int} = {x : 1, y : 2};
+  print(pt.x)

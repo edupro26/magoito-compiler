@@ -1,0 +1,9 @@
+-- Author: 58196, Pedro Lopes
+
+-- Every program needs to have a main function
+
+fun double (n) : Int -> Int = n * 2
+
+fun square (n) : Int -> Int = n * n
+
+const answer : Int = 42

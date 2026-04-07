@@ -1,0 +1,4 @@
+-- Author: 59809, Manuel Leitão
+
+fun main (_) : Unit -> Unit =
+    if 5 == "five" then print(1) else print(0)

@@ -1,0 +1,6 @@
+-- Author: 66494, Tiago Silva
+
+const #_123 : String = "abc"
+
+fun main (_) : Unit -> Unit =
+    print(#_123)

@@ -1,0 +1,3 @@
+-- Author: 60294, Pedro Rosa
+fun getFive(_): Unit -> Int = 5
+const five: Int = getFive(unit)

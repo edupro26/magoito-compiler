@@ -1,0 +1,5 @@
+-- Author: 60294, Pedro Rosa
+const pt: {x: Int, y: Int} = {y = 20, x = 10}
+fun get_y (r): {y: Int, x: Int} -> Int = r.y
+fun main(_): Unit -> Unit = 
+    print(get_y(pt))

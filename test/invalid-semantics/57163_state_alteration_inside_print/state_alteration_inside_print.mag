@@ -1,0 +1,4 @@
+-- Author: 57163, Guilherme Dias
+
+const n : Int = 10
+const loop : Unit = while n > 0 do print(n = n - 1) 

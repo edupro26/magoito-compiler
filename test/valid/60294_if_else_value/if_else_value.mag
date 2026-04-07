@@ -1,0 +1,4 @@
+-- Author: 60294, Pedro Rosa
+fun main(_): Unit -> Unit =
+    var x: Int = if 5 > 3 then 10 else 20;
+    print(x)

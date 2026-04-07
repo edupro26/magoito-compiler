@@ -1,0 +1,6 @@
+-- Author: 59809, Manuel Leitão
+
+fun main (_) : Unit -> Unit =
+    var i : Int = 5;
+    while i do
+        i = i - 1

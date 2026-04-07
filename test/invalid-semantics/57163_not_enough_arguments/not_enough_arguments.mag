@@ -1,0 +1,10 @@
+-- Author: 57163, Guilherme Dias
+
+fun cicle (n, m, p, q) : (Int, Int, Int, Int) -> Unit =
+	while (n > 0) do (
+		n = n - m;
+		print(n * m * p * q)
+	)
+
+fun main (_) : Unit -> Unit =
+    cicle(10,1,7)

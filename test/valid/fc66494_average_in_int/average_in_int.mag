@@ -1,0 +1,14 @@
+-- Author: 66494, Tiago Silva
+
+fun average_in_int (n) : Int -> Int =
+    var sum_digits : Int = 0;
+    var count : Int = 0;
+    while n > 0 do (
+        sum_digits = sum_digits + n % 10;
+        n = n / 10;
+        count = count + 1
+    );
+    sum_digits / count
+
+fun main (_) : Unit -> Unit =
+    print(average_in_int(257))

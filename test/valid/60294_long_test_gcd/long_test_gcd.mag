@@ -1,0 +1,36 @@
+-- Author: 60294, Pedro Rosa
+-- Este programa calcula o Maximo Divisor Comum (MDC)
+-- de dois numeros utilizando duas abordagens distintas
+-- para demonstrar as capacidades imperativas e funcionais.
+
+-- Abordagem Funcional (Recursiva)
+fun gcd_rec(a, b): (Int, Int) -> Int =
+    if b == 0 then a
+    else gcd_rec(b, a % b)
+
+-- Abordagem Imperativa (Com While e Mutacoes)
+fun gcd_imp(a, b): (Int, Int) -> Int =
+    var x: Int = a;
+    var y: Int = b;
+    var temp: Int = 0;
+    while y > 0 do (
+        temp = y;
+        y = x % y;
+        x = temp
+    );
+    x
+
+-- Funcao principal que orquestra a execucao
+fun main(_): Unit -> Unit =
+    var num1: Int = 48;
+    var num2: Int = 18;
+    var res1: Int = gcd_rec(num1, num2);
+    var res2: Int = gcd_imp(num1, num2);
+    
+    -- Agrupa os resultados num Record
+    var results: {rec: Int, imp: Int} = {rec = res1, imp = res2};
+    
+    if results.rec == results.imp then
+        print(results.rec)
+    else
+        print(-1)

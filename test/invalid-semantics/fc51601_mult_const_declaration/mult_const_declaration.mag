@@ -1,0 +1,7 @@
+--- Author: fc51601, José Sousa
+
+const x : Int = 1
+const x : Int = 2
+
+fun main (_) : Unit -> Unit =
+print(x)

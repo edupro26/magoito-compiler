@@ -1,0 +1,9 @@
+-- Author: 54483, Pedro Barata
+
+-- Semantic error: function declared to return Int but body is Bool
+
+fun answer (_) : Unit -> Int =
+  true
+
+fun main (_) : Unit -> Unit =
+  print(answer(unit))

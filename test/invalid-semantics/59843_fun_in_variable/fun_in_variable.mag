@@ -1,0 +1,7 @@
+-- Author: 59843, Miguel Castelo
+
+-- MAGOITO is a first-order language: functions are NOT first-class values
+-- They cannot be stored in variables or records, nor passed as arguments
+
+fun f (x) : Int -> Int = x + 1
+const y : Int = f(3)

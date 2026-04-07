@@ -1,0 +1,6 @@
+-- Author: 57163, Guilherme Dias
+-- Can't use unit as id
+
+fun main (_) : Unit -> Unit = 
+	var unit = print(10);
+	print(unit)

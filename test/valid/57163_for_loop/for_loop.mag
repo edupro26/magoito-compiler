@@ -1,0 +1,14 @@
+-- Author: 57163, Guilherme Dias
+
+
+fun increment(n, surplus) : (Int, Int) -> Int =
+	if surplus == 0 then n else increment(n+1,surplus-1)
+
+fun for(i,max,inc) : (Int, Int, Int) -> Unit =
+	while i < max do (
+		print(i);
+		increment(i,inc)
+	)
+
+fun main (_) : Unit -> Unit =
+	for(0, 10, 1)

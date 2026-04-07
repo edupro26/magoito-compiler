@@ -1,0 +1,8 @@
+-- Author: 58196, Pedro Lopes
+
+-- Tests the power symbol (^) precendence.
+-- expression should evaluate to 80 ((2^2^2)*5)
+
+fun main(_) : Unit -> Unit =
+	print(2^2^2*5)
+    

@@ -1,0 +1,12 @@
+-- Author: 66358, Gustavo Cardoso
+
+fun countFizzBuzz (n) : Int -> Int =
+  var i : Int = 1;
+  var count : Int = 0;
+  while i <= n do (
+    if i % 3 == 0 || i % 5 == 0 then count = count + 1;
+    i = i + 1
+  );
+  count
+
+fun main (_) : Unit -> Unit = print(countFizzBuzz(15))

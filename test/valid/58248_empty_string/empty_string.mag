@@ -1,0 +1,5 @@
+-- Author: 58248, Afonso Topa 
+
+fun main(_) : Unit -> Unit =
+    print("")
+   

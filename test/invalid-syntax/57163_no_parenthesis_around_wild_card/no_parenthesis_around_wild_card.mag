@@ -1,0 +1,6 @@
+-- Author: 57163, Guilherme Dias
+-- No parenthesis around wild card
+fun noParenthesis _ : Unit -> Unit =
+	print(1242)
+
+

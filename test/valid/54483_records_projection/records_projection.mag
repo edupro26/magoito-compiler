@@ -1,0 +1,8 @@
+-- Author: 54483, Pedro Barata
+
+-- Tests record creation, field order irrelevance, and projection
+
+const pt : {x: Int, y: Int} = {y = 10, x = 3}
+
+fun main (_) : Unit -> Unit =
+  print(pt.x)

@@ -1,0 +1,8 @@
+-- Author: tcomp000, Vasco T. Vasconcelos
+
+fun succ (n) : Int -> Int = n + 1
+
+fun add (n, m) : (Int, Int) -> Int =
+  if n == 0 then m else succ(add (n - 1, m))  
+
+fun main (_) : Unit -> Unit = print(add(17, 13))

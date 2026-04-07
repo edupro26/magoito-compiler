@@ -1,0 +1,6 @@
+-- Author: 66358, Gustavo Cardoso
+
+fun t (x) : Int -> Unit =
+  if x > 100 then print(100);
+  if x < 0 then print(0)
+fun main (_) : Unit -> Unit = t(200)

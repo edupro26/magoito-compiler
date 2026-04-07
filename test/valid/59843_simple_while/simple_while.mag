@@ -1,0 +1,10 @@
+-- Author: 59843, Miguel Castelo
+
+fun biggerThanFive (n) : Int -> Int =
+  while n < 6 do (
+    n = n + 1
+  );
+  n
+
+fun main (_) : Unit -> Unit =
+  print(countdown(3))

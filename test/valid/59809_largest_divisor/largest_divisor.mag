@@ -1,0 +1,12 @@
+-- Author: 59809, Manuel Leitão
+
+fun largestDivisor (n) : Int -> Int =
+    var i : Int = n - 1;
+    var found : Bool = false;
+    while i > 1 && !found do (
+        if n % i == 0 then found = true else i = i - 1
+    );
+    i
+
+fun main (_) : Unit -> Unit =
+    print(largestDivisor(36))

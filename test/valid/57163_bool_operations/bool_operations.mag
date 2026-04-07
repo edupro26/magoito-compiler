@@ -1,0 +1,10 @@
+-- Author: 57163, Guilherme Dias
+
+const t : Bool = true
+const f : Bool = false
+
+
+fun main (_) : Unit -> Unit =
+    if !t then print(f);
+    if !f then print(t);
+    unit

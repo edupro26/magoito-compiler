@@ -1,0 +1,10 @@
+-- Author: 59809, Manuel Leitão
+
+fun xor (a, b) : (Bool, Bool) -> Bool =
+    (a || b) && !(a && b)
+
+fun main (_) : Unit -> Unit =
+    var r1 : Bool = xor(true, false);
+    var r2 : Bool = xor(true, true);
+    var r3 : Bool = xor(false, false);
+    if r1 && !r2 && !r3 then print("OK") else print("NOK")

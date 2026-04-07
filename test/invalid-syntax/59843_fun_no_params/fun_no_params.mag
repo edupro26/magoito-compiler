@@ -1,0 +1,8 @@
+-- Author: 59843, Miguel Castelo
+
+-- Functions must have at least one parameter
+-- but this should work:  fun id (_) : Unit -> Unit
+
+fun hello () : Unit -> Unit = print("hello")
+
+fun main (_) : Unit -> Unit = hello(unit)

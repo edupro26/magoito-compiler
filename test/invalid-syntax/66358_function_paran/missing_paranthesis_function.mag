@@ -1,0 +1,3 @@
+-- Author: 66358, Gustavo Cardoso
+
+fun succ n : Int -> Int = n + 1

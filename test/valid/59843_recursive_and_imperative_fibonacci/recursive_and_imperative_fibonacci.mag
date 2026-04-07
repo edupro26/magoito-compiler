@@ -1,0 +1,30 @@
+-- Author: 59843, Miguel Castelo
+
+-- Recursive Fibonacci 
+fun fibRec (n) : Int -> Int =
+  if n == 0 then 0
+  else if n == 1 then 1
+  else fibRec(n - 1) + fibRec(n - 2)
+
+-- Imperative Fibonacci
+fun fibIter (n) : Int -> Int =
+  if n == 0 then 0
+  else
+    var a : Int = 0;
+    var b : Int = 1;
+    var i : Int = 1;
+    while i < n do (
+      var tmp : Int = b;
+      b = a + b;
+      a = tmp;
+      i = i + 1
+    );
+    b
+
+-- Check that both implementations agree for several values
+fun check (n) : Int -> Bool =
+  fibRec(n) == fibIter(n)
+
+fun main (_) : Unit -> Unit =
+  -- Verify recursive and iterative give the same output
+  if check(12) then print(144)

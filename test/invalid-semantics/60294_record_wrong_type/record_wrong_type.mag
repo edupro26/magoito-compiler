@@ -1,0 +1,2 @@
+-- Author: 60294, Pedro Rosa
+const myRec: {id: Int, user: String} = {user="admin", id="0"}

@@ -1,0 +1,7 @@
+-- Author: 58248, Afonso Topa 
+-- Leading zeroes are not allowed
+
+const n : Int = 010
+
+fun main(_) : Unit -> Unit = print(n)
+   

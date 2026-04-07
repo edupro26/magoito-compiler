@@ -1,0 +1,7 @@
+-- Author: 54483, Pedro Barata
+
+-- if-then with no else is sugar for if-then-else unit
+-- Result should be unit since condition is false
+
+fun main (_) : Unit -> Unit =
+  print(if false then print("nope"))

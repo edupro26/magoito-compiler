@@ -1,0 +1,6 @@
+-- Author: 66358, Gustavo Cardoso
+
+fun f (_) : Unit -> Int =
+  var x : Int = 4;
+  5
+fun main (_) : Unit -> Unit = print(f(unit))

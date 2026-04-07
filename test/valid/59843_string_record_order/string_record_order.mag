@@ -1,0 +1,13 @@
+-- Author: 59843, Miguel Castelo
+
+-- Record field order is irrelevant
+-- {name: String, age: Int}
+-- {age: Int, name: String}
+-- are the same type
+
+fun hello (person) : {name : String, age : Int} -> String =
+  person.name
+
+fun main (_) : Unit -> Unit =
+  var p : {age : Int, name : String} = {name = "Miguel", age = 21};
+  print(hello(p))

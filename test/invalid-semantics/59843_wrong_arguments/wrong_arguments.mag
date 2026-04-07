@@ -1,0 +1,7 @@
+-- Author: 59843, Miguel Castelo
+
+-- f takes two arguments not one
+
+fun f (x, y) : (Int, Int) -> Int = x + y
+
+fun main (_) : Unit -> Unit = print(f(1))

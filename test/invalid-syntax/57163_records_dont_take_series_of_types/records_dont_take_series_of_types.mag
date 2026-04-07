@@ -1,0 +1,3 @@
+-- Author: 57163, Guilherme Dias
+
+const val : {id1 : Int, id2 : (Int, Int, Int)} = {id1 = 10, id2 = 20}

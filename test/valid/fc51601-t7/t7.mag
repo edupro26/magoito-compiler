@@ -1,0 +1,7 @@
+--- Author: fc51601, José Sousa
+
+const box : {point: {x: Int, y: Int}, name: String} =
+{point = {x = 1, y = 2}, name = "A"}
+
+fun main (_) : Unit -> Unit =
+print(box.point.x)

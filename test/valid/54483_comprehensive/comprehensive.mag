@@ -1,0 +1,49 @@
+-- Author: 54483, Pedro Barata
+
+-- Comprehensive test: nested records, recursion, imperative loops, sequencing
+-- Demonstrates many features of MAGOITO in a single program
+
+-- A 2D point type
+
+const origin : {x: Int, y: Int} = {x = 0, y = 0}
+
+
+-- Move a point by a delta
+
+fun move (p, dx, dy) : ({x: Int, y: Int}, Int, Int) -> {x: Int, y: Int} =
+  {x = p.x + dx, y = p.y + dy}
+
+
+-- Manhattan distance from origin
+
+fun manhattan (p) : {x: Int, y: Int} -> Int =
+  var ax : Int = if p.x < 0 then 0 - p.x else p.x;
+  var ay : Int = if p.y < 0 then 0 - p.y else p.y;
+  ax + ay
+
+
+-- Sum of integers from 1 to n, imperatively
+
+fun sumTo (n) : Int -> Int =
+  var acc : Int = 0;
+  var i : Int = 1;
+  while i <= n do (
+    acc = acc + i;
+    i = i + 1
+  );
+  acc
+
+
+-- Recursive fibonacci
+
+fun fib (n) : Int -> Int =
+  if n <= 1 then n else fib(n - 1) + fib(n - 2)
+
+fun main (_) : Unit -> Unit =
+  -- Move origin to (3, -4), manhattan distance = 7
+  var p : {x: Int, y: Int} = move(origin, 3, -4);
+  var dist : Int = manhattan(p);
+  -- sumTo(7) = 28, fib(6) = 8, 28 - 8 = 20
+  var s : Int = sumTo(dist);
+  var f : Int = fib(6);
+  print(s - f)

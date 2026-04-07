@@ -1,0 +1,11 @@
+-- Author: 57163, Guilherme Dias
+
+const c0 : Int = 3
+const c1 : Int = 4
+
+fun pythagoras(a, b) : (Int, Int) -> Int =
+	a ^ 2 + b ^ 2
+
+fun main (_) : Unit -> Unit =
+	print("sqrt of :");
+	print(pythagoras(c0,c1))

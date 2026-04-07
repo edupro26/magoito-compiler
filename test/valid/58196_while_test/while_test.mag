@@ -1,0 +1,15 @@
+-- Author: 58196, Pedro Lopes
+
+-- Checks what happens if the while condition changes during the loop
+-- The program should only evaluate the condition once a loop is completed,
+-- Not during it 
+
+fun main (_) : Unit -> Unit =
+  var condition : Int = 1;
+  while condition > 0 do (
+    print("Entered Loop");
+    condition = condition - 1;
+    print("Continued after condition no longer valid, sucess")
+  );
+  print("This should be the third message")
+  

@@ -1,0 +1,5 @@
+-- Author: 57163, Guilherme Dias
+
+fun main (_) : Unit -> Unit = 
+	var telm = 10;
+	print (telm)

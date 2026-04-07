@@ -1,0 +1,9 @@
+-- Author: 59843, Miguel Castelo
+
+-- Constants cannot be declared twice, even with different types
+-- The second declaration of 'limit' is invalid
+
+const limit : Int = 100
+const limit : Bool = true
+
+fun main (_) : Unit -> Unit = print(limit)

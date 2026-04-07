@@ -1,0 +1,40 @@
+-- Author: 57163, Guilherme Dias
+
+const emptyRecord : {} = {} --Just because
+const lineA : {row1: Int, row2: Int, row3: Int} = {row1 = 1, row2 = 2, row3 = 3}
+const lineB : {row1: Int, row2: Int, row3: Int} = {row1 = 4, row2 = 5, row3 = 6}
+const lineC : {row1: Int, row2: Int, row3: Int} = {row1 = 7, row2 = 8, row3 = 9}
+
+
+const matrix : { line1 : {row1: Int, row2: Int, row3: Int}, line2 : {row1: Int, row2: Int, row3: Int}, line3 : {row1: Int, row2: Int, row3: Int} } = {line1= lineA, line2= lineB, line3= lineC }
+
+fun positive(matrix) : { line1 : {row1: Int, row2: Int, row3: Int}, line2 : {row1: Int, row2: Int, row3: Int}, line3 : {row1: Int, row2: Int, row3: Int} } -> Int =
+	var a : Int = matrix.line1.row1 * matrix.line2.row2 * matrix.line3.row3;
+	var b : Int = matrix.line1.row2 * matrix.line2.row3 * matrix.line3.row1;
+	var c : Int = matrix.line1.row3 * matrix.line2.row1 * matrix.line3.row2;
+	a + b + c
+
+fun negative(matrix) : { line1 : {row1: Int, row2: Int, row3: Int}, line2 : {row1: Int, row2: Int, row3: Int}, line3 : {row1: Int, row2: Int, row3: Int} } -> Int =
+	var a : Int = matrix.line1.row3 * matrix.line2.row2 * matrix.line3.row1;
+	var b : Int = matrix.line1.row1 * matrix.line2.row3 * matrix.line3.row2;
+	var c : Int = matrix.line1.row2 * matrix.line2.row1 * matrix.line3.row3;
+	-(a + b + c)
+
+fun det(matrix) : { line1 : {row1: Int, row2: Int, row3: Int}, line2 : {row1: Int, row2: Int, row3: Int}, line3 : {row1: Int, row2: Int, row3: Int} } -> Int =
+	positive(matrix) + negative(matrix)
+
+fun printMatrixLine(line) : {row1: Int, row2: Int, row3: Int} -> Unit =
+	print(line.row1 * 100 + line.row2 * 10 + line.row3)
+	-- print("\n"); print(line.row2); print("\n"); print(line.row3); print("\n")
+
+fun printMatrix(matrix) : { line1 : {row1: Int, row2: Int, row3: Int}, line2 : {row1: Int, row2: Int, row3: Int}, line3 : {row1: Int, row2: Int, row3: Int} } -> Unit =
+	printMatrixLine(matrix.line1);
+	printMatrixLine(matrix.line2);
+	printMatrixLine(matrix.line3)
+
+fun main(_) : Unit -> Unit =
+	var determinant : Int = det(matrix);
+	print("This is the determinant for the following matrix");
+	printMatrix(matrix);
+	print("det = ");
+	print(determinant)

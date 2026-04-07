@@ -1,0 +1,8 @@
+-- Author: 54483, Pedro Barata
+
+-- Semantic error: assigning a Bool to an Int variable
+
+fun main (_) : Unit -> Unit =
+  var x : Int = 10;
+  x = false;
+  print(x)

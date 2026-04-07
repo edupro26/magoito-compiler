@@ -1,0 +1,7 @@
+-- Author: 58196, Pedro Lopes
+
+-- Type of condition should be a boolean
+-- In this language, 1, 0 and -1 can not replace booleans 
+
+fun main (_) : Unit -> Unit =
+  if 1 then print(42) else print(0)

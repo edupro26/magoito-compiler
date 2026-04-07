@@ -1,0 +1,7 @@
+-- Author: 59809, Manuel Leitão
+
+fun fact (n) : Int -> Int =
+    if n == 0 then 1 else n * fact(n - 1)
+
+fun main (_) : Unit -> Unit =
+    print(fact(5))

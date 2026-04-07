@@ -1,0 +1,13 @@
+-- Author: 66494, Tiago Silva
+
+const n : Int = 7
+const i : Int = n / 2
+
+fun isPrime(num, iter) : (Int, Int) -> Bool =
+    if num < 2 then false else
+        if num == 2 || iter == 1 then true else
+            if num % iter == 0 then false else
+                isPrime(num, iter-1)
+
+fun main (_) : Unit -> Unit =
+    print(isPrime(n,i))

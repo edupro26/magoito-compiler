@@ -1,0 +1,6 @@
+-- Author: 66128, Daniel Sousa
+
+fun main (_) : Unit -> Unit =
+    var x : Int = 0;
+    true || (x = 10);
+    print(x)

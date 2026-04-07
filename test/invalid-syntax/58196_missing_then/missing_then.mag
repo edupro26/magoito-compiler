@@ -1,0 +1,8 @@
+-- Author: 58196, Pedro Lopes
+
+-- The language does not mandate the "else" toke on an if clause,
+-- but it does mandate a "then" token, leading this test to fail 
+
+fun abs (n) : Int -> Int = if n >= 0 n else -n
+
+fun main (_) : Unit -> Unit = print(abs(-1))

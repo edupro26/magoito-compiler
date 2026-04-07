@@ -1,0 +1,4 @@
+-- Author: 66494, Tiago Silva
+
+fun main (_) : Unit -> Unit =
+    print(funky_func(3))

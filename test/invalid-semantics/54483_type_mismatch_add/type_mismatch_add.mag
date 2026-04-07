@@ -1,0 +1,6 @@
+-- Author: 54483, Pedro Barata
+
+-- Semantic error: cannot add Int and Bool
+
+fun main (_) : Unit -> Unit =
+  print(1 + true)

@@ -1,0 +1,8 @@
+-- Author: 58196, Pedro Lopes
+
+-- Tests the power symbol (^) precendence among itself
+-- 2 ^ 3 ^ 2 must parse as 2 ^ (3 ^ 2) = 2 ^ 9 = 512, instead of (2 ^ 3) ^ 2 = 8 ^ 2 = 64.
+
+
+fun main (_) : Unit -> Unit =
+  print(2 ^ 3 ^ 2)

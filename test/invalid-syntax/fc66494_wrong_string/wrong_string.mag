@@ -1,0 +1,6 @@
+-- Author: 66494, Tiago Silva
+
+const x : String = "str'
+
+fun main (_) : Unit -> Unit =
+    print(x)

@@ -1,0 +1,8 @@
+-- Author: 66128, Daniel Sousa
+
+fun fn (_, _) : (Unit, Bool) -> Unit = 
+    print("Called fn")
+
+fun main (_) : Unit -> Unit = 
+    fn(unit, true)
+    

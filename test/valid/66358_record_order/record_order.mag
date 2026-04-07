@@ -1,0 +1,5 @@
+-- Author: 66358, Gustavo Cardoso
+
+const origin : {y: Int, x: Int} = {y = 0, x = 0}
+fun swap (p) : ({x: Int, y: Int}) -> {y: Int, x: Int} = {y = p.x, x = p.y}
+fun main (_) : Unit -> Unit =print(swap({x = 3, y = 7}).x)

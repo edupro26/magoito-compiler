@@ -1,0 +1,7 @@
+-- Author: 66128, Daniel Sousa
+
+-- Integers must be valid, and cannot contain letters
+
+fun main (_) : Unit -> Unit = 
+    const invalidInt : Int = --3;
+    print(invalidInt);

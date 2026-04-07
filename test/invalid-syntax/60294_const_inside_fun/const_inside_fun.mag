@@ -1,0 +1,9 @@
+-- Author: 60294, Pedro Rosa
+-- A linguagem MAGOITO não permite declarações de topo (const) dentro de funções.
+
+fun calcArea(side) : Int -> Int =
+    const multiplier : Int = 2;
+    side * side * multiplier
+
+fun main(_) : Unit -> Unit = 
+    print(calcArea(5))

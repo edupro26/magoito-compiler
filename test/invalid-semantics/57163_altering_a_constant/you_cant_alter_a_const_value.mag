@@ -1,0 +1,12 @@
+-- Author: 57163, Guilherme Dias
+-- Maybe since const is a highlevel declaration and not an expression,
+-- this might be a syntatical error
+
+const val : Int = 10
+
+const str : String = "MY STRING"
+
+fun main (_) : Unit -> Unit =
+    val = val * val; -- Can't alter constant value!
+    print(str);
+    print(val)

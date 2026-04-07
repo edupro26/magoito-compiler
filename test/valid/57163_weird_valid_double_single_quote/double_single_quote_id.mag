@@ -1,0 +1,10 @@
+-- Author: 57163, Guilherme Dias
+
+const weird''valid'var : Int = 10 * -1 + 19 * 2 ^ 10 - 1
+
+const some_other_constant : String = "I do compile!"
+
+fun main (_) : Unit -> Unit = 
+	var num : Int = weird''valid'var * 0 + 10;
+	print(num);
+	print(some_other_constant)

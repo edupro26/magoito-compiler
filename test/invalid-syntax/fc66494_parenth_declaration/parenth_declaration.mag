@@ -1,0 +1,6 @@
+-- Author: 66494, Tiago Silva
+
+const (x) : Int = 5
+
+fun main (_) : Unit -> Unit =
+    print(x)

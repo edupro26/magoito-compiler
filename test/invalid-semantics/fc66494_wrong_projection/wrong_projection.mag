@@ -1,0 +1,7 @@
+-- Author: 66494, Tiago Silva
+
+const x : Int = 1
+const rec : {y:Int, z:Int} = {y=2,z=3}
+
+fun main (_) : Unit -> Unit =
+    print(rec.x)

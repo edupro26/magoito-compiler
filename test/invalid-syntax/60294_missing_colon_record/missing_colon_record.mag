@@ -1,0 +1,2 @@
+-- Author: 60294, Pedro Rosa
+const pt: {x = Int, y = Int} = {x=0, y=0}

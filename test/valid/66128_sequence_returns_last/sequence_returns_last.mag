@@ -1,0 +1,4 @@
+-- Author: 66128, Daniel Sousa
+
+fun main (_) : Unit -> Unit =
+    print(1; 2; 3)

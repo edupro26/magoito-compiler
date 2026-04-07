@@ -1,0 +1,13 @@
+-- Author: 66494, Tiago Silva
+
+fun reverse_int (n) : Int -> Int =
+    var r : Int = 0;
+    while n > 0 do (
+        r = r * 10;
+        r = r + (n % 10);
+        n = n / 10
+    );
+    r
+
+fun main (_) : Unit -> Unit =
+    print(reverse_int(120))

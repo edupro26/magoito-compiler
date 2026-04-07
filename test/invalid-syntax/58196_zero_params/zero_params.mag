@@ -1,0 +1,7 @@
+-- Author: 58196, Pedro Lopes
+
+-- Every function needs at least one parameter, even if it is a wildcard
+
+fun greet () : Unit -> String = "hello"
+
+fun main (_) : Unit -> Unit = print(greet(unit))

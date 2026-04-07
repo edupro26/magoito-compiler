@@ -1,0 +1,7 @@
+-- Author: 58196, Pedro Lopes
+
+-- Cannot call function with an unexpected number of arguments
+
+fun add (n, m) : (Int, Int) -> Int = n + m
+
+fun main (_) : Unit -> Unit = print(add(1, 2, 3))

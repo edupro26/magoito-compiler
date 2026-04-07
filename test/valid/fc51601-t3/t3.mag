@@ -1,0 +1,8 @@
+--- Author: fc51601, José Sousa
+
+-- Short circuit test
+
+const trapezoid : Int = 10
+
+fun main (_) : Unit -> Unit =
+    if trapezoid > 1 && trapezoid != 10 && true then print(trapezoid) else print(-1)

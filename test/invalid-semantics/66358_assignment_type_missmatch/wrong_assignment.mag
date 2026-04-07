@@ -1,0 +1,2 @@
+-- Author: 66358, Gustavo Cardoso
+fun main (_) : Unit -> Unit = var x : Int = 10; x = false

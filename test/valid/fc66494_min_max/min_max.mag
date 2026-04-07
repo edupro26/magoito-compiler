@@ -1,0 +1,10 @@
+-- Author: 66494, Tiago Silva
+
+fun min (x, y) : (Int, Int) -> Int =
+    if x < y then x else y
+
+fun max (x, y) : (Int, Int) -> Int =
+    if x > y then x else y
+
+fun main (_) : Unit -> Unit =
+    print(min(max(3,5),4))

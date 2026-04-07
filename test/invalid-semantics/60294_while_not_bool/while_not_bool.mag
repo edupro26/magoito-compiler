@@ -1,0 +1,3 @@
+-- Author: 60294, Pedro Rosa
+fun main (_): Unit -> Unit = 
+    while 1 do unit

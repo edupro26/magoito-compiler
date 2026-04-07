@@ -1,0 +1,10 @@
+-- Author: 59809, Manuel Leitão
+
+fun main (_) : Unit -> Unit =
+    var sum : Int = 0;
+    var i : Int = 0;
+    while i <= 20 do (
+        if i % 2 == 0 then sum = sum + i else unit;
+        i = i + 1
+    );
+    print(sum)

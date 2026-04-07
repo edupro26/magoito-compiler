@@ -1,0 +1,6 @@
+-- Author: 54483, Pedro Barata
+
+-- Prints a string literal
+
+fun main (_) : Unit -> Unit =
+  print("hello world")

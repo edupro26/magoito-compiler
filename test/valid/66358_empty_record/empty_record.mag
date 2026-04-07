@@ -1,0 +1,7 @@
+-- Author: 66358, Gustavo Cardoso
+
+fun makeEmpty (_) : Unit -> {} = {}
+
+fun main (_) : Unit -> Unit =
+  var e : {} = makeEmpty(unit);
+  print(e)

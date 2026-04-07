@@ -1,0 +1,8 @@
+-- Author: 59843, Miguel Castelo
+
+-- Missing 'do' keyword in while loop
+
+fun main (_) : Unit -> Unit =
+  var i : Int = 3;
+  while i > 0
+    i = i - 1

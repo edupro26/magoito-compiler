@@ -1,0 +1,4 @@
+-- Author: 57163, Guilherme Dias
+
+fun dolores(n,m,p,q,o) : (Int, Int) -> Int
+	n + m

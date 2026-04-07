@@ -1,0 +1,3 @@
+-- Author: 66358, Gustavo Cardoso
+
+const origin : {x: Int, y: Int} = {x : 0, y : 0}

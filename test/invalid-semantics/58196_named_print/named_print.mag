@@ -1,0 +1,9 @@
+-- Author: 58196, Pedro Lopes
+
+-- "print" is a reserved word and no function should have its name
+
+fun print (n) : Int -> Int = n + 1
+
+fun main (_) : Unit -> Unit =
+  var x : Int = print(10);
+  print(x)

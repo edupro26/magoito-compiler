@@ -1,0 +1,10 @@
+-- Author: 54483, Pedro Barata
+
+-- Semantic error: 'square' is declared twice at top level
+
+fun square (n) : Int -> Int = n * n
+
+fun square (n) : Int -> Int = n * n
+
+fun main (_) : Unit -> Unit =
+  print(square(4))

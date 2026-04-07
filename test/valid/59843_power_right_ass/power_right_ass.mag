@@ -1,0 +1,10 @@
+-- Author: 59843, Miguel Castelo
+
+-- ^ is right-associative and binds tighter than other arithmetic operators
+-- 2 ^ 3 ^ 2
+-- 2 ^ (3 ^ 2) 
+-- 2 ^ 9 
+-- 512
+
+fun main (_) : Unit -> Unit =
+  print(2 ^ 3 ^ 2)

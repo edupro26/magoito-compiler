@@ -1,0 +1,7 @@
+-- Author: 66128, Daniel Sousa
+
+-- Checks that the compiler correctly identifies and reports the use of a non-boolean expression as a while loop condition.
+
+fun main (_) : Unit -> Unit = 
+    while 5 do print("This is an invalid while loop condition")
+    

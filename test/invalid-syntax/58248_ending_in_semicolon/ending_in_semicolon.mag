@@ -1,0 +1,5 @@
+-- Author: 58248, Afonso Topa 
+-- A function can't end with a semicolon
+
+fun main(_) : Unit -> Unit =
+    print(8);   

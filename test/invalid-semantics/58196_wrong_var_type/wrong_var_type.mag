@@ -1,0 +1,6 @@
+-- Author: 58196, Pedro Lopes
+
+fun main (_) : Unit -> Unit =
+  var flag : Int = 0;
+  flag = true;
+  print(flag)

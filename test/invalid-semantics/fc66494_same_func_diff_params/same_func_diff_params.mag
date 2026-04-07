@@ -1,0 +1,11 @@
+-- Author: 66494, Tiago Silva
+
+fun onomatopeia(_) : Unit -> String =
+    "crii crii crii"
+
+fun onomatopeia(isDog) : Bool -> String =
+    if isDog == true then "WOOF!" else "meow..."
+
+fun main (_) : Unit -> Unit =
+    print(onomatopeia(unit));
+    print(onomatopeia(true))

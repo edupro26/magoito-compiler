@@ -1,0 +1,8 @@
+--- Author: fc51601, José Sousa
+
+fun f (_) : Unit -> Int = var i : Int = 1
+
+const f : Int = 1
+
+
+fun main (_) : Unit -> Unit = print(f)

@@ -1,0 +1,10 @@
+-- Author: 59843, Miguel Castelo
+
+-- Wildcards may appear only in binding positions (enum)
+
+fun alwaysFive (_, _) : (Unit, Bool) -> Int = 5
+
+fun alwaysHello (_, _, _) : (Int, Bool, String) -> String = "hello"
+
+fun main (_) : Unit -> Unit =
+  print(alwaysFive(unit, true))

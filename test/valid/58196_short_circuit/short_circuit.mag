@@ -1,0 +1,11 @@
+-- Author: 58196, Pedro Lopes
+
+-- The expression sideEffec(99) should not be evaluated,
+-- so 99 is not printed, only 0 is.
+
+fun sideEffect (x) : Int -> Bool =
+  var _ : Unit = print(x);
+  true
+
+fun main (_) : Unit -> Unit =
+  if false && sideEffect(99) then print(1) else print(0)

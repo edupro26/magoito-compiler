@@ -1,0 +1,7 @@
+-- Author: 58196, Pedro Lopes
+
+-- Checks if a record can hold a record
+
+fun main (_) : Unit -> Unit = 
+  var record : {x : {a : Int, b : Int}, y : Int} = {x = {a = 5, b = 6} , y = 3};
+  print(record.x.a)

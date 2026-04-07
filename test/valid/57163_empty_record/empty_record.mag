@@ -1,0 +1,14 @@
+-- Author: 57163, Guilherme Dias
+
+const emptyRecord : {} = {}
+
+-- const semiEmptyRecord : {key : Int, val : String} = {key = 10}
+
+-- const semiEmptyRecord : {key : Int, val : String} = {}
+
+fun nothingHappening(record) : {} -> {} = 
+	record
+
+
+fun main (_) : Unit -> Unit = 
+	print(nothingHappening(emptyRecord))
