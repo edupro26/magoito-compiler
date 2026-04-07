@@ -1,6 +1,7 @@
 package lexer
 
 import (
+	"errors"
 	"fmt"
 	"regexp"
 )
@@ -41,10 +42,12 @@ func createLexer(source string) *lexer {
 		patterns: []regexPattern{
 			{regexp.MustCompile(`\s+`), skipHandler},
 			{regexp.MustCompile(`--.*`), skipHandler},
-			// TODO Fix unclosed string problem
 			{regexp.MustCompile(`"[^"]*"`), stringHandler},
+			{regexp.MustCompile(`"[^"\n]*`), unclosedStringHandler},
 			{regexp.MustCompile(`[a-zA-Z][a-zA-Z0-9_']*`), symbolHandler},
-			{regexp.MustCompile(`0|[1-9][0-9]*`), numberHandler},
+			{regexp.MustCompile(`0[0-9]+`), invalidIntegerHandler},
+			{regexp.MustCompile(`[0-9]+\.[0-9]+`), invalidFloatHandler},
+			{regexp.MustCompile(`0|[1-9][0-9]*`), integerHandler},
 			{regexp.MustCompile(`_`), defaultHandler(WILDCARD, "_")},
 			{regexp.MustCompile(`\{`), defaultHandler(LBRACE, "{")},
 			{regexp.MustCompile(`}`), defaultHandler(RBRACE, "}")},
@@ -75,12 +78,23 @@ func createLexer(source string) *lexer {
 	}
 }
 
-func Tokenize(source string) ([]Token, error) {
+func Tokenize(source string) (tokens []Token, err error) {
 	lex := createLexer(source)
+	defer func() {
+		if r := recover(); r != nil {
+			if errVal, ok := r.(error); ok {
+				var le *LexError
+				if errors.As(errVal, &le) {
+					err = le
+					return
+				}
+			}
+			panic(r)
+		}
+	}()
 
 	for !lex.atEof() {
 		match := false
-
 		for _, pattern := range lex.patterns {
 			loc := pattern.regex.FindStringIndex(lex.remainder())
 			if loc != nil && loc[0] == 0 {
@@ -89,9 +103,7 @@ func Tokenize(source string) ([]Token, error) {
 				break
 			}
 		}
-
 		if !match {
-			// TODO Improve this error handling
 			return nil, &LexError{
 				Message: fmt.Sprintf("illegal token '%v'", string(lex.source[lex.pos])),
 				Line:    lex.line,
@@ -99,7 +111,6 @@ func Tokenize(source string) ([]Token, error) {
 			}
 		}
 	}
-
 	lex.push(newToken(EOF, "eof", lex.line, lex.col))
 	return lex.tokens, nil
 }
@@ -136,11 +147,29 @@ func defaultHandler(kind Kind, value string) regexHandler {
 	}
 }
 
-func numberHandler(lex *lexer, regex *regexp.Regexp) {
+func integerHandler(lex *lexer, regex *regexp.Regexp) {
 	line, col := lex.line, lex.col
 	match := regex.FindString(lex.remainder())
 	lex.push(newToken(INT, match, line, col))
 	lex.advN(len(match))
+}
+
+func invalidIntegerHandler(lex *lexer, regex *regexp.Regexp) {
+	match := regex.FindString(lex.remainder())
+	panic(&LexError{
+		Message: fmt.Sprintf("invalid integer literal '%v'", match),
+		Line:    lex.line,
+		Col:     lex.col,
+	})
+}
+
+func invalidFloatHandler(lex *lexer, regex *regexp.Regexp) {
+	match := regex.FindString(lex.remainder())
+	panic(&LexError{
+		Message: fmt.Sprintf("invalid integer literal '%v'", match),
+		Line:    lex.line,
+		Col:     lex.col,
+	})
 }
 
 func stringHandler(lex *lexer, regex *regexp.Regexp) {
@@ -149,6 +178,15 @@ func stringHandler(lex *lexer, regex *regexp.Regexp) {
 	literal := lex.remainder()[match[0]+1 : match[1]-1]
 	lex.push(newToken(STRING, literal, line, col))
 	lex.advN(len(literal) + 2)
+}
+
+func unclosedStringHandler(lex *lexer, regex *regexp.Regexp) {
+	match := regex.FindString(lex.remainder())
+	panic(&LexError{
+		Message: fmt.Sprintf("unclosed string literal '%v'", match),
+		Line:    lex.line,
+		Col:     lex.col,
+	})
 }
 
 func symbolHandler(lex *lexer, regex *regexp.Regexp) {
