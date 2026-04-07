@@ -1,4 +1,4 @@
-## 1 MAGOITO by example
+## MAGOITO by example
 
 **MAGOITO** is an imperative programming language composed of expressions alone.
 
@@ -95,7 +95,7 @@ Records can be nested, as in
 {point: {x: Int, y: Int}, colour: String}
 ```
 
-## 2 The syntax of **MAGOITO**, informally
+## The syntax of **MAGOITO**, informally
 
 ### Lexing
 
@@ -169,7 +169,7 @@ A non-empty sequence of declarations.
 - Function: `type -> type` or `(type1,..., typen) -> type` with n ≥ 2. There are no zero-ary functions. If needed, use `f (_) : Unit -> type = exp`
 and call `f(unit)`
 
-# 3 Validation
+# Validation
 
 ### Top-level declarations
 
@@ -213,7 +213,7 @@ type `type'` in a context augmented with `id:type,id1:type1,...,idn:typen`
 - Function declarations may be (mutually) recursive
 - Functions and constants cannot be declared twice, even if with different signatures
 
-# 4 The behaviour of programs
+# The behaviour of programs
 
 How are programs evaluated?
 
