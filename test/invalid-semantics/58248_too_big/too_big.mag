@@ -1,6 +1,0 @@
--- Author: 58248, Afonso Topa 
--- Integers only go from -2^31 to 2^31-1
-
-fun main(_) : Unit -> Unit =
-    print(2^31)
-   

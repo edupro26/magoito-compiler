@@ -1,0 +1,9 @@
+-- Author: tcomp000, Vasco T. Vasconcelos
+-- Types and Programming Languages. Benjamin Pierce, The MIT Press, 2002, page 183.
+-- https://www.cis.upenn.edu/~bcpierce/tapl
+
+fun f (r) : {x:{a:Int}} -> {a:Int} = r.x
+
+fun g (r) : {x:{a:Int,b:Int},y:{m:Int}} -> {a:Int} = f(r)
+
+fun main (_) : Unit -> Unit = print(g({x = {a = 5, b = 6}, y = {m = 7}}))

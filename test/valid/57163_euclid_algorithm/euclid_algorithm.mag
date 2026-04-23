@@ -1,0 +1,17 @@
+-- Author: 57163, Guilherme Dias
+
+const vals : {a: Int, b: Int} = {a = 42, b = 144}
+
+fun euclidean_gcd(a, b) : (Int, Int) -> Int =
+	if a == 0 then b else euclidean_gcd(b % a, a)
+
+fun main (_) : Unit -> Unit =
+	var x : Int = -1;
+	var y : Int = -1;
+
+	x = if vals.a < vals.b then vals.a else vals.b;
+	y = if vals.a < vals.b then vals.b else vals.a;
+
+	print(euclidean_gcd(x, y))
+
+	-- if vals.a < vals.b then (x = vals.a; y = vals.b) else (x = vals.b; y = vals.a)

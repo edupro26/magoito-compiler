@@ -1,9 +1,0 @@
--- Author: 58248, Afonso Topa 
--- Records need all fields to match exactly with their type,
--- there's no subtyping
-
-fun main(_) : Unit -> Unit =
-    var r : {x: Int, y: Int} = {x = 0, y = 0};
-    var p : {x: Int} = r;
-    print(p)
-   

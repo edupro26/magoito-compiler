@@ -1,0 +1,6 @@
+-- Author: 58248, Afonso Topa 
+-- The language doesn't support chaining comparison binary operators
+-- like <, >, <= and >=
+
+fun compute_within_range(n) : Int -> Int =
+    if 0 < n < 10000 then n * 2 else 0

@@ -1,0 +1,11 @@
+-- Author: 66128, Daniel Sousa
+
+-- Checks that the compiler correctly identifies and reports the use of a function with an incompatible type signature.
+
+fun print (x) : Unit -> Unit = 
+    -- Dummy print function for testing purposes
+    print("This is a dummy print function")
+
+fun main (_) : Unit -> Unit = 
+    print("Hello, World!")
+    

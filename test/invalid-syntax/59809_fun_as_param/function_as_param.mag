@@ -1,0 +1,8 @@
+-- Author: 59809, Manuel Leitão
+
+fun duplicate (n) : Int -> Int = n * 2
+
+fun apply (f,n) : (Int -> Int, Int) -> Int = f(n)
+
+fun main (_) : Unit -> Unit =
+    print(apply(duplicate,5))

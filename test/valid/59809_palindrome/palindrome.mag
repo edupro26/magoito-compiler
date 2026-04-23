@@ -1,0 +1,17 @@
+-- Author: 59809, Manuel Leitão
+
+fun reverse (n) : Int -> Int =
+    var rev : Int = 0;
+    var x : Int = n;
+    while x > 0 do (
+        rev = rev * 10 + x % 10;
+        x = x / 10
+    );
+    rev
+
+fun isPalindrome (n) : Int -> Bool =
+    n == reverse(n)
+
+fun main (_) : Unit -> Unit =
+    print(isPalindrome(12321));
+    print(isPalindrome(12345))

@@ -1,0 +1,7 @@
+-- Author: 58196, Pedro Lopes
+
+-- No wildcard should be present in arithmetic expression
+
+fun double (n) : Int -> Int = n * _
+
+fun main (_) : Unit -> Unit = print(double(5))

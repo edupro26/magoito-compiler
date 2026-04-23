@@ -1,0 +1,6 @@
+-- Author: 54483, Pedro Barata
+
+-- Syntax error: wildcard used in an expression (not a binding position)
+
+fun main (_) : Unit -> Unit =
+  print(2 * _)

@@ -1,0 +1,8 @@
+-- Author: 58248, Afonso Topa 
+-- Obviously a fake postal code
+
+fun main(_) : Unit -> Unit =
+    var person : { name: String, address : { postalCode : Int }} =
+        { name = "Alice", address = { postalCode = 9999123 }};
+
+    print(person.address.postalCode)

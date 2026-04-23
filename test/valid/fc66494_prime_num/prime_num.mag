@@ -1,7 +1,6 @@
 -- Author: 66494, Tiago Silva
 
 const n : Int = 7
-const i : Int = n / 2
 
 fun isPrime(num, iter) : (Int, Int) -> Bool =
     if num < 2 then false else
@@ -10,4 +9,4 @@ fun isPrime(num, iter) : (Int, Int) -> Bool =
                 isPrime(num, iter-1)
 
 fun main (_) : Unit -> Unit =
-    print(isPrime(n,i))
+    print(isPrime(n, n/2))

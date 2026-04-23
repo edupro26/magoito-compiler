@@ -4,7 +4,8 @@
 
 fun main (_) : Unit -> Unit =
     var x : Int = 0;
-    var r : {a: Int, b: Int, c: Int} = {a = (x = 1), b = x, c = (x = x + 1)};
+    var r : {a: Int, b: Int, c: Int} =
+        { a = (x = 1; x), b = x, c = (x = x + 1; x) };
     print(r.a);
     print(r.b);
     print(r.c);

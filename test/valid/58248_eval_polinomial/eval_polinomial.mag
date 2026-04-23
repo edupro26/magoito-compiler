@@ -1,0 +1,10 @@
+-- Author: 58248, Afonso Topa 
+
+fun main(_) : Unit -> Unit =
+    var pol : {p0: Int, p1: Int, p2: Int} = {p2 = 2 , p1 = -2, p0 = -4};
+    var x : Int = 5;
+    var y : Int = evalPolynomial(x, pol);
+    print(y)
+
+fun evalPolynomial(x, pol) : (Int, {p2: Int, p1: Int, p0: Int}) -> Int =
+    pol.p0 + pol.p1*x + pol.p2^2*x

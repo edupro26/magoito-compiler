@@ -1,0 +1,9 @@
+-- Author: 57163, Guilherme Dias
+
+const maxIter : Int = 8
+
+fun fibonacci(i) : Int -> Int =
+	if i == 0 then 0 else if i == 1 then 1 else fibonacci(i-1) + fibonacci(i-2)
+
+fun main (_) : Unit -> Unit =
+	print(fibonacci(maxIter))

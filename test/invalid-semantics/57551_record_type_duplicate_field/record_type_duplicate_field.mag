@@ -1,0 +1,8 @@
+-- Author: 57551, Eduardo Proença
+
+-- record types must have disjoint field labels
+
+fun f(r) : {x: Int, x: Bool} -> Int = 0
+
+fun main (_) : Unit -> Unit =
+    print(f({x = 1}))

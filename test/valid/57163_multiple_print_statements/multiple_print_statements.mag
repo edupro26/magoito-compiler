@@ -1,6 +1,0 @@
--- Author: 57163, Guilherme Dias
-
-const megaPrint : Unit = print(true, false, true, unit, false)
-
-fun main (_) : Unit -> Unit = 
-	megaPrint

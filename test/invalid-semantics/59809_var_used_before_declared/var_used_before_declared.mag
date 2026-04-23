@@ -1,0 +1,6 @@
+-- Author: 59809, Manuel Leitão
+
+fun main (_) : Unit -> Unit =
+    var result : Int = x + 1;
+    var x : Int = 9;
+    print(result)

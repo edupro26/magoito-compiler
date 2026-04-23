@@ -1,7 +1,7 @@
 -- Author: 66494, Tiago Silva
 
-const vect_a : {vax: Int, vay: Int} = {vax = 3, vay = 4}
-const vect_b : {vbx: Int, vby: Int} = {vbx = 7, vby = 2}
+const vect_a : {ax: Int, ay: Int} = {ax = 3, ay = 4}
+const vect_b : {bx: Int, by: Int} = {bx = 7, by = 2}
 
 fun dot_prod_2d (a, b) : ({ax: Int, ay: Int}, {bx: Int, by: Int}) -> Int =
     a.ax*b.bx + a.ay*b.by

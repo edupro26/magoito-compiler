@@ -1,7 +1,0 @@
--- Author: 57551, Eduardo Proença
-
--- Variable declared inside parentheses is not in scope afterwards (unbound identifier)
-
-fun main (_) : Unit -> Unit =
-    (var x : Int = 3);
-    print(x)

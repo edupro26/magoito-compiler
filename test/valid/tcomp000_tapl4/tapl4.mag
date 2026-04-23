@@ -1,0 +1,7 @@
+-- Author: tcomp000, Vasco T. Vasconcelos
+-- Types and Programming Languages. Benjamin Pierce, The MIT Press, 2002, page 183.
+-- https://www.cis.upenn.edu/~bcpierce/tapl
+
+fun f (r) : {x:Int} -> Int = r.x
+
+fun main (_) : Unit -> Unit = print(f({x = 0, y = 1}))

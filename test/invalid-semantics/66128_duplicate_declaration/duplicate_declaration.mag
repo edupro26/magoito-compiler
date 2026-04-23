@@ -1,0 +1,13 @@
+-- Author: 66128, Daniel Sousa
+
+-- Checks that the compiler correctly identifies and reports duplicate declarations of functions.
+
+fun fn (_) : Unit -> Unit = 
+    print("This is the first declaration of the function 'fn'")
+
+fun fn (_) : Unit -> Unit = 
+    print("This is a duplicate declaration of the function 'fn'")
+
+fun main (_) : Unit -> Unit = 
+    fn(unit)
+    

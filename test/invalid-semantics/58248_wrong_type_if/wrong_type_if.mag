@@ -1,0 +1,7 @@
+-- Author: 58248, Afonso Topa
+-- Type checker can't know this program is valid
+
+fun main(_) : Bool -> Int =
+  if true then 5 else false
+
+

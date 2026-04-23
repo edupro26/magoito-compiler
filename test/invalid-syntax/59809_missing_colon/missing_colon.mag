@@ -1,0 +1,7 @@
+-- Author: 59809, Manuel Leitão
+
+const x Int = 10
+
+fun main (_) : Unit -> Unit =
+    x = 20;
+    print(x)

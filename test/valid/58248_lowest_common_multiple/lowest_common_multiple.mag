@@ -1,0 +1,14 @@
+-- Author: 58248, Afonso Topa 
+-- Lowest common multiple of two positive integers
+
+fun main(_) : Unit -> Unit =
+    print(lowest_common_multiple(60, 48))
+
+fun lowest_common_multiple(a, b) : (Int, Int) -> Int =
+    a*b / greatest_common_divisor(a, b)
+
+fun greatest_common_divisor(a, b) : (Int, Int) -> Int =
+    while b != 0 do
+        a = b;
+        b = a % b;
+    a

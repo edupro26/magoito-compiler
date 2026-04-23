@@ -1,8 +1,0 @@
---- Author: fc51601, José Sousa
-
--- Can't recognize numbers bigger than 6
-
-fun guessNumber (x) : Int -> String =
-    if x > 1 then if x > 2 then if x > 3 then if x > 4 then if x > 5 then if x > 6 then print(-1) else print(6) else print(5) else print(4) else print(3) else print(2) else print(1)
-
-fun main (_) : Unit -> Unit = print(guessNumber(4))

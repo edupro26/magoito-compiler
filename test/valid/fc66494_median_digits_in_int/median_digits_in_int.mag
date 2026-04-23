@@ -24,7 +24,7 @@ fun median_digits(n) : Int -> Int =
 
     count = num_length;
     temp = n;
-    while count > middle do (
+    while count > num_middle do (
         temp = temp / 10;
         count = count - 1
     );
