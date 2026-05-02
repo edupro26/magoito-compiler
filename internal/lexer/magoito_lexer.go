@@ -1,4 +1,4 @@
-// Code generated from MagoitoLexer.g4 by ANTLR 4.13.2. DO NOT EDIT.
+// Code generated from lexer/MagoitoLexer.g4 by ANTLR 4.13.2. DO NOT EDIT.
 
 package lexer
 
