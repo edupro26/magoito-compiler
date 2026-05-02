@@ -7,14 +7,19 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o magoito ./cmd/main.go
+RUN apk add --no-cache openjdk17-jre
+
+RUN go generate ./...
+RUN go build -o magoito ./cmd
 
 FROM alpine:3.21
 
 WORKDIR /app
 
-COPY --from=builder /app/magoito .
+COPY --from=builder /app/magoito /usr/local/bin/magoito
 COPY --from=builder /app/*.mag .
 COPY --from=builder /app/test ./test
 
-ENTRYPOINT ["./magoito"]
+RUN echo "clear" >> /root/.profile
+RUN echo 'PS1="[magoito-compiler] \\w $ "' >> /root/.profile
+CMD ["sh", "-l"]
