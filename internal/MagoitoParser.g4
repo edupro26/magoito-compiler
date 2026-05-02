@@ -7,13 +7,13 @@ options {
 program: declaration+ EOF;
 
 declaration
-    : CONST binder COLON typeExpr ASSIGN expr
-    | FUN IDENTIFIER LPAREN binder (COMMA binder)* RPAREN COLON typeExpr ASSIGN expr
+    : CONST binder COLON typeExpr ASSIGN expr #constDeclaration
+    | FUN IDENTIFIER LPAREN binder (COMMA binder)* RPAREN COLON typeExpr ASSIGN expr #funDeclaration
     ;
 
 binder
-    : IDENTIFIER
-    | WILDCARD
+    : IDENTIFIER #idBinder
+    | WILDCARD   #wildcardBinder
     ;
 
 typeExpr
@@ -22,9 +22,9 @@ typeExpr
     ;
 
 nonTupleType
-    : basicType
-    | recordType
-    | LPAREN typeExpr RPAREN
+    : basicType            #basicNonTupleType
+    | recordType           #recordNonTupleType
+    | LPAREN typeExpr RPAREN #parenNonTupleType
     ;
 
 tupleType
@@ -32,10 +32,10 @@ tupleType
     ;
 
 basicType
-    : INT_TYPE
-    | BOOL_TYPE
-    | STRING_TYPE
-    | UNIT_TYPE
+    : INT_TYPE    #intBasicType
+    | BOOL_TYPE   #boolBasicType
+    | STRING_TYPE #stringBasicType
+    | UNIT_TYPE   #unitBasicType
     ;
 
 recordType
@@ -55,11 +55,11 @@ seqExpr
     ;
 
 controlExpr
-    : varDeclExpr
-    | whileExpr
-    | ifExpr
-    | assignExpr
-    | orExpr
+    : varDeclExpr #varDeclControl
+    | whileExpr   #whileControl
+    | ifExpr      #ifControl
+    | assignExpr  #assignControl
+    | orExpr      #orControl
     ;
 
 varDeclExpr
@@ -116,15 +116,15 @@ projectionExpr
     ;
 
 primaryExpr
-    : INT_LITERAL
-    | STRING_LITERAL
-    | TRUE
-    | FALSE
-    | UNIT_VALUE
-    | callExpr
-    | IDENTIFIER
-    | LPAREN expr RPAREN
-    | recordExpr
+    : INT_LITERAL        #intLiteralPrimary
+    | STRING_LITERAL     #stringLiteralPrimary
+    | TRUE               #truePrimary
+    | FALSE              #falsePrimary
+    | UNIT_VALUE         #unitPrimary
+    | callExpr           #callPrimary
+    | IDENTIFIER         #identifierPrimary
+    | LPAREN expr RPAREN #parenPrimary
+    | recordExpr         #recordPrimary
     ;
 
 callExpr
@@ -132,8 +132,8 @@ callExpr
     ;
 
 callee
-    : IDENTIFIER
-    | PRINT
+    : IDENTIFIER #identCallee
+    | PRINT      #printCallee
     ;
 
 recordExpr

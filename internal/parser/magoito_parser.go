@@ -57,7 +57,7 @@ func magoitoparserParserInit() {
 	}
 	staticData.PredictionContextCache = antlr.NewPredictionContextCache()
 	staticData.serializedATN = []int32{
-		4, 1, 47, 299, 2, 0, 7, 0, 2, 1, 7, 1, 2, 2, 7, 2, 2, 3, 7, 3, 2, 4, 7,
+		4, 1, 47, 307, 2, 0, 7, 0, 2, 1, 7, 1, 2, 2, 7, 2, 2, 3, 7, 3, 2, 4, 7,
 		4, 2, 5, 7, 5, 2, 6, 7, 6, 2, 7, 7, 7, 2, 8, 7, 8, 2, 9, 7, 9, 2, 10, 7,
 		10, 2, 11, 7, 11, 2, 12, 7, 12, 2, 13, 7, 13, 2, 14, 7, 14, 2, 15, 7, 15,
 		2, 16, 7, 16, 2, 17, 7, 17, 2, 18, 7, 18, 2, 19, 7, 19, 2, 20, 7, 20, 2,
@@ -66,125 +66,130 @@ func magoitoparserParserInit() {
 		0, 64, 8, 0, 11, 0, 12, 0, 65, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 		1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 83, 8, 1, 10, 1,
 		12, 1, 86, 9, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 94, 8, 1, 1,
-		2, 1, 2, 1, 3, 1, 3, 1, 3, 3, 3, 101, 8, 3, 1, 3, 1, 3, 1, 3, 1, 3, 3,
-		3, 107, 8, 3, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 3, 4, 115, 8, 4, 1, 5,
-		1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 5, 123, 8, 5, 10, 5, 12, 5, 126, 9, 5,
-		1, 5, 1, 5, 1, 6, 1, 6, 1, 7, 1, 7, 1, 7, 1, 7, 5, 7, 136, 8, 7, 10, 7,
-		12, 7, 139, 9, 7, 3, 7, 141, 8, 7, 1, 7, 1, 7, 1, 8, 1, 8, 1, 8, 1, 8,
-		1, 9, 1, 9, 1, 10, 1, 10, 1, 10, 3, 10, 154, 8, 10, 1, 11, 1, 11, 1, 11,
-		1, 11, 1, 11, 3, 11, 161, 8, 11, 1, 12, 1, 12, 1, 12, 1, 12, 1, 12, 1,
-		12, 1, 12, 1, 13, 1, 13, 1, 13, 1, 13, 1, 13, 1, 14, 1, 14, 1, 14, 1, 14,
-		1, 14, 1, 14, 3, 14, 181, 8, 14, 1, 15, 1, 15, 1, 15, 1, 15, 1, 16, 1,
-		16, 1, 16, 5, 16, 190, 8, 16, 10, 16, 12, 16, 193, 9, 16, 1, 17, 1, 17,
-		1, 17, 5, 17, 198, 8, 17, 10, 17, 12, 17, 201, 9, 17, 1, 18, 1, 18, 1,
-		18, 5, 18, 206, 8, 18, 10, 18, 12, 18, 209, 9, 18, 1, 19, 1, 19, 1, 19,
-		5, 19, 214, 8, 19, 10, 19, 12, 19, 217, 9, 19, 1, 20, 1, 20, 1, 20, 5,
-		20, 222, 8, 20, 10, 20, 12, 20, 225, 9, 20, 1, 21, 1, 21, 1, 21, 5, 21,
-		230, 8, 21, 10, 21, 12, 21, 233, 9, 21, 1, 22, 1, 22, 1, 22, 3, 22, 238,
-		8, 22, 1, 23, 1, 23, 1, 23, 3, 23, 243, 8, 23, 1, 24, 1, 24, 1, 24, 5,
-		24, 248, 8, 24, 10, 24, 12, 24, 251, 9, 24, 1, 25, 1, 25, 1, 25, 1, 25,
-		1, 25, 1, 25, 1, 25, 1, 25, 1, 25, 1, 25, 1, 25, 1, 25, 3, 25, 265, 8,
-		25, 1, 26, 1, 26, 1, 26, 1, 26, 1, 26, 5, 26, 272, 8, 26, 10, 26, 12, 26,
-		275, 9, 26, 1, 26, 1, 26, 1, 27, 1, 27, 1, 28, 1, 28, 3, 28, 283, 8, 28,
-		1, 28, 1, 28, 1, 29, 1, 29, 1, 29, 5, 29, 290, 8, 29, 10, 29, 12, 29, 293,
-		9, 29, 1, 30, 1, 30, 1, 30, 1, 30, 1, 30, 0, 0, 31, 0, 2, 4, 6, 8, 10,
-		12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46,
-		48, 50, 52, 54, 56, 58, 60, 0, 8, 1, 0, 42, 43, 1, 0, 13, 16, 1, 0, 18,
-		19, 2, 0, 20, 21, 25, 26, 1, 0, 27, 28, 1, 0, 29, 31, 2, 0, 28, 28, 33,
-		33, 2, 0, 9, 9, 43, 43, 303, 0, 63, 1, 0, 0, 0, 2, 93, 1, 0, 0, 0, 4, 95,
-		1, 0, 0, 0, 6, 106, 1, 0, 0, 0, 8, 114, 1, 0, 0, 0, 10, 116, 1, 0, 0, 0,
-		12, 129, 1, 0, 0, 0, 14, 131, 1, 0, 0, 0, 16, 144, 1, 0, 0, 0, 18, 148,
-		1, 0, 0, 0, 20, 150, 1, 0, 0, 0, 22, 160, 1, 0, 0, 0, 24, 162, 1, 0, 0,
-		0, 26, 169, 1, 0, 0, 0, 28, 174, 1, 0, 0, 0, 30, 182, 1, 0, 0, 0, 32, 186,
-		1, 0, 0, 0, 34, 194, 1, 0, 0, 0, 36, 202, 1, 0, 0, 0, 38, 210, 1, 0, 0,
-		0, 40, 218, 1, 0, 0, 0, 42, 226, 1, 0, 0, 0, 44, 234, 1, 0, 0, 0, 46, 242,
-		1, 0, 0, 0, 48, 244, 1, 0, 0, 0, 50, 264, 1, 0, 0, 0, 52, 266, 1, 0, 0,
-		0, 54, 278, 1, 0, 0, 0, 56, 280, 1, 0, 0, 0, 58, 286, 1, 0, 0, 0, 60, 294,
-		1, 0, 0, 0, 62, 64, 3, 2, 1, 0, 63, 62, 1, 0, 0, 0, 64, 65, 1, 0, 0, 0,
-		65, 63, 1, 0, 0, 0, 65, 66, 1, 0, 0, 0, 66, 67, 1, 0, 0, 0, 67, 68, 5,
-		0, 0, 1, 68, 1, 1, 0, 0, 0, 69, 70, 5, 1, 0, 0, 70, 71, 3, 4, 2, 0, 71,
-		72, 5, 36, 0, 0, 72, 73, 3, 6, 3, 0, 73, 74, 5, 24, 0, 0, 74, 75, 3, 18,
-		9, 0, 75, 94, 1, 0, 0, 0, 76, 77, 5, 2, 0, 0, 77, 78, 5, 43, 0, 0, 78,
-		79, 5, 38, 0, 0, 79, 84, 3, 4, 2, 0, 80, 81, 5, 37, 0, 0, 81, 83, 3, 4,
-		2, 0, 82, 80, 1, 0, 0, 0, 83, 86, 1, 0, 0, 0, 84, 82, 1, 0, 0, 0, 84, 85,
-		1, 0, 0, 0, 85, 87, 1, 0, 0, 0, 86, 84, 1, 0, 0, 0, 87, 88, 5, 39, 0, 0,
-		88, 89, 5, 36, 0, 0, 89, 90, 3, 6, 3, 0, 90, 91, 5, 24, 0, 0, 91, 92, 3,
-		18, 9, 0, 92, 94, 1, 0, 0, 0, 93, 69, 1, 0, 0, 0, 93, 76, 1, 0, 0, 0, 94,
-		3, 1, 0, 0, 0, 95, 96, 7, 0, 0, 0, 96, 5, 1, 0, 0, 0, 97, 100, 3, 8, 4,
-		0, 98, 99, 5, 17, 0, 0, 99, 101, 3, 6, 3, 0, 100, 98, 1, 0, 0, 0, 100,
-		101, 1, 0, 0, 0, 101, 107, 1, 0, 0, 0, 102, 103, 3, 10, 5, 0, 103, 104,
-		5, 17, 0, 0, 104, 105, 3, 6, 3, 0, 105, 107, 1, 0, 0, 0, 106, 97, 1, 0,
-		0, 0, 106, 102, 1, 0, 0, 0, 107, 7, 1, 0, 0, 0, 108, 115, 3, 12, 6, 0,
-		109, 115, 3, 14, 7, 0, 110, 111, 5, 38, 0, 0, 111, 112, 3, 6, 3, 0, 112,
-		113, 5, 39, 0, 0, 113, 115, 1, 0, 0, 0, 114, 108, 1, 0, 0, 0, 114, 109,
-		1, 0, 0, 0, 114, 110, 1, 0, 0, 0, 115, 9, 1, 0, 0, 0, 116, 117, 5, 38,
-		0, 0, 117, 118, 3, 6, 3, 0, 118, 119, 5, 37, 0, 0, 119, 124, 3, 6, 3, 0,
-		120, 121, 5, 37, 0, 0, 121, 123, 3, 6, 3, 0, 122, 120, 1, 0, 0, 0, 123,
-		126, 1, 0, 0, 0, 124, 122, 1, 0, 0, 0, 124, 125, 1, 0, 0, 0, 125, 127,
-		1, 0, 0, 0, 126, 124, 1, 0, 0, 0, 127, 128, 5, 39, 0, 0, 128, 11, 1, 0,
-		0, 0, 129, 130, 7, 1, 0, 0, 130, 13, 1, 0, 0, 0, 131, 140, 5, 40, 0, 0,
-		132, 137, 3, 16, 8, 0, 133, 134, 5, 37, 0, 0, 134, 136, 3, 16, 8, 0, 135,
-		133, 1, 0, 0, 0, 136, 139, 1, 0, 0, 0, 137, 135, 1, 0, 0, 0, 137, 138,
-		1, 0, 0, 0, 138, 141, 1, 0, 0, 0, 139, 137, 1, 0, 0, 0, 140, 132, 1, 0,
-		0, 0, 140, 141, 1, 0, 0, 0, 141, 142, 1, 0, 0, 0, 142, 143, 5, 41, 0, 0,
-		143, 15, 1, 0, 0, 0, 144, 145, 5, 43, 0, 0, 145, 146, 5, 36, 0, 0, 146,
-		147, 3, 6, 3, 0, 147, 17, 1, 0, 0, 0, 148, 149, 3, 20, 10, 0, 149, 19,
-		1, 0, 0, 0, 150, 153, 3, 22, 11, 0, 151, 152, 5, 35, 0, 0, 152, 154, 3,
-		20, 10, 0, 153, 151, 1, 0, 0, 0, 153, 154, 1, 0, 0, 0, 154, 21, 1, 0, 0,
-		0, 155, 161, 3, 24, 12, 0, 156, 161, 3, 26, 13, 0, 157, 161, 3, 28, 14,
-		0, 158, 161, 3, 30, 15, 0, 159, 161, 3, 32, 16, 0, 160, 155, 1, 0, 0, 0,
-		160, 156, 1, 0, 0, 0, 160, 157, 1, 0, 0, 0, 160, 158, 1, 0, 0, 0, 160,
-		159, 1, 0, 0, 0, 161, 23, 1, 0, 0, 0, 162, 163, 5, 3, 0, 0, 163, 164, 3,
-		4, 2, 0, 164, 165, 5, 36, 0, 0, 165, 166, 3, 6, 3, 0, 166, 167, 5, 24,
-		0, 0, 167, 168, 3, 22, 11, 0, 168, 25, 1, 0, 0, 0, 169, 170, 5, 7, 0, 0,
-		170, 171, 3, 32, 16, 0, 171, 172, 5, 8, 0, 0, 172, 173, 3, 22, 11, 0, 173,
-		27, 1, 0, 0, 0, 174, 175, 5, 4, 0, 0, 175, 176, 3, 32, 16, 0, 176, 177,
-		5, 5, 0, 0, 177, 180, 3, 22, 11, 0, 178, 179, 5, 6, 0, 0, 179, 181, 3,
-		22, 11, 0, 180, 178, 1, 0, 0, 0, 180, 181, 1, 0, 0, 0, 181, 29, 1, 0, 0,
-		0, 182, 183, 5, 43, 0, 0, 183, 184, 5, 24, 0, 0, 184, 185, 3, 22, 11, 0,
-		185, 31, 1, 0, 0, 0, 186, 191, 3, 34, 17, 0, 187, 188, 5, 22, 0, 0, 188,
-		190, 3, 34, 17, 0, 189, 187, 1, 0, 0, 0, 190, 193, 1, 0, 0, 0, 191, 189,
-		1, 0, 0, 0, 191, 192, 1, 0, 0, 0, 192, 33, 1, 0, 0, 0, 193, 191, 1, 0,
-		0, 0, 194, 199, 3, 36, 18, 0, 195, 196, 5, 23, 0, 0, 196, 198, 3, 36, 18,
-		0, 197, 195, 1, 0, 0, 0, 198, 201, 1, 0, 0, 0, 199, 197, 1, 0, 0, 0, 199,
-		200, 1, 0, 0, 0, 200, 35, 1, 0, 0, 0, 201, 199, 1, 0, 0, 0, 202, 207, 3,
-		38, 19, 0, 203, 204, 7, 2, 0, 0, 204, 206, 3, 38, 19, 0, 205, 203, 1, 0,
-		0, 0, 206, 209, 1, 0, 0, 0, 207, 205, 1, 0, 0, 0, 207, 208, 1, 0, 0, 0,
-		208, 37, 1, 0, 0, 0, 209, 207, 1, 0, 0, 0, 210, 215, 3, 40, 20, 0, 211,
-		212, 7, 3, 0, 0, 212, 214, 3, 40, 20, 0, 213, 211, 1, 0, 0, 0, 214, 217,
-		1, 0, 0, 0, 215, 213, 1, 0, 0, 0, 215, 216, 1, 0, 0, 0, 216, 39, 1, 0,
-		0, 0, 217, 215, 1, 0, 0, 0, 218, 223, 3, 42, 21, 0, 219, 220, 7, 4, 0,
-		0, 220, 222, 3, 42, 21, 0, 221, 219, 1, 0, 0, 0, 222, 225, 1, 0, 0, 0,
-		223, 221, 1, 0, 0, 0, 223, 224, 1, 0, 0, 0, 224, 41, 1, 0, 0, 0, 225, 223,
-		1, 0, 0, 0, 226, 231, 3, 44, 22, 0, 227, 228, 7, 5, 0, 0, 228, 230, 3,
-		44, 22, 0, 229, 227, 1, 0, 0, 0, 230, 233, 1, 0, 0, 0, 231, 229, 1, 0,
-		0, 0, 231, 232, 1, 0, 0, 0, 232, 43, 1, 0, 0, 0, 233, 231, 1, 0, 0, 0,
-		234, 237, 3, 46, 23, 0, 235, 236, 5, 32, 0, 0, 236, 238, 3, 44, 22, 0,
-		237, 235, 1, 0, 0, 0, 237, 238, 1, 0, 0, 0, 238, 45, 1, 0, 0, 0, 239, 240,
-		7, 6, 0, 0, 240, 243, 3, 46, 23, 0, 241, 243, 3, 48, 24, 0, 242, 239, 1,
-		0, 0, 0, 242, 241, 1, 0, 0, 0, 243, 47, 1, 0, 0, 0, 244, 249, 3, 50, 25,
-		0, 245, 246, 5, 34, 0, 0, 246, 248, 5, 43, 0, 0, 247, 245, 1, 0, 0, 0,
-		248, 251, 1, 0, 0, 0, 249, 247, 1, 0, 0, 0, 249, 250, 1, 0, 0, 0, 250,
-		49, 1, 0, 0, 0, 251, 249, 1, 0, 0, 0, 252, 265, 5, 44, 0, 0, 253, 265,
-		5, 45, 0, 0, 254, 265, 5, 10, 0, 0, 255, 265, 5, 11, 0, 0, 256, 265, 5,
-		12, 0, 0, 257, 265, 3, 52, 26, 0, 258, 265, 5, 43, 0, 0, 259, 260, 5, 38,
-		0, 0, 260, 261, 3, 18, 9, 0, 261, 262, 5, 39, 0, 0, 262, 265, 1, 0, 0,
-		0, 263, 265, 3, 56, 28, 0, 264, 252, 1, 0, 0, 0, 264, 253, 1, 0, 0, 0,
-		264, 254, 1, 0, 0, 0, 264, 255, 1, 0, 0, 0, 264, 256, 1, 0, 0, 0, 264,
-		257, 1, 0, 0, 0, 264, 258, 1, 0, 0, 0, 264, 259, 1, 0, 0, 0, 264, 263,
-		1, 0, 0, 0, 265, 51, 1, 0, 0, 0, 266, 267, 3, 54, 27, 0, 267, 268, 5, 38,
-		0, 0, 268, 273, 3, 18, 9, 0, 269, 270, 5, 37, 0, 0, 270, 272, 3, 18, 9,
-		0, 271, 269, 1, 0, 0, 0, 272, 275, 1, 0, 0, 0, 273, 271, 1, 0, 0, 0, 273,
-		274, 1, 0, 0, 0, 274, 276, 1, 0, 0, 0, 275, 273, 1, 0, 0, 0, 276, 277,
-		5, 39, 0, 0, 277, 53, 1, 0, 0, 0, 278, 279, 7, 7, 0, 0, 279, 55, 1, 0,
-		0, 0, 280, 282, 5, 40, 0, 0, 281, 283, 3, 58, 29, 0, 282, 281, 1, 0, 0,
-		0, 282, 283, 1, 0, 0, 0, 283, 284, 1, 0, 0, 0, 284, 285, 5, 41, 0, 0, 285,
-		57, 1, 0, 0, 0, 286, 291, 3, 60, 30, 0, 287, 288, 5, 37, 0, 0, 288, 290,
-		3, 60, 30, 0, 289, 287, 1, 0, 0, 0, 290, 293, 1, 0, 0, 0, 291, 289, 1,
-		0, 0, 0, 291, 292, 1, 0, 0, 0, 292, 59, 1, 0, 0, 0, 293, 291, 1, 0, 0,
-		0, 294, 295, 5, 43, 0, 0, 295, 296, 5, 24, 0, 0, 296, 297, 3, 18, 9, 0,
-		297, 61, 1, 0, 0, 0, 25, 65, 84, 93, 100, 106, 114, 124, 137, 140, 153,
-		160, 180, 191, 199, 207, 215, 223, 231, 237, 242, 249, 264, 273, 282, 291,
+		2, 1, 2, 3, 2, 98, 8, 2, 1, 3, 1, 3, 1, 3, 3, 3, 103, 8, 3, 1, 3, 1, 3,
+		1, 3, 1, 3, 3, 3, 109, 8, 3, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 3, 4,
+		117, 8, 4, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 5, 125, 8, 5, 10, 5,
+		12, 5, 128, 9, 5, 1, 5, 1, 5, 1, 6, 1, 6, 1, 6, 1, 6, 3, 6, 136, 8, 6,
+		1, 7, 1, 7, 1, 7, 1, 7, 5, 7, 142, 8, 7, 10, 7, 12, 7, 145, 9, 7, 3, 7,
+		147, 8, 7, 1, 7, 1, 7, 1, 8, 1, 8, 1, 8, 1, 8, 1, 9, 1, 9, 1, 10, 1, 10,
+		1, 10, 3, 10, 160, 8, 10, 1, 11, 1, 11, 1, 11, 1, 11, 1, 11, 3, 11, 167,
+		8, 11, 1, 12, 1, 12, 1, 12, 1, 12, 1, 12, 1, 12, 1, 12, 1, 13, 1, 13, 1,
+		13, 1, 13, 1, 13, 1, 14, 1, 14, 1, 14, 1, 14, 1, 14, 1, 14, 3, 14, 187,
+		8, 14, 1, 15, 1, 15, 1, 15, 1, 15, 1, 16, 1, 16, 1, 16, 5, 16, 196, 8,
+		16, 10, 16, 12, 16, 199, 9, 16, 1, 17, 1, 17, 1, 17, 5, 17, 204, 8, 17,
+		10, 17, 12, 17, 207, 9, 17, 1, 18, 1, 18, 1, 18, 5, 18, 212, 8, 18, 10,
+		18, 12, 18, 215, 9, 18, 1, 19, 1, 19, 1, 19, 5, 19, 220, 8, 19, 10, 19,
+		12, 19, 223, 9, 19, 1, 20, 1, 20, 1, 20, 5, 20, 228, 8, 20, 10, 20, 12,
+		20, 231, 9, 20, 1, 21, 1, 21, 1, 21, 5, 21, 236, 8, 21, 10, 21, 12, 21,
+		239, 9, 21, 1, 22, 1, 22, 1, 22, 3, 22, 244, 8, 22, 1, 23, 1, 23, 1, 23,
+		3, 23, 249, 8, 23, 1, 24, 1, 24, 1, 24, 5, 24, 254, 8, 24, 10, 24, 12,
+		24, 257, 9, 24, 1, 25, 1, 25, 1, 25, 1, 25, 1, 25, 1, 25, 1, 25, 1, 25,
+		1, 25, 1, 25, 1, 25, 1, 25, 3, 25, 271, 8, 25, 1, 26, 1, 26, 1, 26, 1,
+		26, 1, 26, 5, 26, 278, 8, 26, 10, 26, 12, 26, 281, 9, 26, 1, 26, 1, 26,
+		1, 27, 1, 27, 3, 27, 287, 8, 27, 1, 28, 1, 28, 3, 28, 291, 8, 28, 1, 28,
+		1, 28, 1, 29, 1, 29, 1, 29, 5, 29, 298, 8, 29, 10, 29, 12, 29, 301, 9,
+		29, 1, 30, 1, 30, 1, 30, 1, 30, 1, 30, 0, 0, 31, 0, 2, 4, 6, 8, 10, 12,
+		14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48,
+		50, 52, 54, 56, 58, 60, 0, 5, 1, 0, 18, 19, 2, 0, 20, 21, 25, 26, 1, 0,
+		27, 28, 1, 0, 29, 31, 2, 0, 28, 28, 33, 33, 316, 0, 63, 1, 0, 0, 0, 2,
+		93, 1, 0, 0, 0, 4, 97, 1, 0, 0, 0, 6, 108, 1, 0, 0, 0, 8, 116, 1, 0, 0,
+		0, 10, 118, 1, 0, 0, 0, 12, 135, 1, 0, 0, 0, 14, 137, 1, 0, 0, 0, 16, 150,
+		1, 0, 0, 0, 18, 154, 1, 0, 0, 0, 20, 156, 1, 0, 0, 0, 22, 166, 1, 0, 0,
+		0, 24, 168, 1, 0, 0, 0, 26, 175, 1, 0, 0, 0, 28, 180, 1, 0, 0, 0, 30, 188,
+		1, 0, 0, 0, 32, 192, 1, 0, 0, 0, 34, 200, 1, 0, 0, 0, 36, 208, 1, 0, 0,
+		0, 38, 216, 1, 0, 0, 0, 40, 224, 1, 0, 0, 0, 42, 232, 1, 0, 0, 0, 44, 240,
+		1, 0, 0, 0, 46, 248, 1, 0, 0, 0, 48, 250, 1, 0, 0, 0, 50, 270, 1, 0, 0,
+		0, 52, 272, 1, 0, 0, 0, 54, 286, 1, 0, 0, 0, 56, 288, 1, 0, 0, 0, 58, 294,
+		1, 0, 0, 0, 60, 302, 1, 0, 0, 0, 62, 64, 3, 2, 1, 0, 63, 62, 1, 0, 0, 0,
+		64, 65, 1, 0, 0, 0, 65, 63, 1, 0, 0, 0, 65, 66, 1, 0, 0, 0, 66, 67, 1,
+		0, 0, 0, 67, 68, 5, 0, 0, 1, 68, 1, 1, 0, 0, 0, 69, 70, 5, 1, 0, 0, 70,
+		71, 3, 4, 2, 0, 71, 72, 5, 36, 0, 0, 72, 73, 3, 6, 3, 0, 73, 74, 5, 24,
+		0, 0, 74, 75, 3, 18, 9, 0, 75, 94, 1, 0, 0, 0, 76, 77, 5, 2, 0, 0, 77,
+		78, 5, 43, 0, 0, 78, 79, 5, 38, 0, 0, 79, 84, 3, 4, 2, 0, 80, 81, 5, 37,
+		0, 0, 81, 83, 3, 4, 2, 0, 82, 80, 1, 0, 0, 0, 83, 86, 1, 0, 0, 0, 84, 82,
+		1, 0, 0, 0, 84, 85, 1, 0, 0, 0, 85, 87, 1, 0, 0, 0, 86, 84, 1, 0, 0, 0,
+		87, 88, 5, 39, 0, 0, 88, 89, 5, 36, 0, 0, 89, 90, 3, 6, 3, 0, 90, 91, 5,
+		24, 0, 0, 91, 92, 3, 18, 9, 0, 92, 94, 1, 0, 0, 0, 93, 69, 1, 0, 0, 0,
+		93, 76, 1, 0, 0, 0, 94, 3, 1, 0, 0, 0, 95, 98, 5, 43, 0, 0, 96, 98, 5,
+		42, 0, 0, 97, 95, 1, 0, 0, 0, 97, 96, 1, 0, 0, 0, 98, 5, 1, 0, 0, 0, 99,
+		102, 3, 8, 4, 0, 100, 101, 5, 17, 0, 0, 101, 103, 3, 6, 3, 0, 102, 100,
+		1, 0, 0, 0, 102, 103, 1, 0, 0, 0, 103, 109, 1, 0, 0, 0, 104, 105, 3, 10,
+		5, 0, 105, 106, 5, 17, 0, 0, 106, 107, 3, 6, 3, 0, 107, 109, 1, 0, 0, 0,
+		108, 99, 1, 0, 0, 0, 108, 104, 1, 0, 0, 0, 109, 7, 1, 0, 0, 0, 110, 117,
+		3, 12, 6, 0, 111, 117, 3, 14, 7, 0, 112, 113, 5, 38, 0, 0, 113, 114, 3,
+		6, 3, 0, 114, 115, 5, 39, 0, 0, 115, 117, 1, 0, 0, 0, 116, 110, 1, 0, 0,
+		0, 116, 111, 1, 0, 0, 0, 116, 112, 1, 0, 0, 0, 117, 9, 1, 0, 0, 0, 118,
+		119, 5, 38, 0, 0, 119, 120, 3, 6, 3, 0, 120, 121, 5, 37, 0, 0, 121, 126,
+		3, 6, 3, 0, 122, 123, 5, 37, 0, 0, 123, 125, 3, 6, 3, 0, 124, 122, 1, 0,
+		0, 0, 125, 128, 1, 0, 0, 0, 126, 124, 1, 0, 0, 0, 126, 127, 1, 0, 0, 0,
+		127, 129, 1, 0, 0, 0, 128, 126, 1, 0, 0, 0, 129, 130, 5, 39, 0, 0, 130,
+		11, 1, 0, 0, 0, 131, 136, 5, 13, 0, 0, 132, 136, 5, 14, 0, 0, 133, 136,
+		5, 15, 0, 0, 134, 136, 5, 16, 0, 0, 135, 131, 1, 0, 0, 0, 135, 132, 1,
+		0, 0, 0, 135, 133, 1, 0, 0, 0, 135, 134, 1, 0, 0, 0, 136, 13, 1, 0, 0,
+		0, 137, 146, 5, 40, 0, 0, 138, 143, 3, 16, 8, 0, 139, 140, 5, 37, 0, 0,
+		140, 142, 3, 16, 8, 0, 141, 139, 1, 0, 0, 0, 142, 145, 1, 0, 0, 0, 143,
+		141, 1, 0, 0, 0, 143, 144, 1, 0, 0, 0, 144, 147, 1, 0, 0, 0, 145, 143,
+		1, 0, 0, 0, 146, 138, 1, 0, 0, 0, 146, 147, 1, 0, 0, 0, 147, 148, 1, 0,
+		0, 0, 148, 149, 5, 41, 0, 0, 149, 15, 1, 0, 0, 0, 150, 151, 5, 43, 0, 0,
+		151, 152, 5, 36, 0, 0, 152, 153, 3, 6, 3, 0, 153, 17, 1, 0, 0, 0, 154,
+		155, 3, 20, 10, 0, 155, 19, 1, 0, 0, 0, 156, 159, 3, 22, 11, 0, 157, 158,
+		5, 35, 0, 0, 158, 160, 3, 20, 10, 0, 159, 157, 1, 0, 0, 0, 159, 160, 1,
+		0, 0, 0, 160, 21, 1, 0, 0, 0, 161, 167, 3, 24, 12, 0, 162, 167, 3, 26,
+		13, 0, 163, 167, 3, 28, 14, 0, 164, 167, 3, 30, 15, 0, 165, 167, 3, 32,
+		16, 0, 166, 161, 1, 0, 0, 0, 166, 162, 1, 0, 0, 0, 166, 163, 1, 0, 0, 0,
+		166, 164, 1, 0, 0, 0, 166, 165, 1, 0, 0, 0, 167, 23, 1, 0, 0, 0, 168, 169,
+		5, 3, 0, 0, 169, 170, 3, 4, 2, 0, 170, 171, 5, 36, 0, 0, 171, 172, 3, 6,
+		3, 0, 172, 173, 5, 24, 0, 0, 173, 174, 3, 22, 11, 0, 174, 25, 1, 0, 0,
+		0, 175, 176, 5, 7, 0, 0, 176, 177, 3, 32, 16, 0, 177, 178, 5, 8, 0, 0,
+		178, 179, 3, 22, 11, 0, 179, 27, 1, 0, 0, 0, 180, 181, 5, 4, 0, 0, 181,
+		182, 3, 32, 16, 0, 182, 183, 5, 5, 0, 0, 183, 186, 3, 22, 11, 0, 184, 185,
+		5, 6, 0, 0, 185, 187, 3, 22, 11, 0, 186, 184, 1, 0, 0, 0, 186, 187, 1,
+		0, 0, 0, 187, 29, 1, 0, 0, 0, 188, 189, 5, 43, 0, 0, 189, 190, 5, 24, 0,
+		0, 190, 191, 3, 22, 11, 0, 191, 31, 1, 0, 0, 0, 192, 197, 3, 34, 17, 0,
+		193, 194, 5, 22, 0, 0, 194, 196, 3, 34, 17, 0, 195, 193, 1, 0, 0, 0, 196,
+		199, 1, 0, 0, 0, 197, 195, 1, 0, 0, 0, 197, 198, 1, 0, 0, 0, 198, 33, 1,
+		0, 0, 0, 199, 197, 1, 0, 0, 0, 200, 205, 3, 36, 18, 0, 201, 202, 5, 23,
+		0, 0, 202, 204, 3, 36, 18, 0, 203, 201, 1, 0, 0, 0, 204, 207, 1, 0, 0,
+		0, 205, 203, 1, 0, 0, 0, 205, 206, 1, 0, 0, 0, 206, 35, 1, 0, 0, 0, 207,
+		205, 1, 0, 0, 0, 208, 213, 3, 38, 19, 0, 209, 210, 7, 0, 0, 0, 210, 212,
+		3, 38, 19, 0, 211, 209, 1, 0, 0, 0, 212, 215, 1, 0, 0, 0, 213, 211, 1,
+		0, 0, 0, 213, 214, 1, 0, 0, 0, 214, 37, 1, 0, 0, 0, 215, 213, 1, 0, 0,
+		0, 216, 221, 3, 40, 20, 0, 217, 218, 7, 1, 0, 0, 218, 220, 3, 40, 20, 0,
+		219, 217, 1, 0, 0, 0, 220, 223, 1, 0, 0, 0, 221, 219, 1, 0, 0, 0, 221,
+		222, 1, 0, 0, 0, 222, 39, 1, 0, 0, 0, 223, 221, 1, 0, 0, 0, 224, 229, 3,
+		42, 21, 0, 225, 226, 7, 2, 0, 0, 226, 228, 3, 42, 21, 0, 227, 225, 1, 0,
+		0, 0, 228, 231, 1, 0, 0, 0, 229, 227, 1, 0, 0, 0, 229, 230, 1, 0, 0, 0,
+		230, 41, 1, 0, 0, 0, 231, 229, 1, 0, 0, 0, 232, 237, 3, 44, 22, 0, 233,
+		234, 7, 3, 0, 0, 234, 236, 3, 44, 22, 0, 235, 233, 1, 0, 0, 0, 236, 239,
+		1, 0, 0, 0, 237, 235, 1, 0, 0, 0, 237, 238, 1, 0, 0, 0, 238, 43, 1, 0,
+		0, 0, 239, 237, 1, 0, 0, 0, 240, 243, 3, 46, 23, 0, 241, 242, 5, 32, 0,
+		0, 242, 244, 3, 44, 22, 0, 243, 241, 1, 0, 0, 0, 243, 244, 1, 0, 0, 0,
+		244, 45, 1, 0, 0, 0, 245, 246, 7, 4, 0, 0, 246, 249, 3, 46, 23, 0, 247,
+		249, 3, 48, 24, 0, 248, 245, 1, 0, 0, 0, 248, 247, 1, 0, 0, 0, 249, 47,
+		1, 0, 0, 0, 250, 255, 3, 50, 25, 0, 251, 252, 5, 34, 0, 0, 252, 254, 5,
+		43, 0, 0, 253, 251, 1, 0, 0, 0, 254, 257, 1, 0, 0, 0, 255, 253, 1, 0, 0,
+		0, 255, 256, 1, 0, 0, 0, 256, 49, 1, 0, 0, 0, 257, 255, 1, 0, 0, 0, 258,
+		271, 5, 44, 0, 0, 259, 271, 5, 45, 0, 0, 260, 271, 5, 10, 0, 0, 261, 271,
+		5, 11, 0, 0, 262, 271, 5, 12, 0, 0, 263, 271, 3, 52, 26, 0, 264, 271, 5,
+		43, 0, 0, 265, 266, 5, 38, 0, 0, 266, 267, 3, 18, 9, 0, 267, 268, 5, 39,
+		0, 0, 268, 271, 1, 0, 0, 0, 269, 271, 3, 56, 28, 0, 270, 258, 1, 0, 0,
+		0, 270, 259, 1, 0, 0, 0, 270, 260, 1, 0, 0, 0, 270, 261, 1, 0, 0, 0, 270,
+		262, 1, 0, 0, 0, 270, 263, 1, 0, 0, 0, 270, 264, 1, 0, 0, 0, 270, 265,
+		1, 0, 0, 0, 270, 269, 1, 0, 0, 0, 271, 51, 1, 0, 0, 0, 272, 273, 3, 54,
+		27, 0, 273, 274, 5, 38, 0, 0, 274, 279, 3, 18, 9, 0, 275, 276, 5, 37, 0,
+		0, 276, 278, 3, 18, 9, 0, 277, 275, 1, 0, 0, 0, 278, 281, 1, 0, 0, 0, 279,
+		277, 1, 0, 0, 0, 279, 280, 1, 0, 0, 0, 280, 282, 1, 0, 0, 0, 281, 279,
+		1, 0, 0, 0, 282, 283, 5, 39, 0, 0, 283, 53, 1, 0, 0, 0, 284, 287, 5, 43,
+		0, 0, 285, 287, 5, 9, 0, 0, 286, 284, 1, 0, 0, 0, 286, 285, 1, 0, 0, 0,
+		287, 55, 1, 0, 0, 0, 288, 290, 5, 40, 0, 0, 289, 291, 3, 58, 29, 0, 290,
+		289, 1, 0, 0, 0, 290, 291, 1, 0, 0, 0, 291, 292, 1, 0, 0, 0, 292, 293,
+		5, 41, 0, 0, 293, 57, 1, 0, 0, 0, 294, 299, 3, 60, 30, 0, 295, 296, 5,
+		37, 0, 0, 296, 298, 3, 60, 30, 0, 297, 295, 1, 0, 0, 0, 298, 301, 1, 0,
+		0, 0, 299, 297, 1, 0, 0, 0, 299, 300, 1, 0, 0, 0, 300, 59, 1, 0, 0, 0,
+		301, 299, 1, 0, 0, 0, 302, 303, 5, 43, 0, 0, 303, 304, 5, 24, 0, 0, 304,
+		305, 3, 18, 9, 0, 305, 61, 1, 0, 0, 0, 28, 65, 84, 93, 97, 102, 108, 116,
+		126, 135, 143, 146, 159, 166, 186, 197, 205, 213, 221, 229, 237, 243, 248,
+		255, 270, 279, 286, 290, 299,
 	}
 	deserializer := antlr.NewATNDeserializer(nil)
 	staticData.atn = deserializer.Deserialize(staticData.serializedATN)
@@ -408,18 +413,6 @@ func (s *ProgramContext) ToStringTree(ruleNames []string, recog antlr.Recognizer
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *ProgramContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterProgram(s)
-	}
-}
-
-func (s *ProgramContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitProgram(s)
-	}
-}
-
 func (s *ProgramContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -484,22 +477,6 @@ type IDeclarationContext interface {
 
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
-
-	// Getter signatures
-	CONST() antlr.TerminalNode
-	AllBinder() []IBinderContext
-	Binder(i int) IBinderContext
-	COLON() antlr.TerminalNode
-	TypeExpr() ITypeExprContext
-	ASSIGN() antlr.TerminalNode
-	Expr() IExprContext
-	FUN() antlr.TerminalNode
-	IDENTIFIER() antlr.TerminalNode
-	LPAREN() antlr.TerminalNode
-	RPAREN() antlr.TerminalNode
-	AllCOMMA() []antlr.TerminalNode
-	COMMA(i int) antlr.TerminalNode
-
 	// IsDeclarationContext differentiates from other interfaces.
 	IsDeclarationContext()
 }
@@ -536,11 +513,137 @@ func NewDeclarationContext(parser antlr.Parser, parent antlr.ParserRuleContext, 
 
 func (s *DeclarationContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *DeclarationContext) CONST() antlr.TerminalNode {
+func (s *DeclarationContext) CopyAll(ctx *DeclarationContext) {
+	s.CopyFrom(&ctx.BaseParserRuleContext)
+}
+
+func (s *DeclarationContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *DeclarationContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+type ConstDeclarationContext struct {
+	DeclarationContext
+}
+
+func NewConstDeclarationContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *ConstDeclarationContext {
+	var p = new(ConstDeclarationContext)
+
+	InitEmptyDeclarationContext(&p.DeclarationContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*DeclarationContext))
+
+	return p
+}
+
+func (s *ConstDeclarationContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *ConstDeclarationContext) CONST() antlr.TerminalNode {
 	return s.GetToken(MagoitoParserCONST, 0)
 }
 
-func (s *DeclarationContext) AllBinder() []IBinderContext {
+func (s *ConstDeclarationContext) Binder() IBinderContext {
+	var t antlr.RuleContext
+	for _, ctx := range s.GetChildren() {
+		if _, ok := ctx.(IBinderContext); ok {
+			t = ctx.(antlr.RuleContext)
+			break
+		}
+	}
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IBinderContext)
+}
+
+func (s *ConstDeclarationContext) COLON() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserCOLON, 0)
+}
+
+func (s *ConstDeclarationContext) TypeExpr() ITypeExprContext {
+	var t antlr.RuleContext
+	for _, ctx := range s.GetChildren() {
+		if _, ok := ctx.(ITypeExprContext); ok {
+			t = ctx.(antlr.RuleContext)
+			break
+		}
+	}
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(ITypeExprContext)
+}
+
+func (s *ConstDeclarationContext) ASSIGN() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserASSIGN, 0)
+}
+
+func (s *ConstDeclarationContext) Expr() IExprContext {
+	var t antlr.RuleContext
+	for _, ctx := range s.GetChildren() {
+		if _, ok := ctx.(IExprContext); ok {
+			t = ctx.(antlr.RuleContext)
+			break
+		}
+	}
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IExprContext)
+}
+
+func (s *ConstDeclarationContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitConstDeclaration(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type FunDeclarationContext struct {
+	DeclarationContext
+}
+
+func NewFunDeclarationContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *FunDeclarationContext {
+	var p = new(FunDeclarationContext)
+
+	InitEmptyDeclarationContext(&p.DeclarationContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*DeclarationContext))
+
+	return p
+}
+
+func (s *FunDeclarationContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *FunDeclarationContext) FUN() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserFUN, 0)
+}
+
+func (s *FunDeclarationContext) IDENTIFIER() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserIDENTIFIER, 0)
+}
+
+func (s *FunDeclarationContext) LPAREN() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserLPAREN, 0)
+}
+
+func (s *FunDeclarationContext) AllBinder() []IBinderContext {
 	children := s.GetChildren()
 	len := 0
 	for _, ctx := range children {
@@ -561,7 +664,7 @@ func (s *DeclarationContext) AllBinder() []IBinderContext {
 	return tst
 }
 
-func (s *DeclarationContext) Binder(i int) IBinderContext {
+func (s *FunDeclarationContext) Binder(i int) IBinderContext {
 	var t antlr.RuleContext
 	j := 0
 	for _, ctx := range s.GetChildren() {
@@ -581,11 +684,15 @@ func (s *DeclarationContext) Binder(i int) IBinderContext {
 	return t.(IBinderContext)
 }
 
-func (s *DeclarationContext) COLON() antlr.TerminalNode {
+func (s *FunDeclarationContext) RPAREN() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserRPAREN, 0)
+}
+
+func (s *FunDeclarationContext) COLON() antlr.TerminalNode {
 	return s.GetToken(MagoitoParserCOLON, 0)
 }
 
-func (s *DeclarationContext) TypeExpr() ITypeExprContext {
+func (s *FunDeclarationContext) TypeExpr() ITypeExprContext {
 	var t antlr.RuleContext
 	for _, ctx := range s.GetChildren() {
 		if _, ok := ctx.(ITypeExprContext); ok {
@@ -601,11 +708,11 @@ func (s *DeclarationContext) TypeExpr() ITypeExprContext {
 	return t.(ITypeExprContext)
 }
 
-func (s *DeclarationContext) ASSIGN() antlr.TerminalNode {
+func (s *FunDeclarationContext) ASSIGN() antlr.TerminalNode {
 	return s.GetToken(MagoitoParserASSIGN, 0)
 }
 
-func (s *DeclarationContext) Expr() IExprContext {
+func (s *FunDeclarationContext) Expr() IExprContext {
 	var t antlr.RuleContext
 	for _, ctx := range s.GetChildren() {
 		if _, ok := ctx.(IExprContext); ok {
@@ -621,54 +728,18 @@ func (s *DeclarationContext) Expr() IExprContext {
 	return t.(IExprContext)
 }
 
-func (s *DeclarationContext) FUN() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserFUN, 0)
-}
-
-func (s *DeclarationContext) IDENTIFIER() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserIDENTIFIER, 0)
-}
-
-func (s *DeclarationContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserLPAREN, 0)
-}
-
-func (s *DeclarationContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserRPAREN, 0)
-}
-
-func (s *DeclarationContext) AllCOMMA() []antlr.TerminalNode {
+func (s *FunDeclarationContext) AllCOMMA() []antlr.TerminalNode {
 	return s.GetTokens(MagoitoParserCOMMA)
 }
 
-func (s *DeclarationContext) COMMA(i int) antlr.TerminalNode {
+func (s *FunDeclarationContext) COMMA(i int) antlr.TerminalNode {
 	return s.GetToken(MagoitoParserCOMMA, i)
 }
 
-func (s *DeclarationContext) GetRuleContext() antlr.RuleContext {
-	return s
-}
-
-func (s *DeclarationContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
-	return antlr.TreesStringTree(s, ruleNames, recog)
-}
-
-func (s *DeclarationContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterDeclaration(s)
-	}
-}
-
-func (s *DeclarationContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitDeclaration(s)
-	}
-}
-
-func (s *DeclarationContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+func (s *FunDeclarationContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
-		return t.VisitDeclaration(s)
+		return t.VisitFunDeclaration(s)
 
 	default:
 		return t.VisitChildren(s)
@@ -688,6 +759,7 @@ func (p *MagoitoParser) Declaration() (localctx IDeclarationContext) {
 
 	switch p.GetTokenStream().LA(1) {
 	case MagoitoParserCONST:
+		localctx = NewConstDeclarationContext(p, localctx)
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(69)
@@ -727,6 +799,7 @@ func (p *MagoitoParser) Declaration() (localctx IDeclarationContext) {
 		}
 
 	case MagoitoParserFUN:
+		localctx = NewFunDeclarationContext(p, localctx)
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(76)
@@ -841,11 +914,6 @@ type IBinderContext interface {
 
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
-
-	// Getter signatures
-	IDENTIFIER() antlr.TerminalNode
-	WILDCARD() antlr.TerminalNode
-
 	// IsBinderContext differentiates from other interfaces.
 	IsBinderContext()
 }
@@ -882,12 +950,8 @@ func NewBinderContext(parser antlr.Parser, parent antlr.ParserRuleContext, invok
 
 func (s *BinderContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *BinderContext) IDENTIFIER() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserIDENTIFIER, 0)
-}
-
-func (s *BinderContext) WILDCARD() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserWILDCARD, 0)
+func (s *BinderContext) CopyAll(ctx *BinderContext) {
+	s.CopyFrom(&ctx.BaseParserRuleContext)
 }
 
 func (s *BinderContext) GetRuleContext() antlr.RuleContext {
@@ -898,22 +962,64 @@ func (s *BinderContext) ToStringTree(ruleNames []string, recog antlr.Recognizer)
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *BinderContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterBinder(s)
-	}
+type IdBinderContext struct {
+	BinderContext
 }
 
-func (s *BinderContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitBinder(s)
-	}
+func NewIdBinderContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *IdBinderContext {
+	var p = new(IdBinderContext)
+
+	InitEmptyBinderContext(&p.BinderContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*BinderContext))
+
+	return p
 }
 
-func (s *BinderContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+func (s *IdBinderContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *IdBinderContext) IDENTIFIER() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserIDENTIFIER, 0)
+}
+
+func (s *IdBinderContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
-		return t.VisitBinder(s)
+		return t.VisitIdBinder(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type WildcardBinderContext struct {
+	BinderContext
+}
+
+func NewWildcardBinderContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *WildcardBinderContext {
+	var p = new(WildcardBinderContext)
+
+	InitEmptyBinderContext(&p.BinderContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*BinderContext))
+
+	return p
+}
+
+func (s *WildcardBinderContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *WildcardBinderContext) WILDCARD() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserWILDCARD, 0)
+}
+
+func (s *WildcardBinderContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitWildcardBinder(s)
 
 	default:
 		return t.VisitChildren(s)
@@ -923,19 +1029,40 @@ func (s *BinderContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 func (p *MagoitoParser) Binder() (localctx IBinderContext) {
 	localctx = NewBinderContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 4, MagoitoParserRULE_binder)
-	var _la int
+	p.SetState(97)
+	p.GetErrorHandler().Sync(p)
+	if p.HasError() {
+		goto errorExit
+	}
 
-	p.EnterOuterAlt(localctx, 1)
-	{
-		p.SetState(95)
-		_la = p.GetTokenStream().LA(1)
-
-		if !(_la == MagoitoParserWILDCARD || _la == MagoitoParserIDENTIFIER) {
-			p.GetErrorHandler().RecoverInline(p)
-		} else {
-			p.GetErrorHandler().ReportMatch(p)
-			p.Consume()
+	switch p.GetTokenStream().LA(1) {
+	case MagoitoParserIDENTIFIER:
+		localctx = NewIdBinderContext(p, localctx)
+		p.EnterOuterAlt(localctx, 1)
+		{
+			p.SetState(95)
+			p.Match(MagoitoParserIDENTIFIER)
+			if p.HasError() {
+				// Recognition error - abort rule
+				goto errorExit
+			}
 		}
+
+	case MagoitoParserWILDCARD:
+		localctx = NewWildcardBinderContext(p, localctx)
+		p.EnterOuterAlt(localctx, 2)
+		{
+			p.SetState(96)
+			p.Match(MagoitoParserWILDCARD)
+			if p.HasError() {
+				// Recognition error - abort rule
+				goto errorExit
+			}
+		}
+
+	default:
+		p.SetError(antlr.NewNoViableAltException(p, nil, nil, nil, nil, nil))
+		goto errorExit
 	}
 
 errorExit:
@@ -1059,18 +1186,6 @@ func (s *TupleArrowTypeContext) TypeExpr() ITypeExprContext {
 	return t.(ITypeExprContext)
 }
 
-func (s *TupleArrowTypeContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterTupleArrowType(s)
-	}
-}
-
-func (s *TupleArrowTypeContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitTupleArrowType(s)
-	}
-}
-
 func (s *TupleArrowTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -1135,18 +1250,6 @@ func (s *ArrowTypeContext) TypeExpr() ITypeExprContext {
 	return t.(ITypeExprContext)
 }
 
-func (s *ArrowTypeContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterArrowType(s)
-	}
-}
-
-func (s *ArrowTypeContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitArrowType(s)
-	}
-}
-
 func (s *ArrowTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -1162,21 +1265,21 @@ func (p *MagoitoParser) TypeExpr() (localctx ITypeExprContext) {
 	p.EnterRule(localctx, 6, MagoitoParserRULE_typeExpr)
 	var _la int
 
-	p.SetState(106)
+	p.SetState(108)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
 	}
 
-	switch p.GetInterpreter().AdaptivePredict(p.BaseParser, p.GetTokenStream(), 4, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.BaseParser, p.GetTokenStream(), 5, p.GetParserRuleContext()) {
 	case 1:
 		localctx = NewArrowTypeContext(p, localctx)
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(97)
+			p.SetState(99)
 			p.NonTupleType()
 		}
-		p.SetState(100)
+		p.SetState(102)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -1185,7 +1288,7 @@ func (p *MagoitoParser) TypeExpr() (localctx ITypeExprContext) {
 
 		if _la == MagoitoParserARROW {
 			{
-				p.SetState(98)
+				p.SetState(100)
 				p.Match(MagoitoParserARROW)
 				if p.HasError() {
 					// Recognition error - abort rule
@@ -1193,7 +1296,7 @@ func (p *MagoitoParser) TypeExpr() (localctx ITypeExprContext) {
 				}
 			}
 			{
-				p.SetState(99)
+				p.SetState(101)
 				p.TypeExpr()
 			}
 
@@ -1203,11 +1306,11 @@ func (p *MagoitoParser) TypeExpr() (localctx ITypeExprContext) {
 		localctx = NewTupleArrowTypeContext(p, localctx)
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(102)
+			p.SetState(104)
 			p.TupleType()
 		}
 		{
-			p.SetState(103)
+			p.SetState(105)
 			p.Match(MagoitoParserARROW)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -1215,7 +1318,7 @@ func (p *MagoitoParser) TypeExpr() (localctx ITypeExprContext) {
 			}
 		}
 		{
-			p.SetState(104)
+			p.SetState(106)
 			p.TypeExpr()
 		}
 
@@ -1242,14 +1345,6 @@ type INonTupleTypeContext interface {
 
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
-
-	// Getter signatures
-	BasicType() IBasicTypeContext
-	RecordType() IRecordTypeContext
-	LPAREN() antlr.TerminalNode
-	TypeExpr() ITypeExprContext
-	RPAREN() antlr.TerminalNode
-
 	// IsNonTupleTypeContext differentiates from other interfaces.
 	IsNonTupleTypeContext()
 }
@@ -1286,7 +1381,37 @@ func NewNonTupleTypeContext(parser antlr.Parser, parent antlr.ParserRuleContext,
 
 func (s *NonTupleTypeContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *NonTupleTypeContext) BasicType() IBasicTypeContext {
+func (s *NonTupleTypeContext) CopyAll(ctx *NonTupleTypeContext) {
+	s.CopyFrom(&ctx.BaseParserRuleContext)
+}
+
+func (s *NonTupleTypeContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *NonTupleTypeContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+type BasicNonTupleTypeContext struct {
+	NonTupleTypeContext
+}
+
+func NewBasicNonTupleTypeContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *BasicNonTupleTypeContext {
+	var p = new(BasicNonTupleTypeContext)
+
+	InitEmptyNonTupleTypeContext(&p.NonTupleTypeContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*NonTupleTypeContext))
+
+	return p
+}
+
+func (s *BasicNonTupleTypeContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *BasicNonTupleTypeContext) BasicType() IBasicTypeContext {
 	var t antlr.RuleContext
 	for _, ctx := range s.GetChildren() {
 		if _, ok := ctx.(IBasicTypeContext); ok {
@@ -1302,27 +1427,39 @@ func (s *NonTupleTypeContext) BasicType() IBasicTypeContext {
 	return t.(IBasicTypeContext)
 }
 
-func (s *NonTupleTypeContext) RecordType() IRecordTypeContext {
-	var t antlr.RuleContext
-	for _, ctx := range s.GetChildren() {
-		if _, ok := ctx.(IRecordTypeContext); ok {
-			t = ctx.(antlr.RuleContext)
-			break
-		}
-	}
+func (s *BasicNonTupleTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitBasicNonTupleType(s)
 
-	if t == nil {
-		return nil
+	default:
+		return t.VisitChildren(s)
 	}
-
-	return t.(IRecordTypeContext)
 }
 
-func (s *NonTupleTypeContext) LPAREN() antlr.TerminalNode {
+type ParenNonTupleTypeContext struct {
+	NonTupleTypeContext
+}
+
+func NewParenNonTupleTypeContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *ParenNonTupleTypeContext {
+	var p = new(ParenNonTupleTypeContext)
+
+	InitEmptyNonTupleTypeContext(&p.NonTupleTypeContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*NonTupleTypeContext))
+
+	return p
+}
+
+func (s *ParenNonTupleTypeContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *ParenNonTupleTypeContext) LPAREN() antlr.TerminalNode {
 	return s.GetToken(MagoitoParserLPAREN, 0)
 }
 
-func (s *NonTupleTypeContext) TypeExpr() ITypeExprContext {
+func (s *ParenNonTupleTypeContext) TypeExpr() ITypeExprContext {
 	var t antlr.RuleContext
 	for _, ctx := range s.GetChildren() {
 		if _, ok := ctx.(ITypeExprContext); ok {
@@ -1338,34 +1475,58 @@ func (s *NonTupleTypeContext) TypeExpr() ITypeExprContext {
 	return t.(ITypeExprContext)
 }
 
-func (s *NonTupleTypeContext) RPAREN() antlr.TerminalNode {
+func (s *ParenNonTupleTypeContext) RPAREN() antlr.TerminalNode {
 	return s.GetToken(MagoitoParserRPAREN, 0)
 }
 
-func (s *NonTupleTypeContext) GetRuleContext() antlr.RuleContext {
+func (s *ParenNonTupleTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitParenNonTupleType(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type RecordNonTupleTypeContext struct {
+	NonTupleTypeContext
+}
+
+func NewRecordNonTupleTypeContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *RecordNonTupleTypeContext {
+	var p = new(RecordNonTupleTypeContext)
+
+	InitEmptyNonTupleTypeContext(&p.NonTupleTypeContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*NonTupleTypeContext))
+
+	return p
+}
+
+func (s *RecordNonTupleTypeContext) GetRuleContext() antlr.RuleContext {
 	return s
 }
 
-func (s *NonTupleTypeContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
-	return antlr.TreesStringTree(s, ruleNames, recog)
-}
-
-func (s *NonTupleTypeContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterNonTupleType(s)
+func (s *RecordNonTupleTypeContext) RecordType() IRecordTypeContext {
+	var t antlr.RuleContext
+	for _, ctx := range s.GetChildren() {
+		if _, ok := ctx.(IRecordTypeContext); ok {
+			t = ctx.(antlr.RuleContext)
+			break
+		}
 	}
-}
 
-func (s *NonTupleTypeContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitNonTupleType(s)
+	if t == nil {
+		return nil
 	}
+
+	return t.(IRecordTypeContext)
 }
 
-func (s *NonTupleTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+func (s *RecordNonTupleTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
-		return t.VisitNonTupleType(s)
+		return t.VisitRecordNonTupleType(s)
 
 	default:
 		return t.VisitChildren(s)
@@ -1375,7 +1536,7 @@ func (s *NonTupleTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{}
 func (p *MagoitoParser) NonTupleType() (localctx INonTupleTypeContext) {
 	localctx = NewNonTupleTypeContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 8, MagoitoParserRULE_nonTupleType)
-	p.SetState(114)
+	p.SetState(116)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -1383,23 +1544,26 @@ func (p *MagoitoParser) NonTupleType() (localctx INonTupleTypeContext) {
 
 	switch p.GetTokenStream().LA(1) {
 	case MagoitoParserINT_TYPE, MagoitoParserBOOL_TYPE, MagoitoParserSTRING_TYPE, MagoitoParserUNIT_TYPE:
+		localctx = NewBasicNonTupleTypeContext(p, localctx)
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(108)
+			p.SetState(110)
 			p.BasicType()
 		}
 
 	case MagoitoParserLBRACE:
+		localctx = NewRecordNonTupleTypeContext(p, localctx)
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(109)
+			p.SetState(111)
 			p.RecordType()
 		}
 
 	case MagoitoParserLPAREN:
+		localctx = NewParenNonTupleTypeContext(p, localctx)
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(110)
+			p.SetState(112)
 			p.Match(MagoitoParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -1407,11 +1571,11 @@ func (p *MagoitoParser) NonTupleType() (localctx INonTupleTypeContext) {
 			}
 		}
 		{
-			p.SetState(111)
+			p.SetState(113)
 			p.TypeExpr()
 		}
 		{
-			p.SetState(112)
+			p.SetState(114)
 			p.Match(MagoitoParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -1553,18 +1717,6 @@ func (s *TupleTypeContext) ToStringTree(ruleNames []string, recog antlr.Recogniz
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *TupleTypeContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterTupleType(s)
-	}
-}
-
-func (s *TupleTypeContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitTupleType(s)
-	}
-}
-
 func (s *TupleTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -1582,20 +1734,8 @@ func (p *MagoitoParser) TupleType() (localctx ITupleTypeContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(116)
-		p.Match(MagoitoParserLPAREN)
-		if p.HasError() {
-			// Recognition error - abort rule
-			goto errorExit
-		}
-	}
-	{
-		p.SetState(117)
-		p.TypeExpr()
-	}
-	{
 		p.SetState(118)
-		p.Match(MagoitoParserCOMMA)
+		p.Match(MagoitoParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -1605,7 +1745,19 @@ func (p *MagoitoParser) TupleType() (localctx ITupleTypeContext) {
 		p.SetState(119)
 		p.TypeExpr()
 	}
-	p.SetState(124)
+	{
+		p.SetState(120)
+		p.Match(MagoitoParserCOMMA)
+		if p.HasError() {
+			// Recognition error - abort rule
+			goto errorExit
+		}
+	}
+	{
+		p.SetState(121)
+		p.TypeExpr()
+	}
+	p.SetState(126)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -1614,7 +1766,7 @@ func (p *MagoitoParser) TupleType() (localctx ITupleTypeContext) {
 
 	for _la == MagoitoParserCOMMA {
 		{
-			p.SetState(120)
+			p.SetState(122)
 			p.Match(MagoitoParserCOMMA)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -1622,11 +1774,11 @@ func (p *MagoitoParser) TupleType() (localctx ITupleTypeContext) {
 			}
 		}
 		{
-			p.SetState(121)
+			p.SetState(123)
 			p.TypeExpr()
 		}
 
-		p.SetState(126)
+		p.SetState(128)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -1634,7 +1786,7 @@ func (p *MagoitoParser) TupleType() (localctx ITupleTypeContext) {
 		_la = p.GetTokenStream().LA(1)
 	}
 	{
-		p.SetState(127)
+		p.SetState(129)
 		p.Match(MagoitoParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -1661,13 +1813,6 @@ type IBasicTypeContext interface {
 
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
-
-	// Getter signatures
-	INT_TYPE() antlr.TerminalNode
-	BOOL_TYPE() antlr.TerminalNode
-	STRING_TYPE() antlr.TerminalNode
-	UNIT_TYPE() antlr.TerminalNode
-
 	// IsBasicTypeContext differentiates from other interfaces.
 	IsBasicTypeContext()
 }
@@ -1704,20 +1849,8 @@ func NewBasicTypeContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 
 func (s *BasicTypeContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *BasicTypeContext) INT_TYPE() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserINT_TYPE, 0)
-}
-
-func (s *BasicTypeContext) BOOL_TYPE() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserBOOL_TYPE, 0)
-}
-
-func (s *BasicTypeContext) STRING_TYPE() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserSTRING_TYPE, 0)
-}
-
-func (s *BasicTypeContext) UNIT_TYPE() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserUNIT_TYPE, 0)
+func (s *BasicTypeContext) CopyAll(ctx *BasicTypeContext) {
+	s.CopyFrom(&ctx.BaseParserRuleContext)
 }
 
 func (s *BasicTypeContext) GetRuleContext() antlr.RuleContext {
@@ -1728,22 +1861,128 @@ func (s *BasicTypeContext) ToStringTree(ruleNames []string, recog antlr.Recogniz
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *BasicTypeContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterBasicType(s)
-	}
+type BoolBasicTypeContext struct {
+	BasicTypeContext
 }
 
-func (s *BasicTypeContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitBasicType(s)
-	}
+func NewBoolBasicTypeContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *BoolBasicTypeContext {
+	var p = new(BoolBasicTypeContext)
+
+	InitEmptyBasicTypeContext(&p.BasicTypeContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*BasicTypeContext))
+
+	return p
 }
 
-func (s *BasicTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+func (s *BoolBasicTypeContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *BoolBasicTypeContext) BOOL_TYPE() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserBOOL_TYPE, 0)
+}
+
+func (s *BoolBasicTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
-		return t.VisitBasicType(s)
+		return t.VisitBoolBasicType(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type UnitBasicTypeContext struct {
+	BasicTypeContext
+}
+
+func NewUnitBasicTypeContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *UnitBasicTypeContext {
+	var p = new(UnitBasicTypeContext)
+
+	InitEmptyBasicTypeContext(&p.BasicTypeContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*BasicTypeContext))
+
+	return p
+}
+
+func (s *UnitBasicTypeContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *UnitBasicTypeContext) UNIT_TYPE() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserUNIT_TYPE, 0)
+}
+
+func (s *UnitBasicTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitUnitBasicType(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type StringBasicTypeContext struct {
+	BasicTypeContext
+}
+
+func NewStringBasicTypeContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *StringBasicTypeContext {
+	var p = new(StringBasicTypeContext)
+
+	InitEmptyBasicTypeContext(&p.BasicTypeContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*BasicTypeContext))
+
+	return p
+}
+
+func (s *StringBasicTypeContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *StringBasicTypeContext) STRING_TYPE() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserSTRING_TYPE, 0)
+}
+
+func (s *StringBasicTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitStringBasicType(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type IntBasicTypeContext struct {
+	BasicTypeContext
+}
+
+func NewIntBasicTypeContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *IntBasicTypeContext {
+	var p = new(IntBasicTypeContext)
+
+	InitEmptyBasicTypeContext(&p.BasicTypeContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*BasicTypeContext))
+
+	return p
+}
+
+func (s *IntBasicTypeContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *IntBasicTypeContext) INT_TYPE() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserINT_TYPE, 0)
+}
+
+func (s *IntBasicTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitIntBasicType(s)
 
 	default:
 		return t.VisitChildren(s)
@@ -1753,19 +1992,64 @@ func (s *BasicTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 func (p *MagoitoParser) BasicType() (localctx IBasicTypeContext) {
 	localctx = NewBasicTypeContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 12, MagoitoParserRULE_basicType)
-	var _la int
+	p.SetState(135)
+	p.GetErrorHandler().Sync(p)
+	if p.HasError() {
+		goto errorExit
+	}
 
-	p.EnterOuterAlt(localctx, 1)
-	{
-		p.SetState(129)
-		_la = p.GetTokenStream().LA(1)
-
-		if !((int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&122880) != 0) {
-			p.GetErrorHandler().RecoverInline(p)
-		} else {
-			p.GetErrorHandler().ReportMatch(p)
-			p.Consume()
+	switch p.GetTokenStream().LA(1) {
+	case MagoitoParserINT_TYPE:
+		localctx = NewIntBasicTypeContext(p, localctx)
+		p.EnterOuterAlt(localctx, 1)
+		{
+			p.SetState(131)
+			p.Match(MagoitoParserINT_TYPE)
+			if p.HasError() {
+				// Recognition error - abort rule
+				goto errorExit
+			}
 		}
+
+	case MagoitoParserBOOL_TYPE:
+		localctx = NewBoolBasicTypeContext(p, localctx)
+		p.EnterOuterAlt(localctx, 2)
+		{
+			p.SetState(132)
+			p.Match(MagoitoParserBOOL_TYPE)
+			if p.HasError() {
+				// Recognition error - abort rule
+				goto errorExit
+			}
+		}
+
+	case MagoitoParserSTRING_TYPE:
+		localctx = NewStringBasicTypeContext(p, localctx)
+		p.EnterOuterAlt(localctx, 3)
+		{
+			p.SetState(133)
+			p.Match(MagoitoParserSTRING_TYPE)
+			if p.HasError() {
+				// Recognition error - abort rule
+				goto errorExit
+			}
+		}
+
+	case MagoitoParserUNIT_TYPE:
+		localctx = NewUnitBasicTypeContext(p, localctx)
+		p.EnterOuterAlt(localctx, 4)
+		{
+			p.SetState(134)
+			p.Match(MagoitoParserUNIT_TYPE)
+			if p.HasError() {
+				// Recognition error - abort rule
+				goto errorExit
+			}
+		}
+
+	default:
+		p.SetError(antlr.NewNoViableAltException(p, nil, nil, nil, nil, nil))
+		goto errorExit
 	}
 
 errorExit:
@@ -1897,18 +2181,6 @@ func (s *RecordTypeContext) ToStringTree(ruleNames []string, recog antlr.Recogni
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *RecordTypeContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterRecordType(s)
-	}
-}
-
-func (s *RecordTypeContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitRecordType(s)
-	}
-}
-
 func (s *RecordTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -1926,14 +2198,14 @@ func (p *MagoitoParser) RecordType() (localctx IRecordTypeContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(131)
+		p.SetState(137)
 		p.Match(MagoitoParserLBRACE)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
 		}
 	}
-	p.SetState(140)
+	p.SetState(146)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -1942,10 +2214,10 @@ func (p *MagoitoParser) RecordType() (localctx IRecordTypeContext) {
 
 	if _la == MagoitoParserIDENTIFIER {
 		{
-			p.SetState(132)
+			p.SetState(138)
 			p.RecordTypeField()
 		}
-		p.SetState(137)
+		p.SetState(143)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -1954,7 +2226,7 @@ func (p *MagoitoParser) RecordType() (localctx IRecordTypeContext) {
 
 		for _la == MagoitoParserCOMMA {
 			{
-				p.SetState(133)
+				p.SetState(139)
 				p.Match(MagoitoParserCOMMA)
 				if p.HasError() {
 					// Recognition error - abort rule
@@ -1962,11 +2234,11 @@ func (p *MagoitoParser) RecordType() (localctx IRecordTypeContext) {
 				}
 			}
 			{
-				p.SetState(134)
+				p.SetState(140)
 				p.RecordTypeField()
 			}
 
-			p.SetState(139)
+			p.SetState(145)
 			p.GetErrorHandler().Sync(p)
 			if p.HasError() {
 				goto errorExit
@@ -1976,7 +2248,7 @@ func (p *MagoitoParser) RecordType() (localctx IRecordTypeContext) {
 
 	}
 	{
-		p.SetState(142)
+		p.SetState(148)
 		p.Match(MagoitoParserRBRACE)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2077,18 +2349,6 @@ func (s *RecordTypeFieldContext) ToStringTree(ruleNames []string, recog antlr.Re
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *RecordTypeFieldContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterRecordTypeField(s)
-	}
-}
-
-func (s *RecordTypeFieldContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitRecordTypeField(s)
-	}
-}
-
 func (s *RecordTypeFieldContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -2104,7 +2364,7 @@ func (p *MagoitoParser) RecordTypeField() (localctx IRecordTypeFieldContext) {
 	p.EnterRule(localctx, 16, MagoitoParserRULE_recordTypeField)
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(144)
+		p.SetState(150)
 		p.Match(MagoitoParserIDENTIFIER)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2112,7 +2372,7 @@ func (p *MagoitoParser) RecordTypeField() (localctx IRecordTypeFieldContext) {
 		}
 	}
 	{
-		p.SetState(145)
+		p.SetState(151)
 		p.Match(MagoitoParserCOLON)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2120,7 +2380,7 @@ func (p *MagoitoParser) RecordTypeField() (localctx IRecordTypeFieldContext) {
 		}
 	}
 	{
-		p.SetState(146)
+		p.SetState(152)
 		p.TypeExpr()
 	}
 
@@ -2207,18 +2467,6 @@ func (s *ExprContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) s
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *ExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterExpr(s)
-	}
-}
-
-func (s *ExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitExpr(s)
-	}
-}
-
 func (s *ExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -2234,7 +2482,7 @@ func (p *MagoitoParser) Expr() (localctx IExprContext) {
 	p.EnterRule(localctx, 18, MagoitoParserRULE_expr)
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(148)
+		p.SetState(154)
 		p.SeqExpr()
 	}
 
@@ -2343,18 +2591,6 @@ func (s *SeqExprContext) ToStringTree(ruleNames []string, recog antlr.Recognizer
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *SeqExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterSeqExpr(s)
-	}
-}
-
-func (s *SeqExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitSeqExpr(s)
-	}
-}
-
 func (s *SeqExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -2372,10 +2608,10 @@ func (p *MagoitoParser) SeqExpr() (localctx ISeqExprContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(150)
+		p.SetState(156)
 		p.ControlExpr()
 	}
-	p.SetState(153)
+	p.SetState(159)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -2384,7 +2620,7 @@ func (p *MagoitoParser) SeqExpr() (localctx ISeqExprContext) {
 
 	if _la == MagoitoParserSEMICOLON {
 		{
-			p.SetState(151)
+			p.SetState(157)
 			p.Match(MagoitoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -2392,7 +2628,7 @@ func (p *MagoitoParser) SeqExpr() (localctx ISeqExprContext) {
 			}
 		}
 		{
-			p.SetState(152)
+			p.SetState(158)
 			p.SeqExpr()
 		}
 
@@ -2417,14 +2653,6 @@ type IControlExprContext interface {
 
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
-
-	// Getter signatures
-	VarDeclExpr() IVarDeclExprContext
-	WhileExpr() IWhileExprContext
-	IfExpr() IIfExprContext
-	AssignExpr() IAssignExprContext
-	OrExpr() IOrExprContext
-
 	// IsControlExprContext differentiates from other interfaces.
 	IsControlExprContext()
 }
@@ -2461,7 +2689,37 @@ func NewControlExprContext(parser antlr.Parser, parent antlr.ParserRuleContext, 
 
 func (s *ControlExprContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *ControlExprContext) VarDeclExpr() IVarDeclExprContext {
+func (s *ControlExprContext) CopyAll(ctx *ControlExprContext) {
+	s.CopyFrom(&ctx.BaseParserRuleContext)
+}
+
+func (s *ControlExprContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *ControlExprContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+type VarDeclControlContext struct {
+	ControlExprContext
+}
+
+func NewVarDeclControlContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *VarDeclControlContext {
+	var p = new(VarDeclControlContext)
+
+	InitEmptyControlExprContext(&p.ControlExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*ControlExprContext))
+
+	return p
+}
+
+func (s *VarDeclControlContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *VarDeclControlContext) VarDeclExpr() IVarDeclExprContext {
 	var t antlr.RuleContext
 	for _, ctx := range s.GetChildren() {
 		if _, ok := ctx.(IVarDeclExprContext); ok {
@@ -2477,39 +2735,35 @@ func (s *ControlExprContext) VarDeclExpr() IVarDeclExprContext {
 	return t.(IVarDeclExprContext)
 }
 
-func (s *ControlExprContext) WhileExpr() IWhileExprContext {
-	var t antlr.RuleContext
-	for _, ctx := range s.GetChildren() {
-		if _, ok := ctx.(IWhileExprContext); ok {
-			t = ctx.(antlr.RuleContext)
-			break
-		}
-	}
+func (s *VarDeclControlContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitVarDeclControl(s)
 
-	if t == nil {
-		return nil
+	default:
+		return t.VisitChildren(s)
 	}
-
-	return t.(IWhileExprContext)
 }
 
-func (s *ControlExprContext) IfExpr() IIfExprContext {
-	var t antlr.RuleContext
-	for _, ctx := range s.GetChildren() {
-		if _, ok := ctx.(IIfExprContext); ok {
-			t = ctx.(antlr.RuleContext)
-			break
-		}
-	}
-
-	if t == nil {
-		return nil
-	}
-
-	return t.(IIfExprContext)
+type AssignControlContext struct {
+	ControlExprContext
 }
 
-func (s *ControlExprContext) AssignExpr() IAssignExprContext {
+func NewAssignControlContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *AssignControlContext {
+	var p = new(AssignControlContext)
+
+	InitEmptyControlExprContext(&p.ControlExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*ControlExprContext))
+
+	return p
+}
+
+func (s *AssignControlContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *AssignControlContext) AssignExpr() IAssignExprContext {
 	var t antlr.RuleContext
 	for _, ctx := range s.GetChildren() {
 		if _, ok := ctx.(IAssignExprContext); ok {
@@ -2525,7 +2779,35 @@ func (s *ControlExprContext) AssignExpr() IAssignExprContext {
 	return t.(IAssignExprContext)
 }
 
-func (s *ControlExprContext) OrExpr() IOrExprContext {
+func (s *AssignControlContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitAssignControl(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type OrControlContext struct {
+	ControlExprContext
+}
+
+func NewOrControlContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *OrControlContext {
+	var p = new(OrControlContext)
+
+	InitEmptyControlExprContext(&p.ControlExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*ControlExprContext))
+
+	return p
+}
+
+func (s *OrControlContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *OrControlContext) OrExpr() IOrExprContext {
 	var t antlr.RuleContext
 	for _, ctx := range s.GetChildren() {
 		if _, ok := ctx.(IOrExprContext); ok {
@@ -2541,30 +2823,98 @@ func (s *ControlExprContext) OrExpr() IOrExprContext {
 	return t.(IOrExprContext)
 }
 
-func (s *ControlExprContext) GetRuleContext() antlr.RuleContext {
+func (s *OrControlContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitOrControl(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type IfControlContext struct {
+	ControlExprContext
+}
+
+func NewIfControlContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *IfControlContext {
+	var p = new(IfControlContext)
+
+	InitEmptyControlExprContext(&p.ControlExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*ControlExprContext))
+
+	return p
+}
+
+func (s *IfControlContext) GetRuleContext() antlr.RuleContext {
 	return s
 }
 
-func (s *ControlExprContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
-	return antlr.TreesStringTree(s, ruleNames, recog)
-}
-
-func (s *ControlExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterControlExpr(s)
+func (s *IfControlContext) IfExpr() IIfExprContext {
+	var t antlr.RuleContext
+	for _, ctx := range s.GetChildren() {
+		if _, ok := ctx.(IIfExprContext); ok {
+			t = ctx.(antlr.RuleContext)
+			break
+		}
 	}
-}
 
-func (s *ControlExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitControlExpr(s)
+	if t == nil {
+		return nil
 	}
+
+	return t.(IIfExprContext)
 }
 
-func (s *ControlExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+func (s *IfControlContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
-		return t.VisitControlExpr(s)
+		return t.VisitIfControl(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type WhileControlContext struct {
+	ControlExprContext
+}
+
+func NewWhileControlContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *WhileControlContext {
+	var p = new(WhileControlContext)
+
+	InitEmptyControlExprContext(&p.ControlExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*ControlExprContext))
+
+	return p
+}
+
+func (s *WhileControlContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *WhileControlContext) WhileExpr() IWhileExprContext {
+	var t antlr.RuleContext
+	for _, ctx := range s.GetChildren() {
+		if _, ok := ctx.(IWhileExprContext); ok {
+			t = ctx.(antlr.RuleContext)
+			break
+		}
+	}
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IWhileExprContext)
+}
+
+func (s *WhileControlContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitWhileControl(s)
 
 	default:
 		return t.VisitChildren(s)
@@ -2574,45 +2924,50 @@ func (s *ControlExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} 
 func (p *MagoitoParser) ControlExpr() (localctx IControlExprContext) {
 	localctx = NewControlExprContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 22, MagoitoParserRULE_controlExpr)
-	p.SetState(160)
+	p.SetState(166)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
 	}
 
-	switch p.GetInterpreter().AdaptivePredict(p.BaseParser, p.GetTokenStream(), 10, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.BaseParser, p.GetTokenStream(), 12, p.GetParserRuleContext()) {
 	case 1:
+		localctx = NewVarDeclControlContext(p, localctx)
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(155)
+			p.SetState(161)
 			p.VarDeclExpr()
 		}
 
 	case 2:
+		localctx = NewWhileControlContext(p, localctx)
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(156)
+			p.SetState(162)
 			p.WhileExpr()
 		}
 
 	case 3:
+		localctx = NewIfControlContext(p, localctx)
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(157)
+			p.SetState(163)
 			p.IfExpr()
 		}
 
 	case 4:
+		localctx = NewAssignControlContext(p, localctx)
 		p.EnterOuterAlt(localctx, 4)
 		{
-			p.SetState(158)
+			p.SetState(164)
 			p.AssignExpr()
 		}
 
 	case 5:
+		localctx = NewOrControlContext(p, localctx)
 		p.EnterOuterAlt(localctx, 5)
 		{
-			p.SetState(159)
+			p.SetState(165)
 			p.OrExpr()
 		}
 
@@ -2752,18 +3107,6 @@ func (s *VarDeclExprContext) ToStringTree(ruleNames []string, recog antlr.Recogn
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *VarDeclExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterVarDeclExpr(s)
-	}
-}
-
-func (s *VarDeclExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitVarDeclExpr(s)
-	}
-}
-
 func (s *VarDeclExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -2779,7 +3122,7 @@ func (p *MagoitoParser) VarDeclExpr() (localctx IVarDeclExprContext) {
 	p.EnterRule(localctx, 24, MagoitoParserRULE_varDeclExpr)
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(162)
+		p.SetState(168)
 		p.Match(MagoitoParserVAR)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2787,11 +3130,11 @@ func (p *MagoitoParser) VarDeclExpr() (localctx IVarDeclExprContext) {
 		}
 	}
 	{
-		p.SetState(163)
+		p.SetState(169)
 		p.Binder()
 	}
 	{
-		p.SetState(164)
+		p.SetState(170)
 		p.Match(MagoitoParserCOLON)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2799,11 +3142,11 @@ func (p *MagoitoParser) VarDeclExpr() (localctx IVarDeclExprContext) {
 		}
 	}
 	{
-		p.SetState(165)
+		p.SetState(171)
 		p.TypeExpr()
 	}
 	{
-		p.SetState(166)
+		p.SetState(172)
 		p.Match(MagoitoParserASSIGN)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2811,7 +3154,7 @@ func (p *MagoitoParser) VarDeclExpr() (localctx IVarDeclExprContext) {
 		}
 	}
 	{
-		p.SetState(167)
+		p.SetState(173)
 		p.ControlExpr()
 	}
 
@@ -2925,18 +3268,6 @@ func (s *WhileExprContext) ToStringTree(ruleNames []string, recog antlr.Recogniz
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *WhileExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterWhileExpr(s)
-	}
-}
-
-func (s *WhileExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitWhileExpr(s)
-	}
-}
-
 func (s *WhileExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -2952,7 +3283,7 @@ func (p *MagoitoParser) WhileExpr() (localctx IWhileExprContext) {
 	p.EnterRule(localctx, 26, MagoitoParserRULE_whileExpr)
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(169)
+		p.SetState(175)
 		p.Match(MagoitoParserWHILE)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2960,11 +3291,11 @@ func (p *MagoitoParser) WhileExpr() (localctx IWhileExprContext) {
 		}
 	}
 	{
-		p.SetState(170)
+		p.SetState(176)
 		p.OrExpr()
 	}
 	{
-		p.SetState(171)
+		p.SetState(177)
 		p.Match(MagoitoParserDO)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -2972,7 +3303,7 @@ func (p *MagoitoParser) WhileExpr() (localctx IWhileExprContext) {
 		}
 	}
 	{
-		p.SetState(172)
+		p.SetState(178)
 		p.ControlExpr()
 	}
 
@@ -3117,18 +3448,6 @@ func (s *IfExprContext) ToStringTree(ruleNames []string, recog antlr.Recognizer)
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *IfExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterIfExpr(s)
-	}
-}
-
-func (s *IfExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitIfExpr(s)
-	}
-}
-
 func (s *IfExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -3144,7 +3463,7 @@ func (p *MagoitoParser) IfExpr() (localctx IIfExprContext) {
 	p.EnterRule(localctx, 28, MagoitoParserRULE_ifExpr)
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(174)
+		p.SetState(180)
 		p.Match(MagoitoParserIF)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -3152,11 +3471,11 @@ func (p *MagoitoParser) IfExpr() (localctx IIfExprContext) {
 		}
 	}
 	{
-		p.SetState(175)
+		p.SetState(181)
 		p.OrExpr()
 	}
 	{
-		p.SetState(176)
+		p.SetState(182)
 		p.Match(MagoitoParserTHEN)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -3164,15 +3483,15 @@ func (p *MagoitoParser) IfExpr() (localctx IIfExprContext) {
 		}
 	}
 	{
-		p.SetState(177)
+		p.SetState(183)
 		p.ControlExpr()
 	}
-	p.SetState(180)
+	p.SetState(186)
 	p.GetErrorHandler().Sync(p)
 
-	if p.GetInterpreter().AdaptivePredict(p.BaseParser, p.GetTokenStream(), 11, p.GetParserRuleContext()) == 1 {
+	if p.GetInterpreter().AdaptivePredict(p.BaseParser, p.GetTokenStream(), 13, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(178)
+			p.SetState(184)
 			p.Match(MagoitoParserELSE)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -3180,7 +3499,7 @@ func (p *MagoitoParser) IfExpr() (localctx IIfExprContext) {
 			}
 		}
 		{
-			p.SetState(179)
+			p.SetState(185)
 			p.ControlExpr()
 		}
 
@@ -3281,18 +3600,6 @@ func (s *AssignExprContext) ToStringTree(ruleNames []string, recog antlr.Recogni
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *AssignExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterAssignExpr(s)
-	}
-}
-
-func (s *AssignExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitAssignExpr(s)
-	}
-}
-
 func (s *AssignExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -3308,7 +3615,7 @@ func (p *MagoitoParser) AssignExpr() (localctx IAssignExprContext) {
 	p.EnterRule(localctx, 30, MagoitoParserRULE_assignExpr)
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(182)
+		p.SetState(188)
 		p.Match(MagoitoParserIDENTIFIER)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -3316,7 +3623,7 @@ func (p *MagoitoParser) AssignExpr() (localctx IAssignExprContext) {
 		}
 	}
 	{
-		p.SetState(183)
+		p.SetState(189)
 		p.Match(MagoitoParserASSIGN)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -3324,7 +3631,7 @@ func (p *MagoitoParser) AssignExpr() (localctx IAssignExprContext) {
 		}
 	}
 	{
-		p.SetState(184)
+		p.SetState(190)
 		p.ControlExpr()
 	}
 
@@ -3447,18 +3754,6 @@ func (s *OrExprContext) ToStringTree(ruleNames []string, recog antlr.Recognizer)
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *OrExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterOrExpr(s)
-	}
-}
-
-func (s *OrExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitOrExpr(s)
-	}
-}
-
 func (s *OrExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -3476,10 +3771,10 @@ func (p *MagoitoParser) OrExpr() (localctx IOrExprContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(186)
+		p.SetState(192)
 		p.AndExpr()
 	}
-	p.SetState(191)
+	p.SetState(197)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -3488,7 +3783,7 @@ func (p *MagoitoParser) OrExpr() (localctx IOrExprContext) {
 
 	for _la == MagoitoParserOR {
 		{
-			p.SetState(187)
+			p.SetState(193)
 			p.Match(MagoitoParserOR)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -3496,11 +3791,11 @@ func (p *MagoitoParser) OrExpr() (localctx IOrExprContext) {
 			}
 		}
 		{
-			p.SetState(188)
+			p.SetState(194)
 			p.AndExpr()
 		}
 
-		p.SetState(193)
+		p.SetState(199)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -3627,18 +3922,6 @@ func (s *AndExprContext) ToStringTree(ruleNames []string, recog antlr.Recognizer
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *AndExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterAndExpr(s)
-	}
-}
-
-func (s *AndExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitAndExpr(s)
-	}
-}
-
 func (s *AndExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -3656,10 +3939,10 @@ func (p *MagoitoParser) AndExpr() (localctx IAndExprContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(194)
+		p.SetState(200)
 		p.EqualityExpr()
 	}
-	p.SetState(199)
+	p.SetState(205)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -3668,7 +3951,7 @@ func (p *MagoitoParser) AndExpr() (localctx IAndExprContext) {
 
 	for _la == MagoitoParserAND {
 		{
-			p.SetState(195)
+			p.SetState(201)
 			p.Match(MagoitoParserAND)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -3676,11 +3959,11 @@ func (p *MagoitoParser) AndExpr() (localctx IAndExprContext) {
 			}
 		}
 		{
-			p.SetState(196)
+			p.SetState(202)
 			p.EqualityExpr()
 		}
 
-		p.SetState(201)
+		p.SetState(207)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -3817,18 +4100,6 @@ func (s *EqualityExprContext) ToStringTree(ruleNames []string, recog antlr.Recog
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *EqualityExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterEqualityExpr(s)
-	}
-}
-
-func (s *EqualityExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitEqualityExpr(s)
-	}
-}
-
 func (s *EqualityExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -3846,10 +4117,10 @@ func (p *MagoitoParser) EqualityExpr() (localctx IEqualityExprContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(202)
+		p.SetState(208)
 		p.ComparisonExpr()
 	}
-	p.SetState(207)
+	p.SetState(213)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -3858,7 +4129,7 @@ func (p *MagoitoParser) EqualityExpr() (localctx IEqualityExprContext) {
 
 	for _la == MagoitoParserEQ || _la == MagoitoParserNEQ {
 		{
-			p.SetState(203)
+			p.SetState(209)
 			_la = p.GetTokenStream().LA(1)
 
 			if !(_la == MagoitoParserEQ || _la == MagoitoParserNEQ) {
@@ -3869,11 +4140,11 @@ func (p *MagoitoParser) EqualityExpr() (localctx IEqualityExprContext) {
 			}
 		}
 		{
-			p.SetState(204)
+			p.SetState(210)
 			p.ComparisonExpr()
 		}
 
-		p.SetState(209)
+		p.SetState(215)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -4030,18 +4301,6 @@ func (s *ComparisonExprContext) ToStringTree(ruleNames []string, recog antlr.Rec
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *ComparisonExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterComparisonExpr(s)
-	}
-}
-
-func (s *ComparisonExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitComparisonExpr(s)
-	}
-}
-
 func (s *ComparisonExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -4059,10 +4318,10 @@ func (p *MagoitoParser) ComparisonExpr() (localctx IComparisonExprContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(210)
+		p.SetState(216)
 		p.AdditiveExpr()
 	}
-	p.SetState(215)
+	p.SetState(221)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -4071,7 +4330,7 @@ func (p *MagoitoParser) ComparisonExpr() (localctx IComparisonExprContext) {
 
 	for (int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&103809024) != 0 {
 		{
-			p.SetState(211)
+			p.SetState(217)
 			_la = p.GetTokenStream().LA(1)
 
 			if !((int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&103809024) != 0) {
@@ -4082,11 +4341,11 @@ func (p *MagoitoParser) ComparisonExpr() (localctx IComparisonExprContext) {
 			}
 		}
 		{
-			p.SetState(212)
+			p.SetState(218)
 			p.AdditiveExpr()
 		}
 
-		p.SetState(217)
+		p.SetState(223)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -4223,18 +4482,6 @@ func (s *AdditiveExprContext) ToStringTree(ruleNames []string, recog antlr.Recog
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *AdditiveExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterAdditiveExpr(s)
-	}
-}
-
-func (s *AdditiveExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitAdditiveExpr(s)
-	}
-}
-
 func (s *AdditiveExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -4252,10 +4499,10 @@ func (p *MagoitoParser) AdditiveExpr() (localctx IAdditiveExprContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(218)
+		p.SetState(224)
 		p.MultiplicativeExpr()
 	}
-	p.SetState(223)
+	p.SetState(229)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -4264,7 +4511,7 @@ func (p *MagoitoParser) AdditiveExpr() (localctx IAdditiveExprContext) {
 
 	for _la == MagoitoParserPLUS || _la == MagoitoParserMINUS {
 		{
-			p.SetState(219)
+			p.SetState(225)
 			_la = p.GetTokenStream().LA(1)
 
 			if !(_la == MagoitoParserPLUS || _la == MagoitoParserMINUS) {
@@ -4275,11 +4522,11 @@ func (p *MagoitoParser) AdditiveExpr() (localctx IAdditiveExprContext) {
 			}
 		}
 		{
-			p.SetState(220)
+			p.SetState(226)
 			p.MultiplicativeExpr()
 		}
 
-		p.SetState(225)
+		p.SetState(231)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -4426,18 +4673,6 @@ func (s *MultiplicativeExprContext) ToStringTree(ruleNames []string, recog antlr
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *MultiplicativeExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterMultiplicativeExpr(s)
-	}
-}
-
-func (s *MultiplicativeExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitMultiplicativeExpr(s)
-	}
-}
-
 func (s *MultiplicativeExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -4455,10 +4690,10 @@ func (p *MagoitoParser) MultiplicativeExpr() (localctx IMultiplicativeExprContex
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(226)
+		p.SetState(232)
 		p.PowerExpr()
 	}
-	p.SetState(231)
+	p.SetState(237)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -4467,7 +4702,7 @@ func (p *MagoitoParser) MultiplicativeExpr() (localctx IMultiplicativeExprContex
 
 	for (int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&3758096384) != 0 {
 		{
-			p.SetState(227)
+			p.SetState(233)
 			_la = p.GetTokenStream().LA(1)
 
 			if !((int64(_la) & ^0x3f) == 0 && ((int64(1)<<_la)&3758096384) != 0) {
@@ -4478,11 +4713,11 @@ func (p *MagoitoParser) MultiplicativeExpr() (localctx IMultiplicativeExprContex
 			}
 		}
 		{
-			p.SetState(228)
+			p.SetState(234)
 			p.PowerExpr()
 		}
 
-		p.SetState(233)
+		p.SetState(239)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -4595,18 +4830,6 @@ func (s *PowerExprContext) ToStringTree(ruleNames []string, recog antlr.Recogniz
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *PowerExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterPowerExpr(s)
-	}
-}
-
-func (s *PowerExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitPowerExpr(s)
-	}
-}
-
 func (s *PowerExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -4624,10 +4847,10 @@ func (p *MagoitoParser) PowerExpr() (localctx IPowerExprContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(234)
+		p.SetState(240)
 		p.UnaryExpr()
 	}
-	p.SetState(237)
+	p.SetState(243)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -4636,7 +4859,7 @@ func (p *MagoitoParser) PowerExpr() (localctx IPowerExprContext) {
 
 	if _la == MagoitoParserPOWER {
 		{
-			p.SetState(235)
+			p.SetState(241)
 			p.Match(MagoitoParserPOWER)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -4644,7 +4867,7 @@ func (p *MagoitoParser) PowerExpr() (localctx IPowerExprContext) {
 			}
 		}
 		{
-			p.SetState(236)
+			p.SetState(242)
 			p.PowerExpr()
 		}
 
@@ -4760,18 +4983,6 @@ func (s *UnaryExprContext) ToStringTree(ruleNames []string, recog antlr.Recogniz
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *UnaryExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterUnaryExpr(s)
-	}
-}
-
-func (s *UnaryExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitUnaryExpr(s)
-	}
-}
-
 func (s *UnaryExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -4787,7 +4998,7 @@ func (p *MagoitoParser) UnaryExpr() (localctx IUnaryExprContext) {
 	p.EnterRule(localctx, 46, MagoitoParserRULE_unaryExpr)
 	var _la int
 
-	p.SetState(242)
+	p.SetState(248)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -4797,7 +5008,7 @@ func (p *MagoitoParser) UnaryExpr() (localctx IUnaryExprContext) {
 	case MagoitoParserMINUS, MagoitoParserNOT:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(239)
+			p.SetState(245)
 			_la = p.GetTokenStream().LA(1)
 
 			if !(_la == MagoitoParserMINUS || _la == MagoitoParserNOT) {
@@ -4808,14 +5019,14 @@ func (p *MagoitoParser) UnaryExpr() (localctx IUnaryExprContext) {
 			}
 		}
 		{
-			p.SetState(240)
+			p.SetState(246)
 			p.UnaryExpr()
 		}
 
 	case MagoitoParserPRINT, MagoitoParserTRUE, MagoitoParserFALSE, MagoitoParserUNIT_VALUE, MagoitoParserLPAREN, MagoitoParserLBRACE, MagoitoParserIDENTIFIER, MagoitoParserINT_LITERAL, MagoitoParserSTRING_LITERAL:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(241)
+			p.SetState(247)
 			p.ProjectionExpr()
 		}
 
@@ -4927,18 +5138,6 @@ func (s *ProjectionExprContext) ToStringTree(ruleNames []string, recog antlr.Rec
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *ProjectionExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterProjectionExpr(s)
-	}
-}
-
-func (s *ProjectionExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitProjectionExpr(s)
-	}
-}
-
 func (s *ProjectionExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -4956,10 +5155,10 @@ func (p *MagoitoParser) ProjectionExpr() (localctx IProjectionExprContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(244)
+		p.SetState(250)
 		p.PrimaryExpr()
 	}
-	p.SetState(249)
+	p.SetState(255)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -4968,7 +5167,7 @@ func (p *MagoitoParser) ProjectionExpr() (localctx IProjectionExprContext) {
 
 	for _la == MagoitoParserDOT {
 		{
-			p.SetState(245)
+			p.SetState(251)
 			p.Match(MagoitoParserDOT)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -4976,7 +5175,7 @@ func (p *MagoitoParser) ProjectionExpr() (localctx IProjectionExprContext) {
 			}
 		}
 		{
-			p.SetState(246)
+			p.SetState(252)
 			p.Match(MagoitoParserIDENTIFIER)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -4984,7 +5183,7 @@ func (p *MagoitoParser) ProjectionExpr() (localctx IProjectionExprContext) {
 			}
 		}
 
-		p.SetState(251)
+		p.SetState(257)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -5011,20 +5210,6 @@ type IPrimaryExprContext interface {
 
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
-
-	// Getter signatures
-	INT_LITERAL() antlr.TerminalNode
-	STRING_LITERAL() antlr.TerminalNode
-	TRUE() antlr.TerminalNode
-	FALSE() antlr.TerminalNode
-	UNIT_VALUE() antlr.TerminalNode
-	CallExpr() ICallExprContext
-	IDENTIFIER() antlr.TerminalNode
-	LPAREN() antlr.TerminalNode
-	Expr() IExprContext
-	RPAREN() antlr.TerminalNode
-	RecordExpr() IRecordExprContext
-
 	// IsPrimaryExprContext differentiates from other interfaces.
 	IsPrimaryExprContext()
 }
@@ -5061,51 +5246,105 @@ func NewPrimaryExprContext(parser antlr.Parser, parent antlr.ParserRuleContext, 
 
 func (s *PrimaryExprContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *PrimaryExprContext) INT_LITERAL() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserINT_LITERAL, 0)
+func (s *PrimaryExprContext) CopyAll(ctx *PrimaryExprContext) {
+	s.CopyFrom(&ctx.BaseParserRuleContext)
 }
 
-func (s *PrimaryExprContext) STRING_LITERAL() antlr.TerminalNode {
+func (s *PrimaryExprContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *PrimaryExprContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+type StringLiteralPrimaryContext struct {
+	PrimaryExprContext
+}
+
+func NewStringLiteralPrimaryContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *StringLiteralPrimaryContext {
+	var p = new(StringLiteralPrimaryContext)
+
+	InitEmptyPrimaryExprContext(&p.PrimaryExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*PrimaryExprContext))
+
+	return p
+}
+
+func (s *StringLiteralPrimaryContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *StringLiteralPrimaryContext) STRING_LITERAL() antlr.TerminalNode {
 	return s.GetToken(MagoitoParserSTRING_LITERAL, 0)
 }
 
-func (s *PrimaryExprContext) TRUE() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserTRUE, 0)
-}
+func (s *StringLiteralPrimaryContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitStringLiteralPrimary(s)
 
-func (s *PrimaryExprContext) FALSE() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserFALSE, 0)
-}
-
-func (s *PrimaryExprContext) UNIT_VALUE() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserUNIT_VALUE, 0)
-}
-
-func (s *PrimaryExprContext) CallExpr() ICallExprContext {
-	var t antlr.RuleContext
-	for _, ctx := range s.GetChildren() {
-		if _, ok := ctx.(ICallExprContext); ok {
-			t = ctx.(antlr.RuleContext)
-			break
-		}
+	default:
+		return t.VisitChildren(s)
 	}
-
-	if t == nil {
-		return nil
-	}
-
-	return t.(ICallExprContext)
 }
 
-func (s *PrimaryExprContext) IDENTIFIER() antlr.TerminalNode {
+type IdentifierPrimaryContext struct {
+	PrimaryExprContext
+}
+
+func NewIdentifierPrimaryContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *IdentifierPrimaryContext {
+	var p = new(IdentifierPrimaryContext)
+
+	InitEmptyPrimaryExprContext(&p.PrimaryExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*PrimaryExprContext))
+
+	return p
+}
+
+func (s *IdentifierPrimaryContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *IdentifierPrimaryContext) IDENTIFIER() antlr.TerminalNode {
 	return s.GetToken(MagoitoParserIDENTIFIER, 0)
 }
 
-func (s *PrimaryExprContext) LPAREN() antlr.TerminalNode {
+func (s *IdentifierPrimaryContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitIdentifierPrimary(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type ParenPrimaryContext struct {
+	PrimaryExprContext
+}
+
+func NewParenPrimaryContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *ParenPrimaryContext {
+	var p = new(ParenPrimaryContext)
+
+	InitEmptyPrimaryExprContext(&p.PrimaryExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*PrimaryExprContext))
+
+	return p
+}
+
+func (s *ParenPrimaryContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *ParenPrimaryContext) LPAREN() antlr.TerminalNode {
 	return s.GetToken(MagoitoParserLPAREN, 0)
 }
 
-func (s *PrimaryExprContext) Expr() IExprContext {
+func (s *ParenPrimaryContext) Expr() IExprContext {
 	var t antlr.RuleContext
 	for _, ctx := range s.GetChildren() {
 		if _, ok := ctx.(IExprContext); ok {
@@ -5121,11 +5360,211 @@ func (s *PrimaryExprContext) Expr() IExprContext {
 	return t.(IExprContext)
 }
 
-func (s *PrimaryExprContext) RPAREN() antlr.TerminalNode {
+func (s *ParenPrimaryContext) RPAREN() antlr.TerminalNode {
 	return s.GetToken(MagoitoParserRPAREN, 0)
 }
 
-func (s *PrimaryExprContext) RecordExpr() IRecordExprContext {
+func (s *ParenPrimaryContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitParenPrimary(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type IntLiteralPrimaryContext struct {
+	PrimaryExprContext
+}
+
+func NewIntLiteralPrimaryContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *IntLiteralPrimaryContext {
+	var p = new(IntLiteralPrimaryContext)
+
+	InitEmptyPrimaryExprContext(&p.PrimaryExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*PrimaryExprContext))
+
+	return p
+}
+
+func (s *IntLiteralPrimaryContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *IntLiteralPrimaryContext) INT_LITERAL() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserINT_LITERAL, 0)
+}
+
+func (s *IntLiteralPrimaryContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitIntLiteralPrimary(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type FalsePrimaryContext struct {
+	PrimaryExprContext
+}
+
+func NewFalsePrimaryContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *FalsePrimaryContext {
+	var p = new(FalsePrimaryContext)
+
+	InitEmptyPrimaryExprContext(&p.PrimaryExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*PrimaryExprContext))
+
+	return p
+}
+
+func (s *FalsePrimaryContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *FalsePrimaryContext) FALSE() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserFALSE, 0)
+}
+
+func (s *FalsePrimaryContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitFalsePrimary(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type TruePrimaryContext struct {
+	PrimaryExprContext
+}
+
+func NewTruePrimaryContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *TruePrimaryContext {
+	var p = new(TruePrimaryContext)
+
+	InitEmptyPrimaryExprContext(&p.PrimaryExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*PrimaryExprContext))
+
+	return p
+}
+
+func (s *TruePrimaryContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *TruePrimaryContext) TRUE() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserTRUE, 0)
+}
+
+func (s *TruePrimaryContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitTruePrimary(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type CallPrimaryContext struct {
+	PrimaryExprContext
+}
+
+func NewCallPrimaryContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *CallPrimaryContext {
+	var p = new(CallPrimaryContext)
+
+	InitEmptyPrimaryExprContext(&p.PrimaryExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*PrimaryExprContext))
+
+	return p
+}
+
+func (s *CallPrimaryContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *CallPrimaryContext) CallExpr() ICallExprContext {
+	var t antlr.RuleContext
+	for _, ctx := range s.GetChildren() {
+		if _, ok := ctx.(ICallExprContext); ok {
+			t = ctx.(antlr.RuleContext)
+			break
+		}
+	}
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(ICallExprContext)
+}
+
+func (s *CallPrimaryContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitCallPrimary(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type UnitPrimaryContext struct {
+	PrimaryExprContext
+}
+
+func NewUnitPrimaryContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *UnitPrimaryContext {
+	var p = new(UnitPrimaryContext)
+
+	InitEmptyPrimaryExprContext(&p.PrimaryExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*PrimaryExprContext))
+
+	return p
+}
+
+func (s *UnitPrimaryContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *UnitPrimaryContext) UNIT_VALUE() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserUNIT_VALUE, 0)
+}
+
+func (s *UnitPrimaryContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitUnitPrimary(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type RecordPrimaryContext struct {
+	PrimaryExprContext
+}
+
+func NewRecordPrimaryContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *RecordPrimaryContext {
+	var p = new(RecordPrimaryContext)
+
+	InitEmptyPrimaryExprContext(&p.PrimaryExprContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*PrimaryExprContext))
+
+	return p
+}
+
+func (s *RecordPrimaryContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *RecordPrimaryContext) RecordExpr() IRecordExprContext {
 	var t antlr.RuleContext
 	for _, ctx := range s.GetChildren() {
 		if _, ok := ctx.(IRecordExprContext); ok {
@@ -5141,30 +5580,10 @@ func (s *PrimaryExprContext) RecordExpr() IRecordExprContext {
 	return t.(IRecordExprContext)
 }
 
-func (s *PrimaryExprContext) GetRuleContext() antlr.RuleContext {
-	return s
-}
-
-func (s *PrimaryExprContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
-	return antlr.TreesStringTree(s, ruleNames, recog)
-}
-
-func (s *PrimaryExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterPrimaryExpr(s)
-	}
-}
-
-func (s *PrimaryExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitPrimaryExpr(s)
-	}
-}
-
-func (s *PrimaryExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+func (s *RecordPrimaryContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
-		return t.VisitPrimaryExpr(s)
+		return t.VisitRecordPrimary(s)
 
 	default:
 		return t.VisitChildren(s)
@@ -5174,17 +5593,18 @@ func (s *PrimaryExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} 
 func (p *MagoitoParser) PrimaryExpr() (localctx IPrimaryExprContext) {
 	localctx = NewPrimaryExprContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 50, MagoitoParserRULE_primaryExpr)
-	p.SetState(264)
+	p.SetState(270)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
 	}
 
-	switch p.GetInterpreter().AdaptivePredict(p.BaseParser, p.GetTokenStream(), 21, p.GetParserRuleContext()) {
+	switch p.GetInterpreter().AdaptivePredict(p.BaseParser, p.GetTokenStream(), 23, p.GetParserRuleContext()) {
 	case 1:
+		localctx = NewIntLiteralPrimaryContext(p, localctx)
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(252)
+			p.SetState(258)
 			p.Match(MagoitoParserINT_LITERAL)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -5193,9 +5613,10 @@ func (p *MagoitoParser) PrimaryExpr() (localctx IPrimaryExprContext) {
 		}
 
 	case 2:
+		localctx = NewStringLiteralPrimaryContext(p, localctx)
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(253)
+			p.SetState(259)
 			p.Match(MagoitoParserSTRING_LITERAL)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -5204,9 +5625,10 @@ func (p *MagoitoParser) PrimaryExpr() (localctx IPrimaryExprContext) {
 		}
 
 	case 3:
+		localctx = NewTruePrimaryContext(p, localctx)
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(254)
+			p.SetState(260)
 			p.Match(MagoitoParserTRUE)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -5215,9 +5637,10 @@ func (p *MagoitoParser) PrimaryExpr() (localctx IPrimaryExprContext) {
 		}
 
 	case 4:
+		localctx = NewFalsePrimaryContext(p, localctx)
 		p.EnterOuterAlt(localctx, 4)
 		{
-			p.SetState(255)
+			p.SetState(261)
 			p.Match(MagoitoParserFALSE)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -5226,9 +5649,10 @@ func (p *MagoitoParser) PrimaryExpr() (localctx IPrimaryExprContext) {
 		}
 
 	case 5:
+		localctx = NewUnitPrimaryContext(p, localctx)
 		p.EnterOuterAlt(localctx, 5)
 		{
-			p.SetState(256)
+			p.SetState(262)
 			p.Match(MagoitoParserUNIT_VALUE)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -5237,16 +5661,18 @@ func (p *MagoitoParser) PrimaryExpr() (localctx IPrimaryExprContext) {
 		}
 
 	case 6:
+		localctx = NewCallPrimaryContext(p, localctx)
 		p.EnterOuterAlt(localctx, 6)
 		{
-			p.SetState(257)
+			p.SetState(263)
 			p.CallExpr()
 		}
 
 	case 7:
+		localctx = NewIdentifierPrimaryContext(p, localctx)
 		p.EnterOuterAlt(localctx, 7)
 		{
-			p.SetState(258)
+			p.SetState(264)
 			p.Match(MagoitoParserIDENTIFIER)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -5255,9 +5681,10 @@ func (p *MagoitoParser) PrimaryExpr() (localctx IPrimaryExprContext) {
 		}
 
 	case 8:
+		localctx = NewParenPrimaryContext(p, localctx)
 		p.EnterOuterAlt(localctx, 8)
 		{
-			p.SetState(259)
+			p.SetState(265)
 			p.Match(MagoitoParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -5265,11 +5692,11 @@ func (p *MagoitoParser) PrimaryExpr() (localctx IPrimaryExprContext) {
 			}
 		}
 		{
-			p.SetState(260)
+			p.SetState(266)
 			p.Expr()
 		}
 		{
-			p.SetState(261)
+			p.SetState(267)
 			p.Match(MagoitoParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -5278,9 +5705,10 @@ func (p *MagoitoParser) PrimaryExpr() (localctx IPrimaryExprContext) {
 		}
 
 	case 9:
+		localctx = NewRecordPrimaryContext(p, localctx)
 		p.EnterOuterAlt(localctx, 9)
 		{
-			p.SetState(263)
+			p.SetState(269)
 			p.RecordExpr()
 		}
 
@@ -5434,18 +5862,6 @@ func (s *CallExprContext) ToStringTree(ruleNames []string, recog antlr.Recognize
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *CallExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterCallExpr(s)
-	}
-}
-
-func (s *CallExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitCallExpr(s)
-	}
-}
-
 func (s *CallExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -5463,11 +5879,11 @@ func (p *MagoitoParser) CallExpr() (localctx ICallExprContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(266)
+		p.SetState(272)
 		p.Callee()
 	}
 	{
-		p.SetState(267)
+		p.SetState(273)
 		p.Match(MagoitoParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -5475,10 +5891,10 @@ func (p *MagoitoParser) CallExpr() (localctx ICallExprContext) {
 		}
 	}
 	{
-		p.SetState(268)
+		p.SetState(274)
 		p.Expr()
 	}
-	p.SetState(273)
+	p.SetState(279)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -5487,7 +5903,7 @@ func (p *MagoitoParser) CallExpr() (localctx ICallExprContext) {
 
 	for _la == MagoitoParserCOMMA {
 		{
-			p.SetState(269)
+			p.SetState(275)
 			p.Match(MagoitoParserCOMMA)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -5495,11 +5911,11 @@ func (p *MagoitoParser) CallExpr() (localctx ICallExprContext) {
 			}
 		}
 		{
-			p.SetState(270)
+			p.SetState(276)
 			p.Expr()
 		}
 
-		p.SetState(275)
+		p.SetState(281)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -5507,7 +5923,7 @@ func (p *MagoitoParser) CallExpr() (localctx ICallExprContext) {
 		_la = p.GetTokenStream().LA(1)
 	}
 	{
-		p.SetState(276)
+		p.SetState(282)
 		p.Match(MagoitoParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -5534,11 +5950,6 @@ type ICalleeContext interface {
 
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
-
-	// Getter signatures
-	IDENTIFIER() antlr.TerminalNode
-	PRINT() antlr.TerminalNode
-
 	// IsCalleeContext differentiates from other interfaces.
 	IsCalleeContext()
 }
@@ -5575,12 +5986,8 @@ func NewCalleeContext(parser antlr.Parser, parent antlr.ParserRuleContext, invok
 
 func (s *CalleeContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *CalleeContext) IDENTIFIER() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserIDENTIFIER, 0)
-}
-
-func (s *CalleeContext) PRINT() antlr.TerminalNode {
-	return s.GetToken(MagoitoParserPRINT, 0)
+func (s *CalleeContext) CopyAll(ctx *CalleeContext) {
+	s.CopyFrom(&ctx.BaseParserRuleContext)
 }
 
 func (s *CalleeContext) GetRuleContext() antlr.RuleContext {
@@ -5591,22 +5998,64 @@ func (s *CalleeContext) ToStringTree(ruleNames []string, recog antlr.Recognizer)
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *CalleeContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterCallee(s)
-	}
+type IdentCalleeContext struct {
+	CalleeContext
 }
 
-func (s *CalleeContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitCallee(s)
-	}
+func NewIdentCalleeContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *IdentCalleeContext {
+	var p = new(IdentCalleeContext)
+
+	InitEmptyCalleeContext(&p.CalleeContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*CalleeContext))
+
+	return p
 }
 
-func (s *CalleeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+func (s *IdentCalleeContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *IdentCalleeContext) IDENTIFIER() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserIDENTIFIER, 0)
+}
+
+func (s *IdentCalleeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
-		return t.VisitCallee(s)
+		return t.VisitIdentCallee(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+type PrintCalleeContext struct {
+	CalleeContext
+}
+
+func NewPrintCalleeContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *PrintCalleeContext {
+	var p = new(PrintCalleeContext)
+
+	InitEmptyCalleeContext(&p.CalleeContext)
+	p.parser = parser
+	p.CopyAll(ctx.(*CalleeContext))
+
+	return p
+}
+
+func (s *PrintCalleeContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *PrintCalleeContext) PRINT() antlr.TerminalNode {
+	return s.GetToken(MagoitoParserPRINT, 0)
+}
+
+func (s *PrintCalleeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MagoitoParserVisitor:
+		return t.VisitPrintCallee(s)
 
 	default:
 		return t.VisitChildren(s)
@@ -5616,19 +6065,40 @@ func (s *CalleeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 func (p *MagoitoParser) Callee() (localctx ICalleeContext) {
 	localctx = NewCalleeContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 54, MagoitoParserRULE_callee)
-	var _la int
+	p.SetState(286)
+	p.GetErrorHandler().Sync(p)
+	if p.HasError() {
+		goto errorExit
+	}
 
-	p.EnterOuterAlt(localctx, 1)
-	{
-		p.SetState(278)
-		_la = p.GetTokenStream().LA(1)
-
-		if !(_la == MagoitoParserPRINT || _la == MagoitoParserIDENTIFIER) {
-			p.GetErrorHandler().RecoverInline(p)
-		} else {
-			p.GetErrorHandler().ReportMatch(p)
-			p.Consume()
+	switch p.GetTokenStream().LA(1) {
+	case MagoitoParserIDENTIFIER:
+		localctx = NewIdentCalleeContext(p, localctx)
+		p.EnterOuterAlt(localctx, 1)
+		{
+			p.SetState(284)
+			p.Match(MagoitoParserIDENTIFIER)
+			if p.HasError() {
+				// Recognition error - abort rule
+				goto errorExit
+			}
 		}
+
+	case MagoitoParserPRINT:
+		localctx = NewPrintCalleeContext(p, localctx)
+		p.EnterOuterAlt(localctx, 2)
+		{
+			p.SetState(285)
+			p.Match(MagoitoParserPRINT)
+			if p.HasError() {
+				// Recognition error - abort rule
+				goto errorExit
+			}
+		}
+
+	default:
+		p.SetError(antlr.NewNoViableAltException(p, nil, nil, nil, nil, nil))
+		goto errorExit
 	}
 
 errorExit:
@@ -5724,18 +6194,6 @@ func (s *RecordExprContext) ToStringTree(ruleNames []string, recog antlr.Recogni
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *RecordExprContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterRecordExpr(s)
-	}
-}
-
-func (s *RecordExprContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitRecordExpr(s)
-	}
-}
-
 func (s *RecordExprContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -5753,14 +6211,14 @@ func (p *MagoitoParser) RecordExpr() (localctx IRecordExprContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(280)
+		p.SetState(288)
 		p.Match(MagoitoParserLBRACE)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
 		}
 	}
-	p.SetState(282)
+	p.SetState(290)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -5769,13 +6227,13 @@ func (p *MagoitoParser) RecordExpr() (localctx IRecordExprContext) {
 
 	if _la == MagoitoParserIDENTIFIER {
 		{
-			p.SetState(281)
+			p.SetState(289)
 			p.RecordFieldList()
 		}
 
 	}
 	{
-		p.SetState(284)
+		p.SetState(292)
 		p.Match(MagoitoParserRBRACE)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -5902,18 +6360,6 @@ func (s *RecordFieldListContext) ToStringTree(ruleNames []string, recog antlr.Re
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *RecordFieldListContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterRecordFieldList(s)
-	}
-}
-
-func (s *RecordFieldListContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitRecordFieldList(s)
-	}
-}
-
 func (s *RecordFieldListContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -5931,10 +6377,10 @@ func (p *MagoitoParser) RecordFieldList() (localctx IRecordFieldListContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(286)
+		p.SetState(294)
 		p.RecordField()
 	}
-	p.SetState(291)
+	p.SetState(299)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
 		goto errorExit
@@ -5943,7 +6389,7 @@ func (p *MagoitoParser) RecordFieldList() (localctx IRecordFieldListContext) {
 
 	for _la == MagoitoParserCOMMA {
 		{
-			p.SetState(287)
+			p.SetState(295)
 			p.Match(MagoitoParserCOMMA)
 			if p.HasError() {
 				// Recognition error - abort rule
@@ -5951,11 +6397,11 @@ func (p *MagoitoParser) RecordFieldList() (localctx IRecordFieldListContext) {
 			}
 		}
 		{
-			p.SetState(288)
+			p.SetState(296)
 			p.RecordField()
 		}
 
-		p.SetState(293)
+		p.SetState(301)
 		p.GetErrorHandler().Sync(p)
 		if p.HasError() {
 			goto errorExit
@@ -6056,18 +6502,6 @@ func (s *RecordFieldContext) ToStringTree(ruleNames []string, recog antlr.Recogn
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *RecordFieldContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.EnterRecordField(s)
-	}
-}
-
-func (s *RecordFieldContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MagoitoParserListener); ok {
-		listenerT.ExitRecordField(s)
-	}
-}
-
 func (s *RecordFieldContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MagoitoParserVisitor:
@@ -6083,7 +6517,7 @@ func (p *MagoitoParser) RecordField() (localctx IRecordFieldContext) {
 	p.EnterRule(localctx, 60, MagoitoParserRULE_recordField)
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(294)
+		p.SetState(302)
 		p.Match(MagoitoParserIDENTIFIER)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -6091,7 +6525,7 @@ func (p *MagoitoParser) RecordField() (localctx IRecordFieldContext) {
 		}
 	}
 	{
-		p.SetState(295)
+		p.SetState(303)
 		p.Match(MagoitoParserASSIGN)
 		if p.HasError() {
 			// Recognition error - abort rule
@@ -6099,7 +6533,7 @@ func (p *MagoitoParser) RecordField() (localctx IRecordFieldContext) {
 		}
 	}
 	{
-		p.SetState(296)
+		p.SetState(304)
 		p.Expr()
 	}
 

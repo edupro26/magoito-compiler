@@ -10,11 +10,17 @@ type MagoitoParserVisitor interface {
 	// Visit a parse tree produced by MagoitoParser#program.
 	VisitProgram(ctx *ProgramContext) interface{}
 
-	// Visit a parse tree produced by MagoitoParser#declaration.
-	VisitDeclaration(ctx *DeclarationContext) interface{}
+	// Visit a parse tree produced by MagoitoParser#constDeclaration.
+	VisitConstDeclaration(ctx *ConstDeclarationContext) interface{}
 
-	// Visit a parse tree produced by MagoitoParser#binder.
-	VisitBinder(ctx *BinderContext) interface{}
+	// Visit a parse tree produced by MagoitoParser#funDeclaration.
+	VisitFunDeclaration(ctx *FunDeclarationContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#idBinder.
+	VisitIdBinder(ctx *IdBinderContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#wildcardBinder.
+	VisitWildcardBinder(ctx *WildcardBinderContext) interface{}
 
 	// Visit a parse tree produced by MagoitoParser#arrowType.
 	VisitArrowType(ctx *ArrowTypeContext) interface{}
@@ -22,14 +28,29 @@ type MagoitoParserVisitor interface {
 	// Visit a parse tree produced by MagoitoParser#tupleArrowType.
 	VisitTupleArrowType(ctx *TupleArrowTypeContext) interface{}
 
-	// Visit a parse tree produced by MagoitoParser#nonTupleType.
-	VisitNonTupleType(ctx *NonTupleTypeContext) interface{}
+	// Visit a parse tree produced by MagoitoParser#basicNonTupleType.
+	VisitBasicNonTupleType(ctx *BasicNonTupleTypeContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#recordNonTupleType.
+	VisitRecordNonTupleType(ctx *RecordNonTupleTypeContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#parenNonTupleType.
+	VisitParenNonTupleType(ctx *ParenNonTupleTypeContext) interface{}
 
 	// Visit a parse tree produced by MagoitoParser#tupleType.
 	VisitTupleType(ctx *TupleTypeContext) interface{}
 
-	// Visit a parse tree produced by MagoitoParser#basicType.
-	VisitBasicType(ctx *BasicTypeContext) interface{}
+	// Visit a parse tree produced by MagoitoParser#intBasicType.
+	VisitIntBasicType(ctx *IntBasicTypeContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#boolBasicType.
+	VisitBoolBasicType(ctx *BoolBasicTypeContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#stringBasicType.
+	VisitStringBasicType(ctx *StringBasicTypeContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#unitBasicType.
+	VisitUnitBasicType(ctx *UnitBasicTypeContext) interface{}
 
 	// Visit a parse tree produced by MagoitoParser#recordType.
 	VisitRecordType(ctx *RecordTypeContext) interface{}
@@ -43,8 +64,20 @@ type MagoitoParserVisitor interface {
 	// Visit a parse tree produced by MagoitoParser#seqExpr.
 	VisitSeqExpr(ctx *SeqExprContext) interface{}
 
-	// Visit a parse tree produced by MagoitoParser#controlExpr.
-	VisitControlExpr(ctx *ControlExprContext) interface{}
+	// Visit a parse tree produced by MagoitoParser#varDeclControl.
+	VisitVarDeclControl(ctx *VarDeclControlContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#whileControl.
+	VisitWhileControl(ctx *WhileControlContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#ifControl.
+	VisitIfControl(ctx *IfControlContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#assignControl.
+	VisitAssignControl(ctx *AssignControlContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#orControl.
+	VisitOrControl(ctx *OrControlContext) interface{}
 
 	// Visit a parse tree produced by MagoitoParser#varDeclExpr.
 	VisitVarDeclExpr(ctx *VarDeclExprContext) interface{}
@@ -85,14 +118,41 @@ type MagoitoParserVisitor interface {
 	// Visit a parse tree produced by MagoitoParser#projectionExpr.
 	VisitProjectionExpr(ctx *ProjectionExprContext) interface{}
 
-	// Visit a parse tree produced by MagoitoParser#primaryExpr.
-	VisitPrimaryExpr(ctx *PrimaryExprContext) interface{}
+	// Visit a parse tree produced by MagoitoParser#intLiteralPrimary.
+	VisitIntLiteralPrimary(ctx *IntLiteralPrimaryContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#stringLiteralPrimary.
+	VisitStringLiteralPrimary(ctx *StringLiteralPrimaryContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#truePrimary.
+	VisitTruePrimary(ctx *TruePrimaryContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#falsePrimary.
+	VisitFalsePrimary(ctx *FalsePrimaryContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#unitPrimary.
+	VisitUnitPrimary(ctx *UnitPrimaryContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#callPrimary.
+	VisitCallPrimary(ctx *CallPrimaryContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#identifierPrimary.
+	VisitIdentifierPrimary(ctx *IdentifierPrimaryContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#parenPrimary.
+	VisitParenPrimary(ctx *ParenPrimaryContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#recordPrimary.
+	VisitRecordPrimary(ctx *RecordPrimaryContext) interface{}
 
 	// Visit a parse tree produced by MagoitoParser#callExpr.
 	VisitCallExpr(ctx *CallExprContext) interface{}
 
-	// Visit a parse tree produced by MagoitoParser#callee.
-	VisitCallee(ctx *CalleeContext) interface{}
+	// Visit a parse tree produced by MagoitoParser#identCallee.
+	VisitIdentCallee(ctx *IdentCalleeContext) interface{}
+
+	// Visit a parse tree produced by MagoitoParser#printCallee.
+	VisitPrintCallee(ctx *PrintCalleeContext) interface{}
 
 	// Visit a parse tree produced by MagoitoParser#recordExpr.
 	VisitRecordExpr(ctx *RecordExprContext) interface{}

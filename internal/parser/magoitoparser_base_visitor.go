@@ -11,11 +11,19 @@ func (v *BaseMagoitoParserVisitor) VisitProgram(ctx *ProgramContext) interface{}
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMagoitoParserVisitor) VisitDeclaration(ctx *DeclarationContext) interface{} {
+func (v *BaseMagoitoParserVisitor) VisitConstDeclaration(ctx *ConstDeclarationContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMagoitoParserVisitor) VisitBinder(ctx *BinderContext) interface{} {
+func (v *BaseMagoitoParserVisitor) VisitFunDeclaration(ctx *FunDeclarationContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitIdBinder(ctx *IdBinderContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitWildcardBinder(ctx *WildcardBinderContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -27,7 +35,15 @@ func (v *BaseMagoitoParserVisitor) VisitTupleArrowType(ctx *TupleArrowTypeContex
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMagoitoParserVisitor) VisitNonTupleType(ctx *NonTupleTypeContext) interface{} {
+func (v *BaseMagoitoParserVisitor) VisitBasicNonTupleType(ctx *BasicNonTupleTypeContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitRecordNonTupleType(ctx *RecordNonTupleTypeContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitParenNonTupleType(ctx *ParenNonTupleTypeContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -35,7 +51,19 @@ func (v *BaseMagoitoParserVisitor) VisitTupleType(ctx *TupleTypeContext) interfa
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMagoitoParserVisitor) VisitBasicType(ctx *BasicTypeContext) interface{} {
+func (v *BaseMagoitoParserVisitor) VisitIntBasicType(ctx *IntBasicTypeContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitBoolBasicType(ctx *BoolBasicTypeContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitStringBasicType(ctx *StringBasicTypeContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitUnitBasicType(ctx *UnitBasicTypeContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -55,7 +83,23 @@ func (v *BaseMagoitoParserVisitor) VisitSeqExpr(ctx *SeqExprContext) interface{}
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMagoitoParserVisitor) VisitControlExpr(ctx *ControlExprContext) interface{} {
+func (v *BaseMagoitoParserVisitor) VisitVarDeclControl(ctx *VarDeclControlContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitWhileControl(ctx *WhileControlContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitIfControl(ctx *IfControlContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitAssignControl(ctx *AssignControlContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitOrControl(ctx *OrControlContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -111,7 +155,39 @@ func (v *BaseMagoitoParserVisitor) VisitProjectionExpr(ctx *ProjectionExprContex
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMagoitoParserVisitor) VisitPrimaryExpr(ctx *PrimaryExprContext) interface{} {
+func (v *BaseMagoitoParserVisitor) VisitIntLiteralPrimary(ctx *IntLiteralPrimaryContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitStringLiteralPrimary(ctx *StringLiteralPrimaryContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitTruePrimary(ctx *TruePrimaryContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitFalsePrimary(ctx *FalsePrimaryContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitUnitPrimary(ctx *UnitPrimaryContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitCallPrimary(ctx *CallPrimaryContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitIdentifierPrimary(ctx *IdentifierPrimaryContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitParenPrimary(ctx *ParenPrimaryContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitRecordPrimary(ctx *RecordPrimaryContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -119,7 +195,11 @@ func (v *BaseMagoitoParserVisitor) VisitCallExpr(ctx *CallExprContext) interface
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMagoitoParserVisitor) VisitCallee(ctx *CalleeContext) interface{} {
+func (v *BaseMagoitoParserVisitor) VisitIdentCallee(ctx *IdentCalleeContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMagoitoParserVisitor) VisitPrintCallee(ctx *PrintCalleeContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
