@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
-	"magoito-compiler/internal/lexer"
+	"magoito-compiler/cmd/printer"
+	"magoito-compiler/internal/ast"
 	"magoito-compiler/internal/parser"
 	"os"
-
-	"github.com/antlr4-go/antlr/v4"
 )
 
 func main() {
@@ -16,25 +15,13 @@ func main() {
 		panic(err)
 	}
 
-	input := antlr.NewInputStream(string(bytes))
+	cst, err := parser.ParseProgram(string(bytes))
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
 
-	// 2. Create lexer
-	lexer := lexer.NewMagoitoLexer(input)
-
-	// 3. Token stream
-	stream := antlr.NewCommonTokenStream(lexer, antlr.TokenDefaultChannel)
-
-	// 4. Create parser
-	parser := parser.NewMagoitoParser(stream)
-
-	// Optional: better error messages
-	parser.RemoveErrorListeners()
-	parser.AddErrorListener(antlr.NewDiagnosticErrorListener(true))
-	// parser.SetErrorHandler(antlr.NewBailErrorStrategy())
-
-	// 5. Parse starting rule
-	tree := parser.Program()
-
-	// 6. Print parse tree (LISP-style)
-	fmt.Println(tree.ToStringTree(parser.GetRuleNames(), parser))
+	// --- Build AST and print ---
+	tree := ast.Build(cst)
+	printer.Print(tree)
 }
