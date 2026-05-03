@@ -1,0 +1,10 @@
+-- Author: 54483, Pedro Barata
+
+-- Tests constant declarations with arithmetic expressions evaluated at compile time
+
+const a : Int = 6
+const b : Int = 7
+const c : Int = a * b
+
+fun main (_) : Unit -> Unit =
+  print(c)

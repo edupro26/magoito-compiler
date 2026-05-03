@@ -1,0 +1,11 @@
+-- Author: 58248, Afonso Topa 
+-- Calculates the area of a circle very accurately
+
+const pi : Int = 3
+
+fun main(_) : Unit -> Unit =
+    var circle: {center: {x: Int, y: Int}, radius: Int} =
+        {center = {x = 0, y = 1}, radius = 10}
+
+fun circle_area(rect): {center: {x: Int, y: Int}, radius: Int} -> Int =
+    rect.radius^2 * pi

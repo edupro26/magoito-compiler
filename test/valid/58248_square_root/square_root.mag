@@ -1,0 +1,13 @@
+-- Author: 58248, Afonso Topa 
+-- Calculates the integer square root of a number
+
+fun sqrt(n) : Int -> Int =
+    if n < 2 then n else (
+       var root : Int = sqrt(n / 4) * 2 + 1;
+       if root^2 > n then root - 1 else root )
+
+
+const square : Int = 16
+
+fun main(_) : Unit -> Unit =
+    print(sqrt(square))

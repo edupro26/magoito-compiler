@@ -1,0 +1,4 @@
+--- Author: fc51601, José Sousa
+
+const a : Int = 1
+fun main (_) : Unit -> Unit = print(a)

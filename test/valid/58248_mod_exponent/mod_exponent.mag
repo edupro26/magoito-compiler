@@ -1,0 +1,23 @@
+-- Author: 58248, Afonso Topa 
+-- Calculates the modular exponentiation
+
+fun main(_) : Unit -> Unit =
+    var base : Int = 9;
+    var exp : Int = 7;
+    var mod : Int = 4;
+    print(modPow(base, exp, mod))
+   
+fun modPow(b, e, m) : (Int, Int, Int) -> Int =
+    if m == 1 then
+        0
+    else (
+        var r : Int = 1;
+        b = b % m;
+        while e > 0 do (
+            if e % 2 == 1 then
+                r = (r*b) % m;
+            b = (b*b) % m;
+            e = e / 2
+        );
+        r
+   )

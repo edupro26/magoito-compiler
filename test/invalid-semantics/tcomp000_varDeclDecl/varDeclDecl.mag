@@ -1,0 +1,7 @@
+-- Author: tcomp000, Vasco T. Vasconcelos
+
+fun f (_) : Unit -> Int =
+  var x : Int = var y : Int = 3
+
+fun main (_) : Unit -> Unit =
+  print(f(unit))

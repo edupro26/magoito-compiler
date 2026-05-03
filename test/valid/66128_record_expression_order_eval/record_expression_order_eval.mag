@@ -1,0 +1,19 @@
+-- Author: 66128, Daniel Sousa
+
+fun main (_) : Unit -> Unit =
+    var x : Int = 1;
+    var r : {a: Int, b: Int} = {
+        a = (x = 5; x),
+        b = x
+    };
+
+    print("x = ");
+    print(x);
+    print("\n");
+
+    print("r.a = ");
+    print(r.a);
+    print("\n");
+    
+    print("r.b = ");
+    print(r.b)

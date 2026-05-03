@@ -1,0 +1,25 @@
+-- Author: 57163, Guilherme Dias
+
+const a : Int = 1
+const b : Int = -5
+const c : Int = 6
+
+fun delta(a,b,c) : (Int, Int, Int) -> Int =
+	b ^ 2 - 4 * a * c
+
+fun search'(mid, sq, n, high, low) : (Int, Int, Int, Int, Int) -> Int =
+	if sq == mid then mid else if sq < n then search(mid + 1, high, n) else search(low, mid-1, n)
+
+fun search(low, high, n) : (Int, Int, Int) -> Int =
+	if low > high then high else search'((low + high)/2, (low + high)^2, n, high, low)
+
+fun sqrt(n) : Int -> Int =
+	if n < 0 then -1 else search(0, n, n)
+
+fun eqSolver(a,b,c) : (Int, Int, Int) -> {x0 : Int, x1 : Int} =
+	{x0 = (-b + sqrt(delta(a,b,c))), x1 = (-b - sqrt(delta(a,b,c)))}
+
+fun main (_) : Unit -> Unit =
+	var rec : {x0:Int, x1:Int} = eqSolver(a,b,c);
+	print(rec.x0);
+	print(rec.x1)

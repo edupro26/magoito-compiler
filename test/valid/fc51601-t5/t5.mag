@@ -1,0 +1,6 @@
+--- Author: fc51601, José Sousa
+
+fun retNum (_) : Unit -> Int = 2
+
+fun main (_) : Unit -> Unit = var y : Unit = var x : Unit = var z : Int = retNum(unit) ; print(y)
+

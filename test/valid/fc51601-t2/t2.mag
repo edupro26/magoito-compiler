@@ -1,0 +1,16 @@
+--- Author: fc51601, José Sousa
+
+fun t (t) : Int -> Int =
+    var t1 : Int = t;
+    var i : Int = 0;
+    if t1 != 1 then (
+        while t1 > 1 do (
+            t1 = t1 - 1;
+            i = i + 1
+        ) ;
+        i
+    )
+    else
+        100
+
+fun main (_) : Unit -> Unit = print(t(t(t(1))))

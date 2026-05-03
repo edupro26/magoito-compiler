@@ -1,0 +1,19 @@
+-- Author: 58196, Pedro Lopes
+
+-- This assumes that the == operator only evaluates the content, not
+-- the object
+
+const s1 : String = "string1"
+const s2 : String = "string2"
+
+fun main (_) : Unit -> Unit = 
+  var s1Copy : String = s1;
+  var s1SameContent : String = "string1";
+  print(s1 == s1);
+  print(s1 == s1Copy);
+  print(s1 == s1SameContent);
+  print(s1 == s2)
+
+
+
+

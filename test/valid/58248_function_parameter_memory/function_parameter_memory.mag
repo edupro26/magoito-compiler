@@ -1,0 +1,11 @@
+-- Author: 58248, Afonso Topa 
+-- Changing the parameters inside a function doesn't change the correspondent values outside it
+
+fun main(_) : Unit -> Unit =
+   var point: {x: Int, y: Int} = {x = 0, y = 0};
+   var _ : {x: Int, y: Int} = incrementX(point);
+   print(point.x)
+
+fun incrementX(point) : {x: Int, y: Int} -> {x: Int, y: Int} =
+--    point.x = x+1;
+    point

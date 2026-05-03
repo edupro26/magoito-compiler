@@ -1,0 +1,9 @@
+-- Author: 58248, Afonso Topa 
+
+fun main(_) : Unit -> Unit =
+    print(sum_first_n(10))
+
+fun sum_first_n(n) : Int -> Int =
+    var total : Int = n;
+    while (n = n - 1) > 0 do total = total + n;
+    total

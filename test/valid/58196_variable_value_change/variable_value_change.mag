@@ -1,0 +1,16 @@
+-- Author: 58196, Pedro Lopes
+
+-- Change variable value more than one time and see if it sticks 
+
+fun change_variable (_) : Unit -> Int =
+  var x : Int = 3;
+  var y : Int = 6;
+  x = x + y;
+  x
+
+fun main (_) : Unit -> Unit = 
+  print(change_variable(unit))
+
+
+
+

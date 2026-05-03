@@ -1,0 +1,16 @@
+-- Author: 58196, Pedro Lopes
+
+-- Check how records are evaluated by the == operator
+-- Was a valid test before, now its a invalid one, as == doesnt accept diferent types
+-- Even if one is a subtype of the other
+
+const s1 : {x: Int, y: String, z: Bool} = {x = 12, y = "string1", z = true}
+const s2 : {z: Bool, x: Int, y: String} = {z = true, x = 12, y = "string1"}
+const s3 : {x: Int, y: String} = {x = 12, y = "string1"}
+const s4 : {x: Int, y: String, z: Bool} = {x = 11, y = "string1", z = true}
+
+
+fun main (_) : Unit -> Unit = 
+  print(s1 == s2);
+  print(s1 == s3);
+  print(s1 == s4)
