@@ -61,3 +61,24 @@ type FunctionType struct {
 func (*BasicType) typeNode()    {}
 func (*RecordType) typeNode()   {}
 func (*FunctionType) typeNode() {}
+
+// Util
+func AsType(v any) Type {
+	if v == nil {
+		return nil
+	}
+	if t, ok := v.(Type); ok {
+		return t
+	}
+	return nil
+}
+
+func AsExpr(v any) Expr {
+	if v == nil {
+		return nil
+	}
+	if e, ok := v.(Expr); ok {
+		return e
+	}
+	return nil
+}
