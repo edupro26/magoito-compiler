@@ -10,7 +10,7 @@ COPY . .
 RUN apk add --no-cache openjdk17-jre
 
 RUN go generate ./...
-RUN go build -o magoito ./cmd
+RUN go build -o magoito ./cli
 
 RUN go version | awk '{print $3}' > /go-version.txt
 

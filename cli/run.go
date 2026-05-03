@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"magoito-compiler/cmd/printer"
+	"magoito-compiler/cli/printer"
 	"magoito-compiler/internal/ast"
 	"magoito-compiler/internal/parser"
 	"os"
