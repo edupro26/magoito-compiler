@@ -5,6 +5,7 @@ import (
 	"magoito-compiler/cli/printer"
 	"magoito-compiler/internal/ast"
 	"magoito-compiler/internal/parser"
+	"magoito-compiler/internal/semantics"
 	"os"
 	"path/filepath"
 
@@ -59,9 +60,14 @@ func runFile(filePath string) error {
 	}
 	cst, err := parser.ParseProgram(string(bytes))
 	if err != nil {
-		return fmt.Errorf("%s:%w", filePath, err)
+		fmt.Printf("%s: %v\n", filePath, err)
+		return nil
 	}
 	tree := ast.Build(cst)
+	if err := semantics.Validate(tree); err != nil {
+		fmt.Printf("%s: %v\n", filePath, err)
+		return nil
+	}
 	if printAST {
 		printer.Print(tree)
 	} else if printPretty {

@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"magoito-compiler/internal/ast"
 	"magoito-compiler/internal/parser"
+	"magoito-compiler/internal/semantics"
 	"os"
 	"path/filepath"
 
@@ -88,7 +90,11 @@ func runTests(testDir string) (TestGroup, error) {
 func runTestFile(path string, expectError bool) (bool, error) {
 	bytes, err := os.ReadFile(path)
 	if err == nil {
-		_, err := parser.ParseProgram(string(bytes))
+		cst, err := parser.ParseProgram(string(bytes))
+		if err == nil {
+			program := ast.Build(cst)
+			err = semantics.Validate(program)
+		}
 		if (err != nil) == expectError {
 			return true, nil
 		}
