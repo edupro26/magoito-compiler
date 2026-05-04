@@ -43,7 +43,7 @@ func (b *ASTBuilder) VisitConstDeclaration(ctx *parser.ConstDeclarationContext) 
 	}
 	typ := AsType(b.Visit(ctx.TypeExpr()))
 	value := AsExpr(b.Visit(ctx.Expr()))
-	return &ConstDecl{Name: name, Type: typ, Value: value}
+	return &ConstDecl{Name: name, Type: typ, Value: value, Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitFunDeclaration(ctx *parser.FunDeclarationContext) any {
@@ -57,7 +57,7 @@ func (b *ASTBuilder) VisitFunDeclaration(ctx *parser.FunDeclarationContext) any 
 	}
 	typ := AsType(b.Visit(ctx.TypeExpr()))
 	body := AsExpr(b.Visit(ctx.Expr()))
-	return &FunDecl{Name: name, Params: params, Type: typ, Body: body}
+	return &FunDecl{Name: name, Params: params, Type: typ, Body: body, Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitArrowType(ctx *parser.ArrowTypeContext) any {
@@ -67,7 +67,7 @@ func (b *ASTBuilder) VisitArrowType(ctx *parser.ArrowTypeContext) any {
 	}
 	params := []Type{left}
 	ret := AsType(b.Visit(ctx.TypeExpr()))
-	return &FunctionType{Params: params, Return: ret}
+	return &FunctionType{Params: params, Return: ret, Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitTupleArrowType(ctx *parser.TupleArrowTypeContext) any {
@@ -76,11 +76,11 @@ func (b *ASTBuilder) VisitTupleArrowType(ctx *parser.TupleArrowTypeContext) any 
 		params = append(params, AsType(b.Visit(t)))
 	}
 	ret := AsType(b.Visit(ctx.TypeExpr()))
-	return &FunctionType{Params: params, Return: ret}
+	return &FunctionType{Params: params, Return: ret, Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitBasicNonTupleType(ctx *parser.BasicNonTupleTypeContext) any {
-	return &BasicType{Name: ctx.BasicType().GetText()}
+	return &BasicType{Name: ctx.BasicType().GetText(), Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitRecordNonTupleType(ctx *parser.RecordNonTupleTypeContext) any {
@@ -89,9 +89,10 @@ func (b *ASTBuilder) VisitRecordNonTupleType(ctx *parser.RecordNonTupleTypeConte
 		fields = append(fields, RecordTypeField{
 			Label: f.IDENTIFIER().GetText(),
 			Type:  AsType(b.Visit(f.TypeExpr())),
+			Pos:   posFromToken(f.IDENTIFIER().GetSymbol()),
 		})
 	}
-	return &RecordType{Fields: fields}
+	return &RecordType{Fields: fields, Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitParenNonTupleType(ctx *parser.ParenNonTupleTypeContext) any {
@@ -99,19 +100,19 @@ func (b *ASTBuilder) VisitParenNonTupleType(ctx *parser.ParenNonTupleTypeContext
 }
 
 func (b *ASTBuilder) VisitIntBasicType(ctx *parser.IntBasicTypeContext) any {
-	return &BasicType{Name: ctx.GetText()}
+	return &BasicType{Name: ctx.GetText(), Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitBoolBasicType(ctx *parser.BoolBasicTypeContext) any {
-	return &BasicType{Name: ctx.GetText()}
+	return &BasicType{Name: ctx.GetText(), Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitStringBasicType(ctx *parser.StringBasicTypeContext) any {
-	return &BasicType{Name: ctx.GetText()}
+	return &BasicType{Name: ctx.GetText(), Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitUnitBasicType(ctx *parser.UnitBasicTypeContext) any {
-	return &BasicType{Name: ctx.GetText()}
+	return &BasicType{Name: ctx.GetText(), Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitExpr(ctx *parser.ExprContext) any {
@@ -122,7 +123,7 @@ func (b *ASTBuilder) VisitSeqExpr(ctx *parser.SeqExprContext) any {
 	left := AsExpr(b.Visit(ctx.ControlExpr()))
 	if ctx.SeqExpr() != nil {
 		right := AsExpr(b.Visit(ctx.SeqExpr()))
-		return &SequenceExpr{Left: left, Right: right}
+		return &SequenceExpr{Left: left, Right: right, Pos: posFromCtx(ctx)}
 	}
 	return left
 }
@@ -151,13 +152,13 @@ func (b *ASTBuilder) VisitVarDeclExpr(ctx *parser.VarDeclExprContext) any {
 	name := ctx.Binder().GetText()
 	typ := AsType(b.Visit(ctx.TypeExpr()))
 	value := AsExpr(b.Visit(ctx.ControlExpr()))
-	return &VarDecl{Name: name, Type: typ, Value: value}
+	return &VarDecl{Name: name, Type: typ, Value: value, Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitWhileExpr(ctx *parser.WhileExprContext) any {
 	cond := AsExpr(b.Visit(ctx.OrExpr()))
 	body := AsExpr(b.Visit(ctx.ControlExpr()))
-	return &WhileExpr{Condition: cond, Body: body}
+	return &WhileExpr{Condition: cond, Body: body, Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitIfExpr(ctx *parser.IfExprContext) any {
@@ -167,13 +168,13 @@ func (b *ASTBuilder) VisitIfExpr(ctx *parser.IfExprContext) any {
 	if len(ctx.AllControlExpr()) > 1 {
 		els = AsExpr(b.Visit(ctx.ControlExpr(1)))
 	}
-	return &IfExpr{Condition: cond, Then: then, Else: els}
+	return &IfExpr{Condition: cond, Then: then, Else: els, Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitAssignExpr(ctx *parser.AssignExprContext) any {
 	name := ctx.IDENTIFIER().GetText()
 	value := AsExpr(b.Visit(ctx.ControlExpr()))
-	return &Assignment{Name: name, Value: value}
+	return &Assignment{Name: name, Value: value, Pos: posFromToken(ctx.IDENTIFIER().GetSymbol())}
 }
 
 func (b *ASTBuilder) VisitOrExpr(ctx *parser.OrExprContext) any {
@@ -185,8 +186,8 @@ func (b *ASTBuilder) VisitOrExpr(ctx *parser.OrExprContext) any {
 	left := AsExpr(b.Visit(parts[0]))
 	for i := 1; i < len(parts); i++ {
 		right := AsExpr(b.Visit(parts[i]))
-		op := ops[i-1].GetText()
-		left = &BinaryExpr{Left: left, Op: op, Right: right}
+		opTok := ops[i-1].GetSymbol()
+		left = &BinaryExpr{Left: left, Op: opTok.GetText(), Right: right, Pos: posFromToken(opTok)}
 	}
 	return left
 }
@@ -200,8 +201,8 @@ func (b *ASTBuilder) VisitAndExpr(ctx *parser.AndExprContext) any {
 	left := AsExpr(b.Visit(parts[0]))
 	for i := 1; i < len(parts); i++ {
 		right := AsExpr(b.Visit(parts[i]))
-		op := ops[i-1].GetText()
-		left = &BinaryExpr{Left: left, Op: op, Right: right}
+		opTok := ops[i-1].GetSymbol()
+		left = &BinaryExpr{Left: left, Op: opTok.GetText(), Right: right, Pos: posFromToken(opTok)}
 	}
 	return left
 }
@@ -211,12 +212,12 @@ func (b *ASTBuilder) VisitEqualityExpr(ctx *parser.EqualityExprContext) any {
 	if len(parts) == 0 {
 		return nil
 	}
-	ops := opsFromTokens(ctx.AllEQ(), ctx.AllNEQ())
+	ops := getOpTokens(ctx.AllEQ(), ctx.AllNEQ())
 	left := AsExpr(b.Visit(parts[0]))
 	for i := 1; i < len(parts); i++ {
 		right := AsExpr(b.Visit(parts[i]))
-		op := ops[i-1]
-		left = &BinaryExpr{Left: left, Op: op, Right: right}
+		opTok := ops[i-1].GetSymbol()
+		left = &BinaryExpr{Left: left, Op: opTok.GetText(), Right: right, Pos: posFromToken(opTok)}
 	}
 	return left
 }
@@ -226,12 +227,12 @@ func (b *ASTBuilder) VisitComparisonExpr(ctx *parser.ComparisonExprContext) any 
 	if len(parts) == 0 {
 		return nil
 	}
-	ops := opsFromTokens(ctx.AllLT(), ctx.AllLTE(), ctx.AllGT(), ctx.AllGTE())
+	ops := getOpTokens(ctx.AllLT(), ctx.AllLTE(), ctx.AllGT(), ctx.AllGTE())
 	left := AsExpr(b.Visit(parts[0]))
 	for i := 1; i < len(parts); i++ {
 		right := AsExpr(b.Visit(parts[i]))
-		op := ops[i-1]
-		left = &BinaryExpr{Left: left, Op: op, Right: right}
+		opTok := ops[i-1].GetSymbol()
+		left = &BinaryExpr{Left: left, Op: opTok.GetText(), Right: right, Pos: posFromToken(opTok)}
 	}
 	return left
 }
@@ -241,12 +242,12 @@ func (b *ASTBuilder) VisitAdditiveExpr(ctx *parser.AdditiveExprContext) any {
 	if len(parts) == 0 {
 		return nil
 	}
-	ops := opsFromTokens(ctx.AllPLUS(), ctx.AllMINUS())
+	ops := getOpTokens(ctx.AllPLUS(), ctx.AllMINUS())
 	left := AsExpr(b.Visit(parts[0]))
 	for i := 1; i < len(parts); i++ {
 		right := AsExpr(b.Visit(parts[i]))
-		op := ops[i-1]
-		left = &BinaryExpr{Left: left, Op: op, Right: right}
+		opTok := ops[i-1].GetSymbol()
+		left = &BinaryExpr{Left: left, Op: opTok.GetText(), Right: right, Pos: posFromToken(opTok)}
 	}
 	return left
 }
@@ -256,12 +257,12 @@ func (b *ASTBuilder) VisitMultiplicativeExpr(ctx *parser.MultiplicativeExprConte
 	if len(parts) == 0 {
 		return nil
 	}
-	ops := opsFromTokens(ctx.AllSTAR(), ctx.AllSLASH(), ctx.AllPERCENT())
+	ops := getOpTokens(ctx.AllSTAR(), ctx.AllSLASH(), ctx.AllPERCENT())
 	left := AsExpr(b.Visit(parts[0]))
 	for i := 1; i < len(parts); i++ {
 		right := AsExpr(b.Visit(parts[i]))
-		op := ops[i-1]
-		left = &BinaryExpr{Left: left, Op: op, Right: right}
+		opTok := ops[i-1].GetSymbol()
+		left = &BinaryExpr{Left: left, Op: opTok.GetText(), Right: right, Pos: posFromToken(opTok)}
 	}
 	return left
 }
@@ -270,22 +271,22 @@ func (b *ASTBuilder) VisitPowerExpr(ctx *parser.PowerExprContext) any {
 	if ctx.PowerExpr() != nil {
 		left := AsExpr(b.Visit(ctx.UnaryExpr()))
 		right := AsExpr(b.Visit(ctx.PowerExpr()))
-		op := ctx.POWER().GetText()
-		return &BinaryExpr{Left: left, Op: op, Right: right}
+		opTok := ctx.POWER().GetSymbol()
+		return &BinaryExpr{Left: left, Op: opTok.GetText(), Right: right, Pos: posFromToken(opTok)}
 	}
 	return b.Visit(ctx.UnaryExpr())
 }
 
 func (b *ASTBuilder) VisitUnaryExpr(ctx *parser.UnaryExprContext) any {
 	if ctx.MINUS() != nil {
-		op := ctx.MINUS().GetText()
+		opTok := ctx.MINUS().GetSymbol()
 		operand := AsExpr(b.Visit(ctx.UnaryExpr()))
-		return &UnaryExpr{Op: op, Operand: operand}
+		return &UnaryExpr{Op: opTok.GetText(), Operand: operand, Pos: posFromToken(opTok)}
 	}
 	if ctx.NOT() != nil {
-		op := ctx.NOT().GetText()
+		opTok := ctx.NOT().GetSymbol()
 		operand := AsExpr(b.Visit(ctx.UnaryExpr()))
-		return &UnaryExpr{Op: op, Operand: operand}
+		return &UnaryExpr{Op: opTok.GetText(), Operand: operand, Pos: posFromToken(opTok)}
 	}
 	return b.Visit(ctx.ProjectionExpr())
 }
@@ -293,31 +294,31 @@ func (b *ASTBuilder) VisitUnaryExpr(ctx *parser.UnaryExprContext) any {
 func (b *ASTBuilder) VisitProjectionExpr(ctx *parser.ProjectionExprContext) any {
 	base := AsExpr(b.Visit(ctx.PrimaryExpr()))
 	for _, ident := range ctx.AllIDENTIFIER() {
-		base = &ProjectionExpr{Record: base, Field: ident.GetText()}
+		base = &ProjectionExpr{Record: base, Field: ident.GetText(), Pos: posFromToken(ident.GetSymbol())}
 	}
 	return base
 }
 
 func (b *ASTBuilder) VisitIntLiteralPrimary(ctx *parser.IntLiteralPrimaryContext) any {
 	value, _ := strconv.Atoi(ctx.INT_LITERAL().GetText())
-	return &IntLiteral{Value: value}
+	return &IntLiteral{Value: value, Pos: posFromToken(ctx.INT_LITERAL().GetSymbol())}
 }
 
 func (b *ASTBuilder) VisitStringLiteralPrimary(ctx *parser.StringLiteralPrimaryContext) any {
 	s, _ := strconv.Unquote(ctx.STRING_LITERAL().GetText())
-	return &StringLiteral{Value: s}
+	return &StringLiteral{Value: s, Pos: posFromToken(ctx.STRING_LITERAL().GetSymbol())}
 }
 
 func (b *ASTBuilder) VisitTruePrimary(ctx *parser.TruePrimaryContext) any {
-	return &BoolLiteral{Value: true}
+	return &BoolLiteral{Value: true, Pos: posFromToken(ctx.TRUE().GetSymbol())}
 }
 
 func (b *ASTBuilder) VisitFalsePrimary(ctx *parser.FalsePrimaryContext) any {
-	return &BoolLiteral{Value: false}
+	return &BoolLiteral{Value: false, Pos: posFromToken(ctx.FALSE().GetSymbol())}
 }
 
 func (b *ASTBuilder) VisitUnitPrimary(ctx *parser.UnitPrimaryContext) any {
-	return &UnitLiteral{}
+	return &UnitLiteral{Pos: posFromToken(ctx.UNIT_VALUE().GetSymbol())}
 }
 
 func (b *ASTBuilder) VisitCallPrimary(ctx *parser.CallPrimaryContext) any {
@@ -325,7 +326,7 @@ func (b *ASTBuilder) VisitCallPrimary(ctx *parser.CallPrimaryContext) any {
 }
 
 func (b *ASTBuilder) VisitIdentifierPrimary(ctx *parser.IdentifierPrimaryContext) any {
-	return &Identifier{Name: ctx.IDENTIFIER().GetText()}
+	return &Identifier{Name: ctx.IDENTIFIER().GetText(), Pos: posFromToken(ctx.IDENTIFIER().GetSymbol())}
 }
 
 func (b *ASTBuilder) VisitParenPrimary(ctx *parser.ParenPrimaryContext) any {
@@ -342,7 +343,7 @@ func (b *ASTBuilder) VisitCallExpr(ctx *parser.CallExprContext) any {
 	for _, a := range ctx.AllExpr() {
 		args = append(args, AsExpr(b.Visit(a)))
 	}
-	return &CallExpr{Callee: callee, Args: args}
+	return &CallExpr{Callee: callee, Args: args, Pos: posFromCtx(ctx)}
 }
 
 func (b *ASTBuilder) VisitRecordExpr(ctx *parser.RecordExprContext) any {
@@ -351,13 +352,13 @@ func (b *ASTBuilder) VisitRecordExpr(ctx *parser.RecordExprContext) any {
 		for _, f := range list.AllRecordField() {
 			label := f.IDENTIFIER().GetText()
 			value := AsExpr(b.Visit(f.Expr()))
-			fields = append(fields, RecordField{Label: label, Value: value})
+			fields = append(fields, RecordField{Label: label, Value: value, Pos: posFromToken(f.IDENTIFIER().GetSymbol())})
 		}
 	}
-	return &RecordExpr{Fields: fields}
+	return &RecordExpr{Fields: fields, Pos: posFromCtx(ctx)}
 }
 
-func opsFromTokens(groups ...[]antlr.TerminalNode) []string {
+func getOpTokens(groups ...[]antlr.TerminalNode) []antlr.TerminalNode {
 	var nodes []antlr.TerminalNode
 	for _, g := range groups {
 		nodes = append(nodes, g...)
@@ -366,9 +367,19 @@ func opsFromTokens(groups ...[]antlr.TerminalNode) []string {
 		return nodes[i].GetSymbol().GetTokenIndex() <
 			nodes[j].GetSymbol().GetTokenIndex()
 	})
-	ops := make([]string, len(nodes))
-	for i, n := range nodes {
-		ops[i] = n.GetText()
+	return nodes
+}
+
+func posFromToken(tok antlr.Token) Position {
+	if tok == nil {
+		return Position{}
 	}
-	return ops
+	return Position{Line: tok.GetLine(), Col: tok.GetColumn()}
+}
+
+func posFromCtx(ctx antlr.ParserRuleContext) Position {
+	if ctx == nil {
+		return Position{}
+	}
+	return posFromToken(ctx.GetStart())
 }

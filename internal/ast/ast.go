@@ -4,6 +4,12 @@ type Program struct {
 	Declarations []Declaration
 }
 
+// Position represents a source location in 1-based line and 0-based column.
+type Position struct {
+	Line int
+	Col  int
+}
+
 // ─── Declarations ────────────────────────────────────────────────────────────
 
 // Declaration is the marker interface for top-level declarations
@@ -16,6 +22,7 @@ type ConstDecl struct {
 	Name  string
 	Type  Type
 	Value Expr
+	Pos   Position
 }
 
 // FunDecl represents: fun id (params) : type = expr
@@ -24,6 +31,7 @@ type FunDecl struct {
 	Params []string
 	Type   Type // must be a FunctionType
 	Body   Expr
+	Pos    Position
 }
 
 func (*ConstDecl) declNode() {}
@@ -39,23 +47,27 @@ type Type interface {
 // BasicType represents types: Int, Bool, Unit, String
 type BasicType struct {
 	Name string
+	Pos  Position
 }
 
 // RecordType represents: {id1: type1, ..., idn: typen}
 type RecordType struct {
 	Fields []RecordTypeField
+	Pos    Position
 }
 
 // RecordTypeField is one field in a record type
 type RecordTypeField struct {
 	Label string
 	Type  Type
+	Pos   Position
 }
 
 // FunctionType represents: type -> type  or  (type1,...,typen) -> type
 type FunctionType struct {
 	Params []Type
 	Return Type
+	Pos    Position
 }
 
 func (*BasicType) typeNode()    {}
