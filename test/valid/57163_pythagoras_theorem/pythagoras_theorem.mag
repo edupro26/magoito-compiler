@@ -7,5 +7,5 @@ fun pythagoras(a, b) : (Int, Int) -> Int =
 	a ^ 2 + b ^ 2
 
 fun main (_) : Unit -> Unit =
-	print("sqrt of :");
+	print("sqrt is ");
 	print(pythagoras(c0,c1))

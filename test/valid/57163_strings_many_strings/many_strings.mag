@@ -4,7 +4,7 @@ const barrier : String = 	"---------------------------------"
 const number : Int = 10
 
 fun cicles(num) : Int -> Unit =
-	while num > 0 do (print(barrier); num-1)
+	while num > 0 do (print(barrier); num = num - 1)
 
 fun main(_) : Unit -> Unit =
 	cicles(number)

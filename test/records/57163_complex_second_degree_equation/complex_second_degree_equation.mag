@@ -7,11 +7,11 @@ const c : Int = 6
 fun delta(a,b,c) : (Int, Int, Int) -> Int =
 	b ^ 2 - 4 * a * c
 
-fun search'(mid, sq, n, high, low) : (Int, Int, Int, Int, Int) -> Int =
+fun search_(mid, sq, n, high, low) : (Int, Int, Int, Int, Int) -> Int =
 	if sq == mid then mid else if sq < n then search(mid + 1, high, n) else search(low, mid-1, n)
 
 fun search(low, high, n) : (Int, Int, Int) -> Int =
-	if low > high then high else search'((low + high)/2, (low + high)^2, n, high, low)
+	if low > high then high else search_((low + high)/2, (low + high)^2, n, high, low)
 
 fun sqrt(n) : Int -> Int =
 	if n < 0 then -1 else search(0, n, n)

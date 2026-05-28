@@ -1,5 +1,0 @@
--- Author: 58248, Afonso Topa 
-
-fun main(_) : Unit -> Unit =
-    var x : Int = 19 / 0;
-    print(x)
