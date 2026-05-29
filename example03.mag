@@ -1,18 +1,10 @@
 -- Example 3
 
-const greeting : String = "counting"
+fun even (x) : Int -> Bool = 
+    x == 0 || odd(x - 1)
 
-fun main (_) : Unit -> Unit =
-    var i : Int = 0;
-    var acc : Int = 0;
-    var st : {msg: String, value: Int} = {msg = greeting, value = acc};
+fun odd (x) : Int -> Bool = 
+    x != 0 && even(x - 1)
 
-    print(st.msg);
-    while i < 4 do (
-        acc = acc + i;
-        i = i + 1
-    );
-
-    st = {msg = "done", value = acc};
-    print(st.msg);
-    print(st.value)
+fun main (_) : Unit -> Unit = 
+    print(odd(17))
