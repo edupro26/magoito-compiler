@@ -80,7 +80,7 @@ func runTests(testDir string) (TestGroup, error) {
 			continue
 		}
 
-		passed, err := runTestFile(files[0], g.Name != "valid")
+		passed, err := runTest(files[0], g.Name != "valid")
 		if passed {
 			g.Passed++
 		} else {
@@ -91,7 +91,7 @@ func runTests(testDir string) (TestGroup, error) {
 	return g, nil
 }
 
-func runTestFile(path string, expectError bool) (bool, error) {
+func runTest(path string, expectError bool) (bool, error) {
 	bytes, err := os.ReadFile(path)
 	if err != nil {
 		return false, err
@@ -101,7 +101,7 @@ func runTestFile(path string, expectError bool) (bool, error) {
 		program := ast.Build(cst)
 		err = semantics.Validate(program)
 		if err == nil && !expectError {
-			if err := runValidProgram(path, program); err != nil {
+			if err := runValid(path, program); err != nil {
 				return false, err
 			}
 		}
@@ -115,7 +115,7 @@ func runTestFile(path string, expectError bool) (bool, error) {
 	return false, fmt.Errorf("expected an error but program succeeded")
 }
 
-func runValidProgram(path string, program *ast.Program) error {
+func runValid(path string, program *ast.Program) error {
 	module, err := codegen.Generate(program)
 	if err != nil {
 		return err
@@ -132,9 +132,6 @@ func runValidProgram(path string, program *ast.Program) error {
 	cmd := exec.Command("lli", llPath)
 	output, err := cmd.Output()
 	if err != nil {
-		if exitErr, ok := err.(*exec.ExitError); ok {
-			return fmt.Errorf("lli failed: %s", string(exitErr.Stderr))
-		}
 		return err
 	}
 	if !bytes.Equal(output, expectBytes) {
