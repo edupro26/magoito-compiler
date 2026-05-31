@@ -1,12 +1,16 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"magoito-compiler/internal/ast"
+	"magoito-compiler/internal/codegen"
 	"magoito-compiler/internal/parser"
 	"magoito-compiler/internal/semantics"
 	"os"
+	"os/exec"
 	"path/filepath"
+	"strings"
 
 	"github.com/spf13/cobra"
 )
@@ -28,7 +32,7 @@ var showAll bool
 var maxShow int
 
 var testCmd = &cobra.Command{
-	Use:   "test [path]",
+	Use:   "test",
 	Short: "Run the test suite",
 	Args:  cobra.MaximumNArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
@@ -89,21 +93,54 @@ func runTests(testDir string) (TestGroup, error) {
 
 func runTestFile(path string, expectError bool) (bool, error) {
 	bytes, err := os.ReadFile(path)
+	if err != nil {
+		return false, err
+	}
+	cst, err := parser.ParseProgram(string(bytes))
 	if err == nil {
-		cst, err := parser.ParseProgram(string(bytes))
-		if err == nil {
-			program := ast.Build(cst)
-			err = semantics.Validate(program)
-		}
-		if (err != nil) == expectError {
-			return true, nil
-		}
-
-		if err != nil {
-			return false, err
+		program := ast.Build(cst)
+		err = semantics.Validate(program)
+		if err == nil && !expectError {
+			if err := runValidProgram(path, program); err != nil {
+				return false, err
+			}
 		}
 	}
-	return false, err
+	if (err != nil) == expectError {
+		return true, nil
+	}
+	if err != nil {
+		return false, err
+	}
+	return false, fmt.Errorf("expected an error but program succeeded")
+}
+
+func runValidProgram(path string, program *ast.Program) error {
+	module, err := codegen.Generate(program)
+	if err != nil {
+		return err
+	}
+	llPath := strings.TrimSuffix(path, filepath.Ext(path)) + ".ll"
+	if err := os.WriteFile(llPath, []byte(module.String()), 0644); err != nil {
+		return err
+	}
+	expectPath := strings.TrimSuffix(path, filepath.Ext(path)) + ".expect"
+	expectBytes, err := os.ReadFile(expectPath)
+	if err != nil {
+		return err
+	}
+	cmd := exec.Command("lli", llPath)
+	output, err := cmd.Output()
+	if err != nil {
+		if exitErr, ok := err.(*exec.ExitError); ok {
+			return fmt.Errorf("lli failed: %s", string(exitErr.Stderr))
+		}
+		return err
+	}
+	if !bytes.Equal(output, expectBytes) {
+		return fmt.Errorf("output mismatch: expected %q, got %q", string(expectBytes), string(output))
+	}
+	return nil
 }
 
 func printErrors(groups []TestGroup) {

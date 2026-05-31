@@ -1,0 +1,14 @@
+-- Example main program
+
+const limit : Int = 5
+
+fun inc (x) : Int -> Int = x + 1
+
+fun main (_) : Unit -> Unit =
+    var i : Int = 0;
+    var acc : Int = 0;
+    while i < limit do (
+        acc = acc + inc(i);
+        i = i + 1
+    );
+    if acc > 10 then print(acc) else print(0)

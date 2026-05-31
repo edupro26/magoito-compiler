@@ -33,8 +33,8 @@ RUN echo "printf '\033[H\033[2J\033[3J'" >> /root/.profile && \
     echo "" >> /root/.profile && \
     echo 'echo "Author: Eduardo Proença"' >> /root/.profile && \
     echo "" >> /root/.profile && \
-    echo "echo \"Type 'magoito --help' for more information, or run 'magoito run --example 1' to run an example\"" >> /root/.profile && \
+    echo "echo \"Type 'magoito --help' for more information, or run 'magoito run --example' to run the example\"" >> /root/.profile && \
     echo "" >> /root/.profile && \
-    echo 'PS1="[magoito-compiler] \\w $ "' >> /root/.profile
+    echo 'PS1="\\n[magoito-compiler] \\w $ "' >> /root/.profile
 
 CMD ["sh", "-l"]
