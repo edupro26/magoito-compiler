@@ -18,6 +18,8 @@ FROM alpine:3.21
 
 WORKDIR /app
 
+RUN apk add --no-cache llvm
+
 COPY --from=builder /app/magoito /usr/local/bin/magoito
 COPY --from=builder /app/*.mag .
 COPY --from=builder /app/test ./test
